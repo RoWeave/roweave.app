@@ -285,4 +285,16 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://roweave.app/cs/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://roweave.app/"/>
   </url>
+  <url>
+    <loc>https://roweave.app/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://roweave.app/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://roweave.app/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://roweave.app/en/privacy/"/>
+  </url>
+  <url>
+    <loc>https://roweave.app/en/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://roweave.app/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://roweave.app/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://roweave.app/en/privacy/"/>
+  </url>
 </urlset>

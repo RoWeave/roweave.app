@@ -149,3 +149,21 @@ details{border-bottom:1px solid var(--line)}summary{list-style:none;display:flex
 :is(p,li,h1,h2,h3,h4,summary,figcaption,blockquote,dt,dd){transform:translate(0)}
 /* Three columns: every card title takes two lines, so closed cards line up. */
 @media(min-width:1181px){.feature-card h3{min-height:2.6em}}
+/* Privacy policy pages: one readable column of text. */
+.policy-page .header-inner{justify-content:space-between}
+.policy-language{font-size:15px;font-weight:560;color:var(--muted);text-decoration:underline;text-underline-offset:4px}
+.policy{max-width:760px;padding:56px 0 64px;color:var(--answer)}
+.policy h1{color:var(--text);margin-bottom:16px;font-size:clamp(26px,7vw,52px);overflow-wrap:normal}
+.policy h2{color:var(--text);font-size:clamp(22px,2.4vw,28px);letter-spacing:-.4px;margin:44px 0 14px}
+.policy p,.policy li{line-height:1.7}
+.policy ul,.policy ol{padding-left:22px;margin:0 0 16px}
+.policy ul{list-style:disc}
+.policy ol{list-style:decimal}
+.policy li::marker{color:var(--accent)}
+.policy li{margin-bottom:10px}
+.policy strong{color:var(--text);font-weight:620}
+.policy a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.policy code{font-size:.88em;overflow-wrap:anywhere;background:var(--soft);border-radius:5px;padding:1px 5px}
+.policy-meta{font-size:14px;color:var(--muted)}
+.policy-footer{border-top:1px solid var(--line);padding-top:24px;font-size:14px;color:var(--muted)}
+.policy-footer a{text-decoration:underline;text-underline-offset:3px}
