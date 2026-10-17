@@ -26,7 +26,7 @@
   </header>
   <main class="container policy" id="main">
     <h1>Privacy Policy</h1>
-    <p class="policy-meta">Version 1, October 17, 2026. Covers the RoWeave app 0.11.9 and later, the roweave.app website and emails to support. The Russian text is the original; this is its translation.</p>
+    <p class="policy-meta">Version 2, October 17, 2026. Covers the RoWeave app 0.11.9 and later, the roweave.app website and emails to support. The Russian text is the original; this is its translation.</p>
 
     <h2>In short</h2>
     <ul>
@@ -46,10 +46,11 @@
       <li><strong>Run history.</strong> Up to the 200 most recent runs, no older than 90 days; older entries are removed automatically. An entry holds the date, tool, outcome, path to the result folder or file and to a saved ZIP, source file name, sheet name, column names, file count and the settings for “Repeat with a new file”. No cell values or passwords. A run interrupted with an unknown outcome stays until “Clear history”.</li>
       <li><strong>Folder permissions and completion journal.</strong> Paths to folders you chose and internal markers, so results can be saved and shown safely.</li>
       <li><strong>Settings.</strong> Theme, language, default results folder, result form (folder or ZIP), check for updates at launch, dismissed hints and the version postponed with “Later”.</li>
-      <li><strong>Support log.</strong> Up to 96 events, no older than 90 days: tool, stage, error code, time, counters, memory estimates, update check and download events. No file names, paths, passwords or contents. It goes into a diagnostics file only when you save one.</li>
+      <li><strong>Support log.</strong> Up to 96 events, no older than 90 days: tool, stage, error code, time, counters, memory estimates and the computer’s free memory, update check and download events. No file names, paths, passwords or contents. It goes into a diagnostics file only when you save one.</li>
       <li><strong>Copies of damaged data.</strong> If an internal data file turns out to be damaged, the app sets aside a copy marked <code>corrupt</code> next to its other data and never deletes it itself. It may contain the same as the history.</li>
       <li><strong>Your results.</strong> Files in the folder you chose and a hidden helper file <code>.output-workspace-run.json</code> in the run folder.</li>
     </ul>
+    <p>To suggest closing other programs when memory runs low, the app checks how much of the computer’s memory is free right now. That number stays on your computer and can only end up in a diagnostics file. The app does not read the list of running programs.</p>
     <p>Workbook passwords, including a list pasted from Excel, are used only in memory during the operation. The result password list is written to disk only if you click “Save…”, as a plain text file in a place you choose. Keep it secret.</p>
     <p>If a workbook is in OneDrive or iCloud Drive, your system or the cloud client downloads it, not RoWeave. Results in a synced folder are uploaded by that service.</p>
 
@@ -72,7 +73,7 @@
       <li><strong>“Use webmail”</strong> opens the new-message page of the service you pick in your browser (depending on the language: Gmail, Outlook.com, Yandex Mail, Mail.ru). The subject and template are passed in that page’s address, so the mail service receives them when the page opens, and the address stays in your browser history.</li>
       <li><strong>“Attach diagnostics”</strong> (on by default) saves a diagnostics file to Downloads and attaches it to the draft or shows it in Finder or File Explorer. If Downloads is not available, the file goes to a temporary <code>RoWeave</code> folder and is removed from there after 7 days. The app does not remove it from Downloads. The file is also created by “Copy address and text”.</li>
     </ul>
-    <p><strong>What the diagnostics file contains.</strong> RoWeave version and build time, system and architecture, steps and timings, error codes including system ones, counters (rows, files, sizes), memory estimates for the workbook and the computer’s RAM, the sheet’s position number, update events, a session number and, for an internal error, the location in RoWeave’s code. No table contents, file names, paths or passwords. “Save diagnostics…” creates the same file.</p>
+    <p><strong>What the diagnostics file contains.</strong> RoWeave version and build time, system and architecture, steps and timings, error codes including system ones, counters (rows, files, sizes), memory estimates for the workbook, the computer’s total and free memory, whether the tip to close other programs was shown, the size of part of the workbook in megabytes if it was rejected as too large, the sheet’s position number, update events, a session number and, for an internal error, the location in RoWeave’s code. No table contents, file names, paths or passwords. “Save diagnostics…” creates the same file.</p>
     <p><strong>What the developer receives.</strong> When you send an email, we receive your address, your sender name if your mail shows one, the text and attachments. We use them only to reply and solve the problem. Legal basis: your request. Emails are stored in Apple iCloud Mail and deleted one year after the last message in the conversation. We do not sell or share them, except with the mail services they pass through.</p>
     <p><strong>Please do not send real workbooks with personal or confidential data.</strong> An anonymized sample is usually enough.</p>
 
@@ -110,8 +111,9 @@
     <h2>How to delete data on your computer</h2>
     <ol>
       <li>In the app: History → “Clear history”. Your Excel files remain. This does not remove <code>corrupt</code> copies, settings, the support log or the default folder.</li>
-      <li><strong>Windows:</strong> when uninstalling from Apps, check the option to delete the application data (unchecked by default). This removes <code>%APPDATA%\app.roweave.desktop</code> and <code>%LOCALAPPDATA%\app.roweave.desktop</code>. Otherwise they stay, and you can delete them by hand.</li>
+      <li><strong>Windows, website version:</strong> when uninstalling from Apps, check the option to delete the application data (unchecked by default). This removes <code>%APPDATA%\app.roweave.desktop</code> and <code>%LOCALAPPDATA%\app.roweave.desktop</code>. Otherwise they stay, and you can delete them by hand.</li>
       <li><strong>macOS:</strong> after quitting the app, delete <code>~/Library/Application Support/app.roweave.desktop</code>, <code>~/Library/WebKit/app.roweave.desktop</code>, <code>~/Library/Caches/app.roweave.desktop</code> and <code>~/Library/Preferences/app.roweave.desktop.plist</code>. For the Mac App Store version: <code>~/Library/Containers/app.roweave.desktop</code>. Deleting RoWeave.app does not touch these folders.</li>
+      <li><strong>The Microsoft Store version</strong> keeps its data in its own package folder, and Windows removes it together with the app.</li>
       <li>Diagnostics files in Downloads, your results and password lists are where you saved them. Delete them yourself.</li>
     </ol>
 
@@ -122,7 +124,7 @@
     <p>RoWeave is not made specifically for children and collects no data about anyone. If you are under 16, please contact support together with a parent.</p>
 
     <h2>Changes</h2>
-    <p>If the app starts handling data differently, for example with a new network feature, we will update this page and its version date before that release and mention the change in the release notes. Previous versions stay in the public history of the <a href="https://github.com/RoWeave/roweave.app/commits/main/en/privacy/index.html">RoWeave/roweave.app</a> repository.</p>
+    <p>If the app starts handling data differently, for example with a new network feature, we will update this page and its version date before that release and mention the change in the release notes. Version 2 (RoWeave 0.11.10): the diagnostics file gained free memory, the close-programs tip and the size of a workbook that is too large; the Microsoft Store version was added. Previous versions stay in the public history of the <a href="https://github.com/RoWeave/roweave.app/commits/main/en/privacy/index.html">RoWeave/roweave.app</a> repository.</p>
   </main>
   <footer class="container site-footer policy-footer"><p>© 2026 RoWeave · <a href="mailto:support@roweave.app">support@roweave.app</a> · <a href="../">Home</a></p></footer>
 </body>
