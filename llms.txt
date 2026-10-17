@@ -1,0 +1,28 @@
+# RoWeave
+
+> RoWeave is a free desktop app for Windows and Mac that splits an Excel sheet into separate workbooks by the values of a column (one file per branch, department or rep) and combines a folder of Excel or CSV reports into one table. Files are processed locally on the computer and never uploaded. No macros, add-ins or Excel installation needed.
+
+## What it does
+
+- Split: pick a column, review the list of files, click Split. Each new workbook keeps the header rows, fonts, fills, borders, column widths, row heights, and number and date formats. Split can also password-protect the new files.
+- Combine: takes a folder of reports, picks the right sheet from each workbook, checks that the headers match and stacks the rows into one table, optionally with a column for the source file name.
+- CSV to Excel: converts large CSV files to XLSX in chunks, without loading the whole file into memory.
+- Before anything runs, RoWeave shows which files will be created and what won't carry over.
+
+## Good to know
+
+- Price: free during the 0.11 beta, every feature, no limits, no sign-up, no ads.
+- Systems: Windows 10 and 11 (64-bit, x64); Macs with Apple Silicon (M1 or later) on macOS 12.3 or later.
+- Formats: opens XLSX, XLSM, XLS, XLSB, CSV, TSV and TXT. Full formatting comes from XLSX/XLSM; from legacy XLS only data, number formats and merged cells; from XLSB only values. Password-protected XLSX, XLSM and XLSB open after entering the password (it is never stored).
+- Not carried over: pivot tables, charts, images and macros. Formulas become the values Excel last saved.
+- The source file is never changed; results go to a folder the user chooses.
+- Interface languages: English, Russian, German, French, Spanish, Italian, Dutch, Polish, Czech, Brazilian Portuguese, Vietnamese, Indonesian, Japanese, Korean and Simplified Chinese.
+- Made by one developer. Support: support@roweave.app
+
+## Links
+
+- [Website (English)](https://roweave.app/en/)
+- [Website (Russian)](https://roweave.app/?lang=ru)
+- [Download for Windows](https://github.com/RoWeave/releases/releases/latest/download/RoWeave-Windows-x64-setup.exe)
+- [Download for Mac](https://github.com/RoWeave/releases/releases/latest/download/RoWeave-macOS-arm64.dmg)
+- [All versions and release notes](https://github.com/RoWeave/releases/releases)

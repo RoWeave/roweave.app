@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Excelを列ごとに分割・複数ファイルを1つに結合 | RoWeave</title>
+  <meta name="description" content="Excelの表を列の値ごとに別ファイルへ分割（書式はそのまま）、複数のブックを1つに結合、CSVをExcelに変換できるデスクトップアプリ。マクロ不要、オフラインで動作します。" data-i18n-content="description">
+  <meta name="theme-color" content="#f3f5f5">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RoWeave">
+  <meta property="og:title" content="Excelを列ごとに分割・複数ファイルを1つに結合 | RoWeave" data-i18n-content="title">
+  <meta property="og:description" content="Excelの表を列の値ごとに別ファイルへ分割（書式はそのまま）、複数のブックを1つに結合、CSVをExcelに変換できるデスクトップアプリ。マクロ不要、オフラインで動作します。" data-i18n-content="description">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary">
+  <meta property="og:url" content="https://roweave.app/ja/">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="canonical" href="https://roweave.app/ja/">
+  <link rel="alternate" hreflang="ru" href="https://roweave.app/?lang=ru" data-alternates>
+  <link rel="alternate" hreflang="en" href="https://roweave.app/en/" data-alternates>
+  <link rel="alternate" hreflang="de" href="https://roweave.app/de/" data-alternates>
+  <link rel="alternate" hreflang="fr" href="https://roweave.app/fr/" data-alternates>
+  <link rel="alternate" hreflang="es" href="https://roweave.app/es/" data-alternates>
+  <link rel="alternate" hreflang="nl" href="https://roweave.app/nl/" data-alternates>
+  <link rel="alternate" hreflang="pl" href="https://roweave.app/pl/" data-alternates>
+  <link rel="alternate" hreflang="ja" href="https://roweave.app/ja/" data-alternates>
+  <link rel="alternate" hreflang="ko" href="https://roweave.app/ko/" data-alternates>
+  <link rel="alternate" hreflang="zh-Hans" href="https://roweave.app/zh-Hans/" data-alternates>
+  <link rel="alternate" hreflang="pt-BR" href="https://roweave.app/pt-BR/" data-alternates>
+  <link rel="alternate" hreflang="it" href="https://roweave.app/it/" data-alternates>
+  <link rel="alternate" hreflang="vi" href="https://roweave.app/vi/" data-alternates>
+  <link rel="alternate" hreflang="id" href="https://roweave.app/id/" data-alternates>
+  <link rel="alternate" hreflang="cs" href="https://roweave.app/cs/" data-alternates>
+  <link rel="alternate" hreflang="x-default" href="https://roweave.app/" data-alternates>
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../script.js" defer></script>
+  <script type="application/ld+json" data-structured-data>{"@context":"https://schema.org","@type":"SoftwareApplication","name":"RoWeave","url":"https://roweave.app/ja/","description":"Excelの表を列の値ごとに別ファイルへ分割（書式はそのまま）、複数のブックを1つに結合、CSVをExcelに変換できるデスクトップアプリ。マクロ不要、オフラインで動作します。","applicationCategory":"BusinessApplication","operatingSystem":"Windows 10, Windows 11, macOS 12.3+","inLanguage":"ja","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"downloadUrl":"https://github.com/RoWeave/releases/releases/latest"}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main"><span data-i18n="skip">本文へ移動</span></a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#" aria-label="RoWeave（ページの先頭へ）" data-i18n-aria-label="brandHome"><img src="../assets/roweave-icon-160.webp" alt="" width="38" height="38"><span>RoWeave</span></a>
+      <nav class="navigation" aria-label="メインナビゲーション" data-i18n-aria-label="navigation" id="navigation">
+        <a href="#use-cases"><span data-i18n="navUseCases">活用シーン</span></a><a href="#features"><span data-i18n="navFeatures">できること</span></a><a href="#how-it-works"><span data-i18n="navHow">使い方</span></a><a href="#faq"><span data-i18n="navFaq">よくある質問</span></a>
+      </nav>
+      <div class="header-actions">
+        <label class="language-control" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c5 5 5 13 0 18-5-5-5-13 0-18Z"/></svg><span data-language-short aria-hidden="true">日本語</span><select id="language" aria-label="ページの言語" data-i18n-aria-label="language"><option value="id" data-href="../id/index.html">Bahasa Indonesia</option><option value="cs" data-href="../cs/index.html">Čeština</option><option value="de" data-href="../de/index.html">Deutsch</option><option value="en" data-href="../en/index.html">English</option><option value="es" data-href="../es/index.html">Español</option><option value="fr" data-href="../fr/index.html">Français</option><option value="it" data-href="../it/index.html">Italiano</option><option value="nl" data-href="../nl/index.html">Nederlands</option><option value="pl" data-href="../pl/index.html">Polski</option><option value="pt-BR" data-href="../pt-BR/index.html">Português (Brasil)</option><option value="vi" data-href="../vi/index.html">Tiếng Việt</option><option value="ru" data-href="../index.html?lang=ru">Русский</option><option value="ja" selected data-href="../ja/index.html">日本語</option><option value="ko" data-href="../ko/index.html">한국어</option><option value="zh-Hans" data-href="../zh-Hans/index.html">简体中文</option></select></label>
+        <button class="icon-button theme-toggle" type="button" aria-label="ダークテーマに切り替える" data-i18n-aria-label="themeDark" data-label-light="ライトテーマに切り替える" data-i18n-data-label-light="themeLight" data-label-dark="ダークテーマに切り替える" data-i18n-data-label-dark="themeDark" hidden><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20.7 13A8.8 8.8 0 0 1 11 3.3 8.8 8.8 0 1 0 20.7 13Z"/></svg></button>
+        <a class="button button-small" href="#download"><span data-i18n="navPlatforms">ダウンロード</span></a>
+        <button class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="メニューを開く" data-i18n-aria-label="menuOpen" data-label-open="メニューを開く" data-i18n-data-label-open="menuOpen" data-label-close="メニューを閉じる" data-i18n-data-label-close="menuClose" hidden><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title"><span class="hero-line" data-i18n="heroTogether">Excelを列ごとに分割。</span> <span class="hero-line hero-accent" data-i18n="heroApart">レポートを1つに結合。</span></h1>
+        <p class="hero-description"><span data-i18n="heroDescription">RoWeaveは、表の行を支店・部署・担当者ごとの別ファイルに振り分けます。見出し、列幅、数値の書式は元の表のままです。逆に、フォルダー内のレポートを1つの表にまとめることもできます。</span></p>
+        <div class="hero-actions"><a class="button" href="#how-it-works"><span data-i18n="ctaFeatures">使い方を見る</span></a><a class="text-link" href="#download"><span data-i18n="ctaPlatforms">無料でダウンロード</span></a></div>
+        <p class="hero-note"><span class="status-dot" aria-hidden="true"></span><span data-i18n="releasePending">Windows・Mac 版の無料ベータ 0.11。</span></p>
+      </div>
+      <div class="hero-visual">
+        <img class="hero-mascot" src="../assets/roweave-split-400.webp" alt="RoWeaveのキャラクターが1つの表を複数に分けている" data-i18n-alt="heroAlt" width="400" height="400" fetchpriority="high">
+        <div class="example" role="group" aria-label="例：「売上」表の行を、東京と大阪の別々のファイルに振り分けます" data-i18n-aria-label="exampleLabel">
+          <div class="example-top"><span class="file-symbol" aria-hidden="true">X</span><strong><span data-i18n="exampleFile">売上.xlsx</span></strong><span class="example-badge"><span data-i18n="sourceFile">元のファイル</span></span></div>
+          <table class="example-table"><caption class="sr-only"><span data-i18n="tableCaption">元データの例</span></caption><thead><tr><th scope="col"><span data-i18n="city">支店</span></th><th scope="col"><span data-i18n="product">商品</span></th><th scope="col"><span data-i18n="quantity">数量</span></th></tr></thead><tbody><tr><td><span class="city city-green"><span data-i18n="moscow">東京</span></span></td><td><span data-i18n="notebook">ノート</span></td><td><span>120</span></td></tr><tr><td><span class="city city-blue"><span data-i18n="kazan">大阪</span></span></td><td><span data-i18n="folder">クリアファイル</span></td><td><span>85</span></td></tr><tr><td><span class="city city-green"><span data-i18n="moscow">東京</span></span></td><td><span data-i18n="pen">ボールペン</span></td><td><span>240</span></td></tr></tbody></table>
+          <div class="example-split"><span aria-hidden="true">↓</span><span data-i18n="splitBy">「支店」列で分割</span></div>
+          <div class="example-results"><span><i class="file-symbol" aria-hidden="true">X</i><span data-i18n="moscowFile">東京.xlsx</span></span><span><i class="file-symbol file-symbol-blue" aria-hidden="true">X</i><span data-i18n="kazanFile">大阪.xlsx</span></span></div>
+        </div>
+        <p class="visual-caption"><span data-i18n="visualCaption">支店の数だけ、ファイルができます。</span></p>
+      </div>
+    </section>
+
+    <ul class="trust-strip container" aria-label="主な特長" data-i18n-aria-label="trustLabel">
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/></svg><span data-i18n="trustFiles">アップロード不要</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span data-i18n="trustResult">マクロ・アドイン不要</span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18M6.5 6.5h.01M9 6.5h.01"/></svg><span data-i18n="trustNoExcel">処理にExcel不要</span></li>
+    </ul>
+
+    <section class="section container" id="use-cases" aria-labelledby="use-cases-title" tabindex="-1">
+      <div class="section-heading"><h2 id="use-cases-title"><span data-i18n="useCasesTitle">毎月この作業を
+手作業でしているなら</span></h2><p><span data-i18n="useCasesIntro">フィルター、コピー、新しいファイル、貼り付け、列幅の調整。これを部署の数だけ繰り返していませんか。あるいは、作った人にしかわからないマクロに頼っていませんか。</span></p></div>
+      <ul class="card-grid use-grid">
+        <li class="card use-card"><p class="use-role"><span data-i18n="use1Role">経理・財務</span></p><h3><span data-i18n="use1Task">部門ごとにレポートを配布</span></h3><p><span data-i18n="use1Body">全社のレポート1つ → 部門ごとのファイル。見出しも数値の表示形式もそのままです。</span></p></li>
+        <li class="card use-card"><p class="use-role"><span data-i18n="use2Role">人事</span></p><h3><span data-i18n="use2Task">管理職に自部署の社員分だけを渡す</span></h3><p><span data-i18n="use2Body">社員名簿 → 部署ごとのファイル。ファイルごとに別のパスワードを設定でき、パスワードはRoWeaveが別の一覧に保存します。</span></p></li>
+        <li class="card use-card"><p class="use-role"><span data-i18n="use3Role">物流・倉庫</span></p><h3><span data-i18n="use3Task">倉庫ごとのレポートを1つの表に</span></h3><p><span data-i18n="use3Body">各拠点からの30ファイル → 1つの表。各行に元のファイル名を付けることもできます。</span></p></li>
+        <li class="card use-card"><p class="use-role"><span data-i18n="use4Role">営業管理</span></p><h3><span data-i18n="use4Task">予実表を営業担当者ごとに配布</span></h3><p><span data-i18n="use4Body">CRMから出力したデータ（「地域」と「担当者」の列）→ 地域ごとのフォルダー。その中に担当者ごとのファイルを作成します。</span></p></li>
+        <li class="card use-card"><p class="use-role"><span data-i18n="use5Role">会計システム・銀行</span></p><h3><span data-i18n="use5Task">先頭のゼロを消さずにCSVを開く</span></h3><p><span data-i18n="use5Body">CSV → XLSX。商品コード、取引先コード、口座番号が出力時のまま残ります。</span></p></li>
+        <li class="card use-card"><p class="use-role"><span data-i18n="use6Role">学校・大学</span></p><h3><span data-i18n="use6Task">名簿をクラス・グループごとに分ける</span></h3><p><span data-i18n="use6Body">全体の名簿 → グループごとのファイル。あとで先生方のファイルを1つのブックにまとめ直すこともできます。</span></p></li>
+      </ul>
+    </section>
+
+    <section class="section section-tight container" id="features" aria-labelledby="features-title" tabindex="-1">
+      <div class="section-heading"><h2 id="features-title"><span data-i18n="featuresTitle">ふだん手作業でしている
+3つの作業</span></h2><p><span data-i18n="featuresIntro">実行する前に、作成されるファイルと引き継がれない要素をRoWeaveが表示します。</span></p></div>
+      <div class="feature-grid">
+        <article class="card feature-card"><div class="feature-art"><img src="../assets/roweave-sorter-400.webp" alt="" width="400" height="400" loading="lazy"></div><p class="feature-label"><span data-i18n="splitLabel">分割</span></p><h3><span data-i18n="splitTitle">1つの表 → 値ごとのファイル</span></h3><p class="feature-example"><span data-i18n="splitExampleIn">全社の給与一覧</span><span class="feature-arrow" aria-hidden="true">→</span><span data-i18n="splitExampleOut">部署ごとのファイル</span></p><details class="feature-more"><summary><span data-i18n="featureMore">詳しく見る</span></summary><p class="feature-body"><span data-i18n="splitBody">「部署」などの列を選びます。RoWeaveが部署ごとにブックを作成し、見出し行、列幅、数値の表示形式、塗りつぶしと文字の色をそのまま引き継ぎます。複数の列を選ぶと、最初の列でサブフォルダーに振り分けます。ファイルごとにパスワードを設定することもできます。</span></p></details></article>
+        <article class="card feature-card"><div class="feature-art"><img src="../assets/roweave-collect-400.webp" alt="" width="400" height="400" loading="lazy"></div><p class="feature-label"><span data-i18n="collectLabel">結合</span></p><h3><span data-i18n="collectTitle">複数のファイル → 1つの表</span></h3><p class="feature-example"><span data-i18n="collectExampleIn">支店レポート30件</span><span class="feature-arrow" aria-hidden="true">→</span><span data-i18n="collectExampleOut">1つの表</span></p><details class="feature-more"><summary><span data-i18n="featureMore">詳しく見る</span></summary><p class="feature-body"><span data-i18n="collectBody">レポートの入ったフォルダーをドロップします。RoWeaveが各ブックから必要なシートを取り出し、見出しが一致しているか確認して、行を1つの表にまとめます。元のファイル名の列を追加することもできます。パスワード付きのブックも、XLSX、XLSM、XLSB形式なら対応しています。暗号化された旧形式のXLS（Excel 97–2003）は開けません。</span></p></details></article>
+        <article class="card feature-card"><div class="feature-art"><img src="../assets/roweave-csv-to-excel-400.webp" alt="" width="400" height="400" loading="lazy"></div><p class="feature-label"><span data-i18n="csvLabel">CSV → Excel</span></p><h3><span data-i18n="csvTitle">CSVデータ → 通常のExcelファイル</span></h3><p class="feature-example"><span data-i18n="csvExampleIn">会計データ</span><span class="feature-arrow" aria-hidden="true">→</span><span data-i18n="csvExampleOut">ゼロが残るXLSX</span></p><details class="feature-more"><summary><span data-i18n="featureMore">詳しく見る</span></summary><p class="feature-body"><span data-i18n="csvBody">商品コードや取引先コードの先頭のゼロが消えず、長い番号が「1.2E+15」に変わることもありません。文字コードは自動で判別します（UTF-8、UTF-16、Shift_JIS、中国語のGBK/GB18030、韓国語のCP949、欧州言語向けのWindows-1252・Windows-1250、トルコ語のWindows-1254、ベトナム語のWindows-1258、キリル文字のWindows-1251・KOI8-R）。判別に自信がないときは、プレビューを表示して確認します。大きなデータも少しずつ読み込み、800万セルまで対応します。</span></p></details></article>
+      </div>
+    </section>
+
+    <section class="workflow-section" id="how-it-works" aria-labelledby="workflow-title" tabindex="-1"><div class="container workflow-layout">
+      <div class="workflow-copy"><h2 id="workflow-title"><span data-i18n="workflowTitle">使い方</span></h2><ol class="steps"><li><span class="step-number" aria-hidden="true">1</span><div><h3><span data-i18n="step1Title">ファイルをドロップ</span></h3><p><span data-i18n="step1Body">ブック1つでも、複数のファイルでも、フォルダーごとでもかまいません。XLSX、XLSM、XLS、XLSB、CSV、TSV、TXTに対応しています。</span></p></div></li><li><span class="step-number" aria-hidden="true">2</span><div><h3><span data-i18n="step2Title">結果を事前に確認</span></h3><p><span data-i18n="step2Body">シートと列を選びます。作成されるファイルの一覧が表示され、引き継がれない要素があれば警告が出ます。</span></p></div></li><li><span class="step-number" aria-hidden="true">3</span><div><h3><span data-i18n="step3Title">結果を保存</span></h3><p><span data-i18n="step3Body">新しいファイルは指定したフォルダーに保存されます。元のファイルは変更されず、過去の処理は「履歴」に残ります。</span></p></div></li></ol></div>
+      <figure class="app-preview"><p class="preview-label"><span data-i18n="previewLabel">結合：実行前の確認</span></p><a class="preview-link" href="../assets/collector-preview.png" target="_blank" rel="noopener"><img src="../assets/collector-preview.webp" alt="RoWeaveの結合画面：出力設定、見出しの違いに関する警告、結合前の確認" data-i18n-alt="previewAlt" width="1080" height="900" loading="lazy"><span class="preview-open"><span data-i18n="previewOpen">スクリーンショットを拡大</span><span class="sr-only" data-i18n="newTabShort"> （新しいタブで開きます）</span></span></a><figcaption><span data-i18n="previewCaption">RoWeaveは結合の前に、2つのファイルで見出しが異なることを警告します。データはサンプルです。</span></figcaption></figure>
+    </div></section>
+
+    <section class="section container" id="compare" aria-labelledby="compare-title">
+      <div class="section-heading"><h2 id="compare-title"><span data-i18n="compareTitle">これまでのやり方</span></h2></div>
+      <ul class="card-grid compare-grid">
+        <li class="card compare-card"><h3><span data-i18n="compareManualTitle">手作業</span></h3><p><span data-i18n="compareManualBody">フィルター → コピー → 新しいファイル → 貼り付け → 書式の修正。これを40回。1つ間違えれば、関係のない人にデータが届いてしまいます。</span></p></li>
+        <li class="card compare-card"><h3><span data-i18n="compareVbaTitle">VBAマクロ</span></h3><p><span data-i18n="compareVbaBody">作った人がいるうちは動きます。Macでは動かないことが多く、マクロ付きのファイルを禁止している会社も少なくありません。</span></p></li>
+        <li class="card compare-card"><h3><span data-i18n="compareOnlineTitle">オンラインツール</span></h3><p><span data-i18n="compareOnlineBody">給与や顧客のデータを、他社のサーバーにアップロードする必要があります。</span></p></li>
+        <li class="card compare-card compare-card-roweave"><h3><img src="../assets/roweave-icon-160.webp" alt="" width="24" height="24"><span data-i18n="compareRoweaveTitle">RoWeave</span></h3><p><span data-i18n="compareRoweaveBody">列を選び、ファイル一覧を確認して「分割」をクリック。書式はそのまま、ファイルは手元に残ります。</span></p></li>
+      </ul>
+    </section>
+
+    <section class="section section-tight container" id="keep" aria-labelledby="keep-title" tabindex="-1">
+      <div class="section-heading"><h2 id="keep-title"><span data-i18n="keepTitle">新しいファイルに引き継がれるもの、
+引き継がれないもの</span></h2></div>
+      <div class="keep-grid">
+        <div class="card keep-card keep-yes"><h3 class="keep-badge"><span class="keep-mark" aria-hidden="true"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="8.75"/><path d="M6.4 10.3l2.4 2.4 4.8-5"/></svg></span><span data-i18n="keepYesTitle">引き継がれる</span></h3><ul><li><span data-i18n="keepYes1">フォント、塗りつぶし、罫線、配置</span></li><li><span data-i18n="keepYes2">列幅、数値と日付の表示形式</span></li><li><span data-i18n="keepYes3">表の上の見出し行（すべてのファイルに）</span></li><li><span data-i18n="keepYes4">行の高さ</span></li></ul></div>
+        <div class="card keep-card keep-exp"><h3 class="keep-badge"><span class="keep-mark" aria-hidden="true"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="8.75"/><path d="M10 5.9v5.2"/><circle cx="10" cy="14.1" r=".6" fill="currentColor" stroke="none"/></svg></span><span data-i18n="keepExpTitle">ベータ版（「詳細設定」で有効化、初期設定はオフ）</span></h3><ul><li><span data-i18n="keepExp1">シートの保護と編集可能なセル</span></li><li><span data-i18n="keepExp2">ドロップダウンリストとデータの入力規則</span></li><li><span data-i18n="keepExp3">条件付き書式</span></li></ul><p class="keep-note"><span data-i18n="keepExpNote">分割と結合の「元のブックから保持するもの」で切り替えます。</span></p></div>
+        <div class="card keep-card keep-no"><h3 class="keep-badge"><span class="keep-mark" aria-hidden="true"><svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="8.75"/><path d="M7.4 7.4l5.2 5.2M12.6 7.4l-5.2 5.2"/></svg></span><span data-i18n="keepNoTitle">引き継がれない</span></h3><ul><li><span data-i18n="keepNo1">ピボットテーブル、グラフ、画像</span></li><li><span data-i18n="keepNo2">マクロ（結果は通常のXLSX）</span></li><li><span data-i18n="keepNo3">数式（Excelが保存した値のみ）</span></li></ul></div>
+      </div>
+      <p class="section-note"><span data-i18n="formatsNote">XLSX、XLSM、XLS、XLSB、CSV、TSV、TXT を開けます。分割では、旧形式の XLS（Excel 97–2003）からデータ、表示形式、結合セルを引き継ぎますが、フォント、塗りつぶし、罫線は引き継ぎません。バイナリ形式の XLSB からは値のみです。結合では、XLS、XLSB、またはテキストファイル（CSV、TSV、TXT）が含まれる場合、XLSX のブックの部分も含めて、表全体を書式なしの値として書き込みます。</span></p>
+    </section>
+
+
+    <section class="section section-tight container about-section" id="about" aria-labelledby="about-title"><h2 id="about-title"><span data-i18n="aboutTitle">このプロジェクトについて</span></h2><p><span data-i18n="aboutBody">RoWeave はひとりの開発者がつくっています。できることは、表の分割、ファイルの結合、CSV から Excel への変換の 3 つです。そのほかの機能は、いただいた声をもとに少しずつ追加しています。</span></p><p><span data-i18n="aboutContactBefore">うまく動かないことや足りない機能があれば、</span> <a href="mailto:support@roweave.app">support@roweave.app</a><span data-i18n="aboutContactAfter">までお知らせください。</span></p></section>
+
+    <section class="section container faq-section" id="faq" aria-labelledby="faq-title" tabindex="-1"><div class="faq-aside"><h2 id="faq-title"><span data-i18n="faqTitle">よくある質問</span></h2></div><div class="faq-list">
+      <details><summary><span data-i18n="faq5">どこでダウンロードできますか？</span><span class="faq-mark" aria-hidden="true">+</span></summary><div class="answer"><p><span data-i18n="faq5Body">ページ下部の「ダウンロード」から、Windows 用インストーラーと Mac 用 DMG を入手できます。新しいバージョンが出ると、RoWeave がお知らせします。</span></p></div></details>
+      <details><summary><span data-i18n="faq10">料金はいくらですか？</span><span class="faq-mark" aria-hidden="true">+</span></summary><div class="answer"><p><span data-i18n="faq10Body">現在、Windows 版・Mac 版の RoWeave は無料です。すべての機能を制限なく使え、登録も広告もありません。</span></p></div></details>
+      <details><summary><span data-i18n="faq1">RoWeaveはどのパソコンで使えますか？</span><span class="faq-mark" aria-hidden="true">+</span></summary><div class="answer"><p><span data-i18n="faq1Body">Windows 10・11（64ビット版、x64）と、Apple Silicon（M1以降）搭載でmacOS 12.3以降のMacに対応します。</span></p></div></details>
+      <details><summary><span data-i18n="faq4">元のファイルは変更されますか？</span><span class="faq-mark" aria-hidden="true">+</span></summary><div class="answer"><p><span data-i18n="faq4Body">いいえ。RoWeaveは元のファイルを読み込むだけで、上書きはしません。結果は、指定したフォルダーに別のファイルとして保存されます。</span></p></div></details>
+      <details><summary><span data-i18n="faq3">書式や数式は残りますか？</span><span class="faq-mark" aria-hidden="true">+</span></summary><div class="answer"><p><span data-i18n="faq3Body">分割では、フォント、塗りつぶし、罫線、列幅、数値の表示形式を引き継ぎます。数式は、Excelがブックに最後に保存した値に置き換わります。数値はそのままですが、データを変更しても再計算されません。結合でも値として書き込み、すべてのソースが XLSX・XLSM のブックであれば書式も引き継ぎます。</span></p><p><a href="#keep"><span data-i18n="faq3Link">引き継がれるもの・引き継がれないもの</span></a></p></div></details>
+      <details><summary><span data-i18n="faq6">大きなファイルも扱えますか？</span><span class="faq-mark" aria-hidden="true">+</span></summary><div class="answer"><p><span data-i18n="faq6Body">大きな CSV は、ファイル全体をメモリに読み込まずに分割して Excel に変換します。上限は 800 万セル（例：40 万行 × 20 列）と 400 万行です。セル内の文字列がとても長い場合は、上限が下がることがあります。行数が Excel のシートの上限（1,048,576 行）を超える場合は、複数のシートに分けることを提案します。分割と結合は表全体をメモリに保持するため、上限はお使いのコンピューターによって変わります。大きなファイルでは警告を表示し、そのまま試すこともできます。</span></p></div></details>
+      <details><summary><span data-i18n="faq7">パスワード付きのファイルにも対応していますか？</span><span class="faq-mark" aria-hidden="true">+</span></summary><div class="answer"><p><span data-i18n="faq7Body">XLSX、XLSM、XLSB形式なら開けます。パスワードはアプリで入力し、保存されることはありません。暗号化された旧形式のXLS（Excel 97–2003）には対応していません。分割では、新しいファイルにパスワードを設定することもできます。全ファイル共通でも、ファイルごとに別々でもかまいません。パスワードの一覧は別のファイルに保存されます。</span></p></div></details>
+      <details><summary><span data-i18n="faq2">Excelのインストールは必要ですか？</span><span class="faq-mark" aria-hidden="true">+</span></summary><div class="answer"><p><span data-i18n="faq2Body">いいえ。RoWeaveがファイルの読み込みと作成を行います。Excelが必要なのは結果を開くときだけで、ほかの表計算ソフトでもかまいません。</span></p></div></details>
+    </div></section>
+
+    <section class="container download-section" id="download" aria-labelledby="download-title" tabindex="-1"><div class="download-panel"><img src="../assets/roweave-icon-160.webp" alt="" width="80" height="80" loading="lazy"><h2 id="download-title"><span data-i18n="downloadTitle">RoWeave
+Windows版・Mac版</span></h2><p><span data-i18n="downloadBody">無料ベータ 0.11</span></p><ul class="platform-grid" aria-label="アプリのバージョン" data-i18n-aria-label="platformsLabel"><li class="platform-card"><h3><span>Windows</span></h3><p><span data-i18n="windowsPlatform">Windows 10・11、64ビット版（x64）</span></p><a class="button store-button" href="#" data-store="msstore" hidden>Microsoft Store</a><a class="button direct-download" href="https://github.com/RoWeave/releases/releases/latest/download/RoWeave-Windows-x64-setup.exe"><span data-i18n="downloadWindows">Windows 版をダウンロード</span></a><p class="platform-file"><span data-i18n="windowsFile">.exe インストーラー、約 11 MB</span></p><details class="platform-hint"><summary><span data-i18n="smartscreenSummary">Windows で警告が出たら</span></summary><p><span data-i18n="smartscreenHint">「WindowsによってPCが保護されました」と表示されたら、「詳細情報」→「実行」をクリックしてください。インストーラーはまだ Microsoft の署名を受けていません。</span></p></details></li><li class="platform-card"><h3><span>macOS</span></h3><p><span data-i18n="macPlatform">Apple Silicon（M1以降）、macOS 12.3以降</span></p><a class="button store-button" href="#" data-store="mas" hidden>Mac App Store</a><a class="button direct-download" href="https://github.com/RoWeave/releases/releases/latest/download/RoWeave-macOS-arm64.dmg"><span data-i18n="downloadMac">Mac 版をダウンロード</span></a><p class="platform-file"><span data-i18n="macFile">.dmg ディスクイメージ、約 14 MB。Apple による署名と公証済み。</span></p></li></ul><p class="download-meta"><a class="text-link" href="https://github.com/RoWeave/releases/releases"><span data-i18n="downloadMeta">すべてのバージョン（GitHub）</span></a></p>
+    </div>
+    </div></section>
+  </main>
+
+  <footer class="container site-footer"><div class="footer-top"><a class="brand" href="#" aria-label="RoWeave（ページの先頭へ）" data-i18n-aria-label="brandHome"><img src="../assets/roweave-icon-160.webp" alt="" width="34" height="34" loading="lazy"><span>RoWeave</span></a><p><span data-i18n="footerTagline">Excelブックを分割・結合するデスクトップアプリ。</span></p></div><nav class="language-links" aria-label="ページの言語" data-i18n-aria-label="language"><a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a><a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a><a href="../de/index.html" hreflang="de" lang="de">Deutsch</a><a href="../en/index.html" hreflang="en" lang="en">English</a><a href="../es/index.html" hreflang="es" lang="es">Español</a><a href="../fr/index.html" hreflang="fr" lang="fr">Français</a><a href="../it/index.html" hreflang="it" lang="it">Italiano</a><a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a><a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a><a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a><a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="../index.html?lang=ru" hreflang="ru" lang="ru">Русский</a><a href="../ja/index.html" hreflang="ja" aria-current="page" lang="ja">日本語</a><a href="../ko/index.html" hreflang="ko" lang="ko">한국어</a><a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav><p class="footer-privacy"><span data-i18n="privacyBody">ファイルはお使いのコンピューター上で処理され、どこにも送信されません。RoWeave がインターネットに接続するのはアップデートの確認時だけで、設定でオフにできます。</span> <a href="#privacy"><span data-i18n="privacyMore">プライバシーについて詳しく</span></a></p><div class="footer-bottom"><p><span>© 2026 RoWeave</span></p><span><span data-i18n="footerSupport">お問い合わせ：</span> <a href="mailto:support@roweave.app">support@roweave.app</a></span><a href="#privacy"><span data-i18n="footerPrivacy">プライバシー</span></a></div><details class="privacy-disclosure" id="privacy"><summary><span data-i18n="privacyDetails">アプリとこのサイトのプライバシー</span><span class="faq-mark" aria-hidden="true">+</span></summary><div class="answer"><p><span data-i18n="privacyDetails1">アプリはExcelファイルをお使いのパソコン上だけで処理し、その内容をネットワークに送信しません。アプリがインターネットに接続するのはアップデートの確認時（updates.roweave.app または GitHub）だけで、ファイル名や内容は送信されません。自動確認はオフにできます。このサイトには、ファイルのアップロード、フォーム、広告、アクセス解析はありません。フォントはシステムのものを使い、画像はページと同じ場所に置いています。選択した言語は、ページのURLにのみ記録されます。</span></p><p><span data-i18n="privacySupport">アプリの「サポートに連絡」は support@roweave.app 宛てのメールを用意するだけです。送信するのはご自身のメールで、RoWeave が何かを送ることはありません。「診断情報を添付」をオンにすると、手順・時刻・エラーコードを記録したファイルを保存してメールに添付します。表の内容、パス、パスワードは含まれません。</span></p><p><span data-i18n="privacyDetails2">ホスティング事業者は、サイトの配信に必要な接続の技術情報を処理する場合があります。support@roweave.app にメールをいただいた場合、アドレスは返信にだけ使います。</span></p></div></details></footer>
+</body>
+</html>
