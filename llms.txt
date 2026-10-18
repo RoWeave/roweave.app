@@ -11,7 +11,7 @@
 
 ## Good to know
 
-- Price: free during the 0.11 beta, every feature, no limits, no sign-up, no ads.
+- Price: free during the 0.12 beta, every feature, no limits, no sign-up, no ads.
 - Systems: Windows 10 and 11 (64-bit, x64); Macs with Apple Silicon (M1 or later) on macOS 12.3 or later.
 - Formats: opens XLSX, XLSM, XLS, XLSB, CSV, TSV and TXT. Full formatting comes from XLSX/XLSM; from legacy XLS only data, number formats and merged cells; from XLSB only values. Password-protected XLSX, XLSM and XLSB open after entering the password (it is never stored).
 - Not carried over: pivot tables, charts, images and macros. Formulas become the values Excel last saved.
