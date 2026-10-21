@@ -26,7 +26,7 @@
   </header>
   <main class="container policy" id="main">
     <h1>Privacy Policy</h1>
-    <p class="policy-meta">Version 2, October 17, 2026. Covers the RoWeave app 0.11.9 and later, the roweave.app website and emails to support. The Russian text is the original; this is its translation.</p>
+    <p class="policy-meta">Version 3, October 21, 2026. Covers the RoWeave app 0.11.9 and later, the roweave.app website and emails to support. The Russian text is the original; this is its translation.</p>
 
     <h2>In short</h2>
     <ul>
@@ -46,7 +46,8 @@
       <li><strong>Run history.</strong> Up to the 200 most recent runs, no older than 90 days; older entries are removed automatically. An entry holds the date, tool, outcome, path to the result folder or file and to a saved ZIP, source file name, sheet name, column names, file count and the settings for “Repeat with a new file”. No cell values or passwords. A run interrupted with an unknown outcome stays until “Clear history”.</li>
       <li><strong>Folder permissions and completion journal.</strong> Paths to folders you chose and internal markers, so results can be saved and shown safely.</li>
       <li><strong>Settings.</strong> Theme, language, default results folder, result form (folder or ZIP), check for updates at launch, dismissed hints and the version postponed with “Later”.</li>
-      <li><strong>Support log.</strong> Up to 96 events, no older than 90 days: tool, stage, error code, time, counters, memory estimates and the computer’s free memory, update check and download events. No file names, paths, passwords or contents. It goes into a diagnostics file only when you save one.</li>
+      <li><strong>Support log.</strong> Up to 96 events, no older than 90 days: tool, stage, error code, time, counters, memory estimates and the computer’s free memory, update check and download events, and failures of the app itself: an internal RoWeave error (its place in RoWeave’s code, that is the module name and line number, and which thread) and a crash of the process that displays the window (which process and why, for example “out of memory”). No error text, file names, paths, passwords or contents. It goes into a diagnostics file only when you save one.</li>
+      <li><strong>App failures.</strong> If RoWeave closed because of a failure, the details reach the support log on the next start. For this, the app data folder keeps up to 16 entries: kind of failure, time, number of repeats and the same details as in the support log. The file is deleted as soon as the entries are moved to the log. It is never sent anywhere.</li>
       <li><strong>Copies of damaged data.</strong> If an internal data file turns out to be damaged, the app sets aside a copy marked <code>corrupt</code> next to its other data and never deletes it itself. It may contain the same as the history.</li>
       <li><strong>Your results.</strong> Files in the folder you chose and a hidden helper file <code>.output-workspace-run.json</code> in the run folder.</li>
     </ul>
@@ -64,6 +65,7 @@
       <li>On Windows, the installer copy in the temporary folder is removed at the next launch.</li>
       <li>The “Open roweave.app” button, shown when an update downloads slowly, opens the website in your browser.</li>
     </ul>
+    <p>Links in the app (the website, help, the privacy policy) open in your browser only when you click them. The website then sees the usual connection data, as with any visit.</p>
     <p>File names and contents, paths, passwords, history and diagnostics are not part of these requests. There is no persistent device ID.</p>
 
     <h2>If you contact support</h2>
@@ -73,7 +75,7 @@
       <li><strong>“Use webmail”</strong> opens the new-message page of the service you pick in your browser (depending on the language: Gmail, Outlook.com, Yandex Mail, Mail.ru). The subject and template are passed in that page’s address, so the mail service receives them when the page opens, and the address stays in your browser history.</li>
       <li><strong>“Attach diagnostics”</strong> (on by default) saves a diagnostics file to Downloads and attaches it to the draft or shows it in Finder or File Explorer. If Downloads is not available, the file goes to a temporary <code>RoWeave</code> folder and is removed from there after 7 days. The app does not remove it from Downloads. The file is also created by “Copy address and text”.</li>
     </ul>
-    <p><strong>What the diagnostics file contains.</strong> RoWeave version and build time, system and architecture, steps and timings, error codes including system ones, counters (rows, files, sizes), memory estimates for the workbook, the computer’s total and free memory, whether the tip to close other programs was shown, the size of part of the workbook in megabytes if it was rejected as too large, the sheet’s position number, update events, a session number and, for an internal error, the location in RoWeave’s code. No table contents, file names, paths or passwords. “Save diagnostics…” creates the same file.</p>
+    <p><strong>What the diagnostics file contains.</strong> RoWeave version and build time, system and architecture, steps and timings, error codes including system ones, counters (rows, files, sizes), memory estimates for the workbook, the computer’s total and free memory, whether the tip to close other programs was shown, the size of part of the workbook in megabytes if it was rejected as too large, the sheet’s position number, update events, a session number and details of app failures: the place of an internal error in RoWeave’s code and the kind and reason of a crash of the window process. No table contents, file names, paths, passwords, error text or stack traces, memory dumps, or user and computer names. RoWeave contains no crash-report uploader. “Save diagnostics…” creates the same file.</p>
     <p><strong>What the developer receives.</strong> When you send an email, we receive your address, your sender name if your mail shows one, the text and attachments. We use them only to reply and solve the problem. Legal basis: your request. Emails are stored in Apple iCloud Mail and deleted one year after the last message in the conversation. We do not sell or share them, except with the mail services they pass through.</p>
     <p><strong>Please do not send real workbooks with personal or confidential data.</strong> An anonymized sample is usually enough.</p>
 
@@ -89,6 +91,7 @@
     <ul>
       <li>If Windows has no Microsoft Edge WebView2, the installer runs Microsoft’s bootstrapper, which downloads this component from Microsoft’s servers. This does not happen when RoWeave updates.</li>
       <li>Windows SmartScreen and Microsoft Defender, and Gatekeeper on the Mac, may check the installer and the app with Microsoft or Apple. That is the system, not RoWeave.</li>
+      <li>If RoWeave or its window crashes, Windows and macOS may send a report about it to Microsoft or Apple according to their own diagnostics settings. That is also the system; RoWeave has no say in it.</li>
     </ul>
 
     <h2>AI assistants and automation (macOS)</h2>
@@ -124,7 +127,7 @@
     <p>RoWeave is not made specifically for children and collects no data about anyone. If you are under 16, please contact support together with a parent.</p>
 
     <h2>Changes</h2>
-    <p>If the app starts handling data differently, for example with a new network feature, we will update this page and its version date before that release and mention the change in the release notes. Version 2 (RoWeave 0.11.10): the diagnostics file gained free memory, the close-programs tip and the size of a workbook that is too large; the Microsoft Store version was added. Previous versions stay in the public history of the <a href="https://github.com/RoWeave/roweave.app/commits/main/en/privacy/index.html">RoWeave/roweave.app</a> repository.</p>
+    <p>If the app starts handling data differently, for example with a new network feature, we will update this page and its version date before that release and mention the change in the release notes. Version 2 (RoWeave 0.11.10): the diagnostics file gained free memory, the close-programs tip and the size of a workbook that is too large; the Microsoft Store version was added. Version 3 (RoWeave 0.12.4): the support log and the diagnostics file keep details of app failures, and a failures file in the app data folder was added; none of this is sent anywhere. Previous versions stay in the public history of the <a href="https://github.com/RoWeave/roweave.app/commits/main/en/privacy/index.html">RoWeave/roweave.app</a> repository.</p>
   </main>
   <footer class="container site-footer policy-footer"><p>© 2026 RoWeave · <a href="mailto:support@roweave.app">support@roweave.app</a> · <a href="../">Home</a></p></footer>
 </body>
