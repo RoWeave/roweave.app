@@ -28,15 +28,14 @@
     return languages.includes(code) ? code : null;
   }
 
-  // The root page is Russian. Without an explicit ?lang=, visitors go to their browser language (English otherwise).
+  // The root repeats the Russian page for crawlers without JavaScript; visitors go to their language's own page:
+  // an explicit ?lang= from old links first, then the browser language, English otherwise.
   if (root.hasAttribute('data-home')) {
     const requested = supportedLanguage(new URLSearchParams(location.search).get('lang'));
     const preferred = requested
       || (navigator.languages || [navigator.language]).map(supportedLanguage).find(Boolean) || 'en';
-    if (preferred !== language) {
-      location.replace(hrefFor(preferred) + location.hash);
-      return;
-    }
+    location.replace(hrefFor(preferred) + location.hash);
+    return;
   }
 
   const themeButton = document.querySelector('.theme-toggle');

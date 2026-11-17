@@ -4,7 +4,7 @@
 
 ## What it does
 
-- Split: pick a column, review the list of files, click Split. Each new workbook keeps the header rows, fonts, fills, borders, column widths, row heights, and number and date formats. Split can also password-protect the new files.
+- Split: pick a column, review the list of files, click Split. Each new workbook keeps the header rows, fonts, fills, borders, column widths, row heights, and number and date formats. Split can also password-protect the new files. Split can also save each sheet of a workbook as a separate file.
 - Combine: takes a folder of reports, picks the right sheet from each workbook, checks that the headers match and stacks the rows into one table, optionally with a column for the source file name.
 - CSV to Excel: converts large CSV files to XLSX in chunks, without loading the whole file into memory.
 - Before anything runs, RoWeave shows which files will be created and what won't carry over.
@@ -22,7 +22,7 @@
 ## Links
 
 - [Website (English)](https://roweave.app/en/)
-- [Website (Russian)](https://roweave.app/?lang=ru)
+- [Website (Russian)](https://roweave.app/ru/)
 - [Download for Windows](https://github.com/RoWeave/releases/releases/latest/download/RoWeave-Windows-x64-setup.exe)
 - [Download for Mac](https://github.com/RoWeave/releases/releases/latest/download/RoWeave-macOS-arm64.dmg)
 - [All versions and release notes](https://github.com/RoWeave/releases/releases)

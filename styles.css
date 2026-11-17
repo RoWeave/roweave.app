@@ -62,8 +62,7 @@ h2{font-size:clamp(30px,3.2vw,44px);line-height:1.14;letter-spacing:-1.2px;font-
 .step-number{display:grid;place-items:center;flex-shrink:0;width:34px;height:34px;border-radius:50%;border:1px solid color-mix(in srgb,var(--accent) 35%,transparent);color:var(--accent);font-size:14px;font-weight:600}
 .steps h3{font-size:18px;margin:3px 0 6px}.steps p{color:var(--muted);margin:0;max-width:420px}
 .app-preview{margin:0;min-width:0}.preview-label{font-size:13px;font-weight:560;color:var(--muted);margin:0 0 12px}
-.preview-link{display:block;border-radius:12px;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow-soft);overflow:hidden}.preview-link img{filter:var(--screenshot-filter)}
-.preview-open{display:flex;align-items:center;justify-content:center;gap:10px;padding:12px 16px;border-top:1px solid var(--line);color:var(--accent);font-size:14px;font-weight:560;line-height:1.5}.preview-link:hover .preview-open{background:var(--tint)}
+.preview-frame{border-radius:12px;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow-soft);overflow:hidden}.preview-frame img{filter:var(--screenshot-filter)}
 .app-preview figcaption{font-size:13px;text-align:center;color:var(--muted);margin-top:12px}
 
 /* Comparison and "what carries over" */
