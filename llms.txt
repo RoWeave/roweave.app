@@ -14,7 +14,7 @@
 - Price: free during the 0.13 beta, every feature, no limits, no sign-up, no ads.
 - Systems: Windows 10 and 11 (64-bit, x64); Macs with Apple Silicon (M1 or later) on macOS 12.3 or later.
 - Formats: opens XLSX, XLSM, XLS, XLSB, CSV, TSV and TXT. Full formatting comes from XLSX/XLSM; from legacy XLS only data, number formats and merged cells; from XLSB only values. Password-protected XLSX, XLSM and XLSB open after entering the password (it is never stored).
-- Not carried over: pivot tables, charts, images and macros. Formulas become the values Excel last saved.
+- Not carried over: pivot tables, charts, images and macros. Formulas usually become the values Excel last saved; in the “Each sheet as a separate file” mode, supported formulas that refer only to their own sheet can be kept.
 - The source file is never changed; results go to a folder the user chooses.
 - Interface languages: English, Russian, German, French, Spanish, Italian, Dutch, Polish, Czech, Brazilian Portuguese, Vietnamese, Indonesian, Japanese, Korean and Simplified Chinese.
 - Made by one developer. Support: support@roweave.app

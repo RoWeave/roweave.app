@@ -89,6 +89,28 @@
     }
   });
 
+  // Showcase tabs: Split, Combine, CSV to Excel. Arrow keys move between tabs.
+  const tabs = [...document.querySelectorAll('[role="tab"][data-tab]')];
+  function selectTab(active, focus) {
+    for (const tab of tabs) {
+      const selected = tab === active;
+      tab.setAttribute('aria-selected', String(selected));
+      tab.tabIndex = selected ? 0 : -1;
+      document.getElementById(tab.getAttribute('aria-controls')).hidden = !selected;
+    }
+    if (focus) active.focus();
+  }
+  selectTab(tabs[0], false);
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => selectTab(tab, false));
+    tab.addEventListener('keydown', event => {
+      const step = { ArrowRight: 1, ArrowLeft: -1 }[event.key];
+      if (!step) return;
+      event.preventDefault();
+      selectTab(tabs[(index + step + tabs.length) % tabs.length], true);
+    });
+  });
+
   const privacy = document.querySelector('#privacy');
   const openPrivacy = () => { if (location.hash === '#privacy') privacy.open = true; };
   document.querySelectorAll('a[href="#privacy"]').forEach(link => link.addEventListener('click', () => { privacy.open = true; }));
