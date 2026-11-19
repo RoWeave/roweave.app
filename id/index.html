@@ -46,217 +46,179 @@
 <body>
   <a class="skip-link" href="#main"><span data-i18n="skip">Langsung ke konten</span></a>
 
-  <header class="site-header">
+  <header class="site-header" id="top">
     <div class="container header-inner">
-      <a class="brand" href="#" aria-label="RoWeave, kembali ke atas" data-i18n-aria-label="brandHome"><img src="../assets/roweave-icon-160.webp" alt="" width="30" height="30"><span>RoWeave</span></a>
+      <a class="brand" href="#top" aria-label="RoWeave, kembali ke atas" data-i18n-aria-label="brandHome">
+        <img src="../assets/roweave-icon-160.webp" alt="" width="28" height="28">
+        <span class="brand-name">RoWeave</span>
+      </a>
 
-      <nav class="navigation" id="navigation" aria-label="Navigasi utama" data-i18n-aria-label="navigation">
+      <nav class="site-nav" id="navigation" aria-label="Navigasi utama" data-i18n-aria-label="navigation">
         <a href="#features"><span data-i18n="navFeatures">Fitur</span></a>
         <a href="#scenarios"><span data-i18n="navUseCases">Untuk siapa</span></a>
         <a href="#compare"><span data-i18n="navCompare">Perbandingan</span></a>
         <a href="#keep"><span data-i18n="navKeep">Apa yang dipertahankan</span></a>
         <a href="#faq"><span data-i18n="navFaq">FAQ</span></a>
+        <a class="nav-download" href="#download"><span data-i18n="navPlatforms">Unduh</span></a>
       </nav>
 
       <div class="header-actions">
         <label class="language-control" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c5 5 5 13 0 18-5-5-5-13 0-18Z"/></svg><span data-language-short aria-hidden="true">ID</span><select id="language" aria-label="Bahasa halaman" data-i18n-aria-label="language"><option value="id" selected data-href="../id/index.html">Bahasa Indonesia</option><option value="cs" data-href="../cs/index.html">Čeština</option><option value="de" data-href="../de/index.html">Deutsch</option><option value="en" data-href="../en/index.html">English</option><option value="es" data-href="../es/index.html">Español</option><option value="fr" data-href="../fr/index.html">Français</option><option value="it" data-href="../it/index.html">Italiano</option><option value="nl" data-href="../nl/index.html">Nederlands</option><option value="pl" data-href="../pl/index.html">Polski</option><option value="pt-BR" data-href="../pt-BR/index.html">Português (Brasil)</option><option value="vi" data-href="../vi/index.html">Tiếng Việt</option><option value="ru" data-href="../ru/index.html">Русский</option><option value="ja" data-href="../ja/index.html">日本語</option><option value="ko" data-href="../ko/index.html">한국어</option><option value="zh-Hans" data-href="../zh-Hans/index.html">简体中文</option></select></label>
 
-        <button class="icon-button theme-toggle" type="button" aria-label="Beralih ke tema gelap" data-label-light="Beralih ke tema terang" data-label-dark="Beralih ke tema gelap" data-i18n-aria-label="themeDark" data-i18n-data-label-light="themeLight" data-i18n-data-label-dark="themeDark" hidden>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20.7 13A8.8 8.8 0 0 1 11 3.3 8.8 8.8 0 1 0 20.7 13Z"/></svg>
+        <button class="theme-toggle" type="button" aria-label="Beralih ke tema gelap" data-label-light="Beralih ke tema terang" data-label-dark="Beralih ke tema gelap" data-text-light="Terang" data-text-dark="Gelap" data-i18n-aria-label="themeDark" data-i18n-data-label-light="themeLight" data-i18n-data-label-dark="themeDark" data-i18n-data-text-light="themeShortLight" data-i18n-data-text-dark="themeShortDark" hidden>
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20.7 13A8.8 8.8 0 0 1 11 3.3 8.8 8.8 0 1 0 20.7 13Z"/></svg>
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.4M12 19.6V22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M2 12h2.4M19.6 12H22M4.9 19.1l1.7-1.7M17.4 6.6l1.7-1.7"/></svg>
+          <span class="theme-toggle-text" data-theme-text><span data-i18n="themeShortDark">Gelap</span></span>
         </button>
 
-        <a class="button button-small" href="#download"><span data-i18n="navPlatforms">Unduh</span></a>
+        <a class="btn btn-primary btn-sm" href="#download"><span data-i18n="navPlatforms">Unduh</span></a>
 
-        <button class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Buka menu" data-label-open="Buka menu" data-label-close="Tutup menu" data-i18n-aria-label="menuOpen" data-i18n-data-label-open="menuOpen" data-i18n-data-label-close="menuClose" hidden>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Buka menu" data-label-open="Buka menu" data-label-close="Tutup menu" data-i18n-aria-label="menuOpen" data-i18n-data-label-open="menuOpen" data-i18n-data-label-close="menuClose" hidden>
+          <svg class="icon-menu" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
         </button>
       </div>
     </div>
   </header>
 
   <main id="main" tabindex="-1">
-    <section class="hero container" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="hero-meta"><span data-i18n="heroMeta">Beta gratis 0.13 · Windows 10/11 dan macOS 12.3+</span></p>
-        <h1 id="hero-title"><span data-i18n="heroTogether">Pisahkan Excel per kolom.</span> <span data-i18n="heroApart">Gabungkan laporan jadi satu.</span></h1>
-        <p class="hero-description"><span data-i18n="heroDescription">RoWeave memisahkan file Excel per kolom menjadi file-file terpisah dan menggabungkan laporan dari satu folder menjadi satu tabel.</span></p>
-        <div class="hero-actions">
-          <a class="button" href="#download"><span data-i18n="ctaPlatforms">Unduh gratis</span></a>
-          <a class="button button-quiet" href="#how-it-works"><span data-i18n="navHow">Cara kerja</span></a>
-        </div>
-      </div>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-head">
+          <p class="hero-kicker">
+            <span class="kicker-dot" aria-hidden="true"></span>
+            <span data-i18n="downloadStatus">Beta 0.13 gratis</span>
+            <span class="kicker-sep" aria-hidden="true">·</span>
+            <span data-i18n="heroPlatforms">Windows 10/11 dan macOS 12.3+</span>
+          </p>
 
-      <div class="showcase" id="showcase">
-        <div class="showcase-bar">
-          <div class="segmented" role="tablist" aria-label="Mode aplikasi RoWeave" data-i18n-aria-label="showcaseLabel">
-            <button class="segment" type="button" role="tab" id="tab-split" aria-selected="true" aria-controls="panel-split" data-tab="split"><span data-i18n="splitLabel">Pisahkan</span></button>
-            <button class="segment" type="button" role="tab" id="tab-collect" aria-selected="false" aria-controls="panel-collect" data-tab="collect"><span data-i18n="collectLabel">Gabungkan</span></button>
-            <button class="segment" type="button" role="tab" id="tab-csv" aria-selected="false" aria-controls="panel-csv" data-tab="csv"><span data-i18n="csvLabel">CSV → Excel</span></button>
-          </div>
-        </div>
+          <div class="hero-top">
+            <h1 id="hero-title">
+              <span class="hero-line-main" data-i18n="heroTogether">Pisahkan Excel per kolom.</span>
+              <span class="hero-line-sub" data-i18n="heroApart">Gabungkan laporan jadi satu.</span>
+            </h1>
 
-        <div class="window-frame">
-          <div class="showcase-panel" id="panel-split" role="tabpanel" aria-labelledby="tab-split" tabindex="0">
-            <picture class="shot-light">
-              <source media="(max-width: 640px)" srcset="../assets/app-split-light-mobile.webp" width="936" height="838">
-              <img src="../assets/app-split-light.webp" alt="Jendela Pisahkan di RoWeave: kolom “Wilayah” dipilih dan daftar 7 file yang akan dibuat ditampilkan sebelum dijalankan" data-i18n-alt="shotSplitAlt" width="1536" height="864" fetchpriority="high">
-            </picture>
-            <picture class="shot-dark">
-              <source media="(max-width: 640px)" srcset="../assets/app-split-dark-mobile.webp" width="936" height="838">
-              <img src="../assets/app-split-dark.webp" alt="Jendela Pisahkan di RoWeave: kolom “Wilayah” dipilih dan daftar 7 file yang akan dibuat ditampilkan sebelum dijalankan" data-i18n-alt="shotSplitAlt" width="1536" height="864" fetchpriority="high">
-            </picture>
-          </div>
-          <div class="showcase-panel" id="panel-collect" role="tabpanel" aria-labelledby="tab-collect" tabindex="0" hidden>
-            <picture class="shot-light">
-              <source media="(max-width: 640px)" srcset="../assets/app-collect-light-mobile.webp" width="936" height="838">
-              <img src="../assets/app-collect-light.webp" alt="Jendela Gabungkan di RoWeave: tiga file cabang, pengecekan header, dan pratinjau tabel gabungan dengan kolom file sumber" data-i18n-alt="shotCollectAlt" width="1536" height="864" loading="lazy">
-            </picture>
-            <picture class="shot-dark">
-              <source media="(max-width: 640px)" srcset="../assets/app-collect-dark-mobile.webp" width="936" height="838">
-              <img src="../assets/app-collect-dark.webp" alt="Jendela Gabungkan di RoWeave: tiga file cabang, pengecekan header, dan pratinjau tabel gabungan dengan kolom file sumber" data-i18n-alt="shotCollectAlt" width="1536" height="864" loading="lazy">
-            </picture>
-          </div>
-          <div class="showcase-panel" id="panel-csv" role="tabpanel" aria-labelledby="tab-csv" tabindex="0" hidden>
-            <picture class="shot-light">
-              <source media="(max-width: 640px)" srcset="../assets/app-csv-light-mobile.webp" width="936" height="838">
-              <img src="../assets/app-csv-light.webp" alt="Konverter CSV ke Excel di RoWeave: pengodean dan pemisah terdeteksi otomatis, angka nol di depan kode tetap dipertahankan" data-i18n-alt="shotCsvAlt" width="1536" height="864" loading="lazy">
-            </picture>
-            <picture class="shot-dark">
-              <source media="(max-width: 640px)" srcset="../assets/app-csv-dark-mobile.webp" width="936" height="838">
-              <img src="../assets/app-csv-dark.webp" alt="Konverter CSV ke Excel di RoWeave: pengodean dan pemisah terdeteksi otomatis, angka nol di depan kode tetap dipertahankan" data-i18n-alt="shotCsvAlt" width="1536" height="864" loading="lazy">
-            </picture>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="container facts-strip" aria-label="Intinya" data-i18n-aria-label="trustLabel">
-      <div class="facts-grid">
-        <div class="fact-item">
-          <strong><span data-i18n="trustFiles">Tidak ada yang diunggah</span></strong>
-          <p><span data-i18n="privacyBody">File diproses di komputer Anda dan tidak dikirim ke mana pun. RoWeave hanya terhubung ke internet untuk memeriksa pembaruan, dan Anda dapat mematikannya di pengaturan.</span></p>
-        </div>
-        <div class="fact-item">
-          <strong><span data-i18n="fact2Title">Tidak dipasang di dalam Excel</span></strong>
-          <p><span data-i18n="fact2Body">Aplikasi terpisah tanpa makro VBA atau add-in. Excel tidak perlu terpasang, dan di Windows aplikasi ini dipasang tanpa hak administrator.</span></p>
-        </div>
-        <div class="fact-item">
-          <strong><span data-i18n="fact3Title">Lihat rencananya sebelum dijalankan</span></strong>
-          <p><span data-i18n="featuresIntro">Sebelum apa pun dijalankan, RoWeave menunjukkan file apa yang akan Anda dapatkan dan apa yang tidak ikut terbawa.</span></p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section container" id="features" aria-labelledby="features-title" tabindex="-1">
-      <div class="section-head">
-        <h2 id="features-title"><span data-i18n="featuresTitle">Tiga pekerjaan yang biasanya dikerjakan manual</span></h2>
-      </div>
-
-      <div class="ledger">
-        <article class="ledger-row">
-          <div class="ledger-id">
-            <span class="index-num">01</span>
-            <div>
-              <p class="ledger-tag"><span data-i18n="splitLabel">Pisahkan</span></p>
-              <h3><span data-i18n="splitTitle">Satu lembar → satu file untuk setiap nilai</span></h3>
-              <p class="flow-badge"><span data-i18n="splitExampleIn">Daftar gaji</span> <span aria-hidden="true">→</span> <span data-i18n="splitExampleOut">satu file per departemen</span></p>
+            <div class="hero-aside">
+              <p class="hero-desc"><span data-i18n="heroDescription">RoWeave memisahkan file Excel per kolom menjadi file-file terpisah dan menggabungkan laporan dari satu folder menjadi satu tabel.</span></p>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="#download"><span data-i18n="ctaPlatforms">Unduh gratis</span></a>
+                <a class="btn btn-ghost" href="#how-it-works"><span data-i18n="navHow">Cara kerja</span> <span aria-hidden="true">↓</span></a>
+              </div>
             </div>
           </div>
-          <div class="ledger-body">
-            <p><span data-i18n="splitBody">Pilih kolom, misalnya “Departemen”. RoWeave membuat satu buku kerja per departemen dengan tetap mempertahankan baris header, lebar kolom, format angka, serta warna isian dan font. Pilih beberapa kolom, dan kolom pertama menentukan subfolder. Setiap file bisa diberi kata sandi sendiri.</span></p>
-            <p class="ledger-detail"><span data-i18n="splitDetail">Ada juga mode “Setiap lembar sebagai file terpisah”. File hasil bisa langsung dikemas ke ZIP atau diberi kata sandi: satu untuk semua atau berbeda untuk setiap file, dengan daftar kata sandi di file terpisah.</span></p>
-          </div>
-        </article>
+        </div>
 
-        <article class="ledger-row">
-          <div class="ledger-id">
-            <span class="index-num">02</span>
-            <div>
-              <p class="ledger-tag"><span data-i18n="collectLabel">Gabungkan</span></p>
-              <h3><span data-i18n="collectTitle">Banyak file → satu lembar</span></h3>
-              <p class="flow-badge"><span data-i18n="collectExampleIn">30 laporan cabang</span> <span aria-hidden="true">→</span> <span data-i18n="collectExampleOut">satu lembar</span></p>
+        <div class="showcase" id="showcase">
+          <div class="mode-bar" role="tablist" aria-label="Mode aplikasi RoWeave" data-i18n-aria-label="showcaseLabel">
+            <button class="mode-tab" type="button" role="tab" id="tab-split" aria-selected="true" aria-controls="panel-split" data-tab="split"><span class="mode-name" data-i18n="splitLabel">Pisahkan</span></button>
+            <button class="mode-tab" type="button" role="tab" id="tab-collect" aria-selected="false" aria-controls="panel-collect" data-tab="collect" tabindex="-1"><span class="mode-name" data-i18n="collectLabel">Gabungkan</span></button>
+            <button class="mode-tab" type="button" role="tab" id="tab-csv" aria-selected="false" aria-controls="panel-csv" data-tab="csv" tabindex="-1"><span class="mode-name" data-i18n="csvLabel">CSV → Excel</span></button>
+          </div>
+
+          <div class="specimen-frame">
+            <div class="showcase-panel" id="panel-split" role="tabpanel" aria-labelledby="tab-split" tabindex="0">
+              <picture class="shot-light">
+                <source media="(max-width: 640px)" srcset="../assets/app-split-light-mobile.webp" width="936" height="838">
+                <img src="../assets/app-split-light.webp" alt="Jendela Pisahkan di RoWeave: kolom “Wilayah” dipilih dan daftar 7 file yang akan dibuat ditampilkan sebelum dijalankan" data-i18n-alt="shotSplitAlt" width="1536" height="864" fetchpriority="high">
+              </picture>
+              <picture class="shot-dark">
+                <source media="(max-width: 640px)" srcset="../assets/app-split-dark-mobile.webp" width="936" height="838">
+                <img src="../assets/app-split-dark.webp" alt="Jendela Pisahkan di RoWeave: kolom “Wilayah” dipilih dan daftar 7 file yang akan dibuat ditampilkan sebelum dijalankan" data-i18n-alt="shotSplitAlt" width="1536" height="864" fetchpriority="high">
+              </picture>
+            </div>
+            <div class="showcase-panel" id="panel-collect" role="tabpanel" aria-labelledby="tab-collect" tabindex="0" hidden>
+              <picture class="shot-light">
+                <source media="(max-width: 640px)" srcset="../assets/app-collect-light-mobile.webp" width="936" height="838">
+                <img src="../assets/app-collect-light.webp" alt="Jendela Gabungkan di RoWeave: tiga file cabang, pengecekan header, dan pratinjau tabel gabungan dengan kolom file sumber" data-i18n-alt="shotCollectAlt" width="1536" height="864" loading="lazy">
+              </picture>
+              <picture class="shot-dark">
+                <source media="(max-width: 640px)" srcset="../assets/app-collect-dark-mobile.webp" width="936" height="838">
+                <img src="../assets/app-collect-dark.webp" alt="Jendela Gabungkan di RoWeave: tiga file cabang, pengecekan header, dan pratinjau tabel gabungan dengan kolom file sumber" data-i18n-alt="shotCollectAlt" width="1536" height="864" loading="lazy">
+              </picture>
+            </div>
+            <div class="showcase-panel" id="panel-csv" role="tabpanel" aria-labelledby="tab-csv" tabindex="0" hidden>
+              <picture class="shot-light">
+                <source media="(max-width: 640px)" srcset="../assets/app-csv-light-mobile.webp" width="936" height="838">
+                <img src="../assets/app-csv-light.webp" alt="Konverter CSV ke Excel di RoWeave: pengodean dan pemisah terdeteksi otomatis, angka nol di depan kode tetap dipertahankan" data-i18n-alt="shotCsvAlt" width="1536" height="864" loading="lazy">
+              </picture>
+              <picture class="shot-dark">
+                <source media="(max-width: 640px)" srcset="../assets/app-csv-dark-mobile.webp" width="936" height="838">
+                <img src="../assets/app-csv-dark.webp" alt="Konverter CSV ke Excel di RoWeave: pengodean dan pemisah terdeteksi otomatis, angka nol di depan kode tetap dipertahankan" data-i18n-alt="shotCsvAlt" width="1536" height="864" loading="lazy">
+              </picture>
             </div>
           </div>
-          <div class="ledger-body">
-            <p><span data-i18n="collectBody">Masukkan satu folder laporan. RoWeave mengambil lembar yang tepat dari setiap buku kerja, memeriksa bahwa header-nya cocok, lalu menumpuk barisnya menjadi satu tabel. Anda juga bisa menambahkan kolom berisi nama file sumber. Buku kerja XLSX, XLSM, dan XLSB yang dilindungi kata sandi juga bisa diproses; file XLS lama (Excel 97–2003) yang dienkripsi tidak dapat dibuka.</span></p>
-          </div>
-        </article>
-
-        <article class="ledger-row">
-          <div class="ledger-id">
-            <span class="index-num">03</span>
-            <div>
-              <p class="ledger-tag"><span data-i18n="csvLabel">CSV → Excel</span></p>
-              <h3><span data-i18n="csvTitle">Ekspor CSV → file Excel yang rapi</span></h3>
-              <p class="flow-badge"><span data-i18n="csvExampleIn">Ekspor ERP</span> <span aria-hidden="true">→</span> <span data-i18n="csvExampleOut">XLSX, nol tetap ada</span></p>
-            </div>
-          </div>
-          <div class="ledger-body">
-            <p><span data-i18n="csvBody">Konversi CSV ke XLSX dengan tetap mempertahankan angka nol di depan pada kode produk, ID, dan nomor rekening, agar angka panjang tidak berubah menjadi “1,2E+15”.</span></p>
-            <p class="ledger-detail"><span data-i18n="csvDetail">RoWeave mendeteksi pengodean sendiri, termasuk UTF-8 dan Windows-1252. Jika tidak yakin, RoWeave menampilkan pratinjau dan meminta Anda memilih. Ekspor besar dibaca bertahap, hingga 8 juta sel.</span></p>
-          </div>
-        </article>
+        </div>
       </div>
     </section>
 
-    <section class="section section-tight container" id="scenarios" aria-labelledby="scenarios-title" tabindex="-1">
-      <div class="section-head">
-        <h2 id="scenarios-title"><span data-i18n="useCasesTitle">Jika Anda mengerjakan ini manual setiap bulan</span></h2>
-      </div>
-
-      <ul class="cell-grid">
-        <li class="cell-item">
-          <p class="cell-role"><span data-i18n="use1Role">Keuangan &amp; akuntansi</span></p>
-          <h3><span data-i18n="use1Task">Kirim laporan ke setiap cost center</span></h3>
-          <p><span data-i18n="use1Body">Satu laporan seluruh perusahaan → satu file per cost center, dengan header dan format angka yang sama.</span></p>
-        </li>
-        <li class="cell-item">
-          <p class="cell-role"><span data-i18n="use2Role">HR</span></p>
-          <h3><span data-i18n="use2Task">Beri setiap manajer hanya timnya sendiri</span></h3>
-          <p><span data-i18n="use2Body">Daftar karyawan → satu file per departemen, masing-masing dengan kata sandi sendiri. RoWeave menyimpan kata sandi ke daftar terpisah.</span></p>
-        </li>
-        <li class="cell-item">
-          <p class="cell-role"><span data-i18n="use3Role">Logistik &amp; gudang</span></p>
-          <h3><span data-i18n="use3Task">Gabungkan laporan gudang jadi satu lembar</span></h3>
-          <p><span data-i18n="use3Body">30 file dari berbagai lokasi → satu tabel. Setiap baris bisa memuat nama file asalnya.</span></p>
-        </li>
-        <li class="cell-item">
-          <p class="cell-role"><span data-i18n="use4Role">Operasional penjualan</span></p>
-          <h3><span data-i18n="use4Task">Kirim target vs. realisasi ke setiap tenaga penjual</span></h3>
-          <p><span data-i18n="use4Body">Ekspor CRM dengan kolom Wilayah dan Tenaga penjual → satu folder per wilayah, berisi satu file untuk setiap tenaga penjual.</span></p>
-        </li>
-        <li class="cell-item">
-          <p class="cell-role"><span data-i18n="use5Role">Ekspor ERP &amp; bank</span></p>
-          <h3><span data-i18n="use5Task">Buka CSV tanpa kehilangan angka nol di depan</span></h3>
-          <p><span data-i18n="use5Body">CSV → XLSX, dengan kode produk, NPWP, dan nomor rekening persis seperti saat diekspor.</span></p>
-        </li>
-        <li class="cell-item">
-          <p class="cell-role"><span data-i18n="use6Role">Sekolah &amp; universitas</span></p>
-          <h3><span data-i18n="use6Task">Pisahkan daftar nama per kelas atau kelompok</span></h3>
-          <p><span data-i18n="use6Body">Satu daftar induk → satu file per kelompok. Nanti, gabungkan kembali file dari para guru menjadi satu buku kerja.</span></p>
-        </li>
-      </ul>
-    </section>
-
-    <section class="band-soft" id="how-it-works" aria-labelledby="workflow-title" tabindex="-1">
+    <section class="principles" aria-label="Intinya" data-i18n-aria-label="trustLabel">
       <div class="container">
-        <div class="section-head">
+        <div class="principles-grid">
+          <div class="principle-item">
+            <h2><span data-i18n="trustFiles">Tidak ada yang diunggah</span></h2>
+            <p><span data-i18n="trustFilesBody">RoWeave memproses file di komputer Anda. Pemeriksaan pembaruan otomatis bisa dimatikan di pengaturan.</span></p>
+          </div>
+          <div class="principle-item">
+            <h2><span data-i18n="fact2Title">Tidak dipasang di dalam Excel</span></h2>
+            <p><span data-i18n="fact2Body">Aplikasi terpisah tanpa makro VBA atau add-in. Excel tidak perlu terpasang, dan di Windows aplikasi ini dipasang tanpa hak administrator.</span></p>
+          </div>
+          <div class="principle-item">
+            <h2><span data-i18n="fact3Title">Lihat rencananya sebelum dijalankan</span></h2>
+            <p><span data-i18n="featuresIntro">Sebelum apa pun dijalankan, RoWeave menunjukkan file apa yang akan Anda dapatkan dan apa yang tidak ikut terbawa.</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features" aria-labelledby="features-title" tabindex="-1">
+      <div class="container split-section">
+        <div class="split-rail">
+          <h2 id="features-title"><span data-i18n="featuresTitle">Tiga pekerjaan yang biasanya dikerjakan manual</span></h2>
+        </div>
+
+        <div class="split-content">
+          <article class="feature-entry" id="mode-split">
+            <p class="entry-index"><span data-i18n="splitLabel">Pisahkan</span></p>
+            <h3><span data-i18n="splitTitle">Satu lembar → satu file untuk setiap nilai</span></h3>
+            <p><span data-i18n="splitBody">Pilih kolom, misalnya “Departemen”. RoWeave membuat satu buku kerja per departemen dengan tetap mempertahankan baris header, lebar kolom, format angka, serta warna isian dan font. Pilih beberapa kolom, dan kolom pertama menentukan subfolder.</span></p>
+            <p class="entry-secondary"><span data-i18n="splitDetail">Ada juga mode “Setiap lembar sebagai file terpisah” (bisa mempertahankan rumus yang didukung dalam lembar yang sama) dan mode “Pisahkan per bagian” untuk buku kerja yang sangat besar. File hasil bisa langsung dikemas ke ZIP atau diberi kata sandi: satu untuk semua atau berbeda untuk setiap file, dengan daftar kata sandi di file terpisah.</span></p>
+          </article>
+
+          <article class="feature-entry" id="mode-collect">
+            <p class="entry-index"><span data-i18n="collectLabel">Gabungkan</span></p>
+            <h3><span data-i18n="collectTitle">Banyak file → satu lembar</span></h3>
+            <p><span data-i18n="collectBody">Masukkan satu folder laporan. RoWeave mengambil lembar yang tepat dari setiap buku kerja, memeriksa bahwa header-nya cocok, lalu menumpuk barisnya menjadi satu tabel. Anda juga bisa menambahkan kolom berisi nama file sumber. Buku kerja XLSX, XLSM, dan XLSB yang dilindungi kata sandi juga bisa diproses; file XLS lama (Excel 97–2003) yang dienkripsi tidak dapat dibuka.</span></p>
+          </article>
+
+          <article class="feature-entry" id="mode-csv">
+            <p class="entry-index"><span data-i18n="csvLabel">CSV → Excel</span></p>
+            <h3><span data-i18n="csvTitle">Ekspor CSV → file Excel yang rapi</span></h3>
+            <p><span data-i18n="csvBody">Konversi CSV ke XLSX dengan tetap mempertahankan angka nol di depan pada kode produk, ID, dan nomor rekening, agar angka panjang tidak berubah menjadi “1,2E+15”.</span></p>
+            <p class="entry-secondary"><span data-i18n="csvDetail">RoWeave mendeteksi pengodean sendiri, termasuk UTF-8 dan Windows-1252. Jika tidak yakin, RoWeave menampilkan pratinjau dan meminta Anda memilih. Ekspor besar dibaca bertahap, hingga 8 juta sel.</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="workflow-band" id="how-it-works" aria-labelledby="workflow-title" tabindex="-1">
+      <div class="container">
+        <div class="band-head">
           <h2 id="workflow-title"><span data-i18n="workflowTitle">Cara kerja</span></h2>
         </div>
 
-        <ol class="steps-row">
-          <li>
-            <span class="step-index" aria-hidden="true">01</span>
+        <ol class="workflow-steps">
+          <li class="workflow-step">
+            <span class="step-num" aria-hidden="true">01</span>
             <h3><span data-i18n="step1Title">Masukkan file Anda</span></h3>
             <p><span data-i18n="step1Body">Satu buku kerja, beberapa file, atau satu folder penuh. Mendukung XLSX, XLSM, XLS, XLSB, CSV, TSV, dan TXT.</span></p>
           </li>
-          <li>
-            <span class="step-index" aria-hidden="true">02</span>
+          <li class="workflow-step">
+            <span class="step-num" aria-hidden="true">02</span>
             <h3><span data-i18n="step2Title">Periksa hasilnya</span></h3>
             <p><span data-i18n="step2Body">Pilih lembar dan kolom. RoWeave menampilkan daftar file yang akan dibuat dan memperingatkan Anda jika ada yang tidak ikut terbawa.</span></p>
           </li>
-          <li>
-            <span class="step-index" aria-hidden="true">03</span>
+          <li class="workflow-step">
+            <span class="step-num" aria-hidden="true">03</span>
             <h3><span data-i18n="step3Title">Simpan hasilnya</span></h3>
             <p><span data-i18n="step3Body">File baru disimpan di folder pilihan Anda. File asli tidak tersentuh, dan proses sebelumnya tersimpan di Riwayat.</span></p>
           </li>
@@ -264,266 +226,326 @@
       </div>
     </section>
 
-    <section class="section container" id="compare" aria-labelledby="compare-title" tabindex="-1">
-      <div class="section-head">
-        <h2 id="compare-title"><span data-i18n="compareTitle">Cara yang biasa dipakai</span></h2>
-        <p><span data-i18n="compareIntro">Add-in bisa melakukan lebih banyak dan bekerja langsung di Excel. RoWeave cocok jika Anda tidak ingin memasang add-in atau makro, atau bekerja di Mac.</span></p>
-      </div>
-
-      <div class="table-wrap">
-        <table class="compare-table">
-          <thead>
-            <tr>
-              <th scope="col"><span data-i18n="compareColMethod">Cara</span></th>
-              <th scope="col"><span data-i18n="compareColSplit">Pisahkan per kolom ke file</span></th>
-              <th scope="col"><span data-i18n="compareColMerge">Gabungkan file jadi satu</span></th>
-              <th scope="col"><span data-i18n="compareColMac">Mac</span></th>
-              <th scope="col"><span data-i18n="compareColNeeds">Kebutuhan dan batasan</span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row"><span data-i18n="compareManualTitle">Manual</span></th>
-              <td data-label="Pisahkan per kolom ke file" data-i18n-data-label="compareColSplit"><span data-i18n="compareManualSplit">Lambat, mudah salah baris</span></td>
-              <td data-label="Gabungkan file jadi satu" data-i18n-data-label="compareColMerge"><span data-i18n="compareManualMerge">Salin-tempel manual</span></td>
-              <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareYes">Ya</span></td>
-              <td data-label="Kebutuhan dan batasan" data-i18n-data-label="compareColNeeds"><span data-i18n="compareManualNeeds">Untuk setiap departemen, Anda harus memfilter baris, menyalinnya, dan menyimpannya sebagai file terpisah</span></td>
-            </tr>
-            <tr>
-              <th scope="row"><span data-i18n="comparePqTitle">Power Query (di Excel)</span></th>
-              <td data-label="Pisahkan per kolom ke file" data-i18n-data-label="compareColSplit"><span data-i18n="compareNo">Tidak</span></td>
-              <td data-label="Gabungkan file jadi satu" data-i18n-data-label="compareColMerge"><span data-i18n="comparePqMerge">Ya, dari folder</span></td>
-              <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="comparePqMac">Impor dari folder terbatas</span></td>
-              <td data-label="Kebutuhan dan batasan" data-i18n-data-label="compareColNeeds"><span data-i18n="comparePqNeeds">Sudah ada di Excel untuk Windows, tetapi kueri harus disiapkan; tidak bisa memisahkan ke file</span></td>
-            </tr>
-            <tr>
-              <th scope="row"><span data-i18n="compareVbaTitle">Makro VBA</span></th>
-              <td data-label="Pisahkan per kolom ke file" data-i18n-data-label="compareColSplit"><span data-i18n="compareVbaCode">Jika ada kode siap pakai</span></td>
-              <td data-label="Gabungkan file jadi satu" data-i18n-data-label="compareColMerge"><span data-i18n="compareVbaCode">Jika ada kode siap pakai</span></td>
-              <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareVbaMac">Sering perlu diubah</span></td>
-              <td data-label="Kebutuhan dan batasan" data-i18n-data-label="compareColNeeds"><span data-i18n="compareVbaNeeds">Perlu makro yang dibuat untuk tugas Anda dan izin untuk menjalankannya</span></td>
-            </tr>
-            <tr>
-              <th scope="row"><span data-i18n="compareAddinsTitle">Add-in Excel</span></th>
-              <td data-label="Pisahkan per kolom ke file" data-i18n-data-label="compareColSplit"><span data-i18n="compareAddinsVaries">Tergantung add-in</span></td>
-              <td data-label="Gabungkan file jadi satu" data-i18n-data-label="compareColMerge"><span data-i18n="compareAddinsVaries">Tergantung add-in</span></td>
-              <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareAddinsVaries">Tergantung add-in</span></td>
-              <td data-label="Kebutuhan dan batasan" data-i18n-data-label="compareColNeeds"><span data-i18n="compareAddinsNeeds">Berjalan di dalam Excel; kompatibilitas dan ketentuan penggunaan tergantung produknya</span></td>
-            </tr>
-            <tr>
-              <th scope="row"><span data-i18n="compareOnlineTitle">Layanan online</span></th>
-              <td data-label="Pisahkan per kolom ke file" data-i18n-data-label="compareColSplit"><span data-i18n="compareOnlineVaries">Tergantung layanannya</span></td>
-              <td data-label="Gabungkan file jadi satu" data-i18n-data-label="compareColMerge"><span data-i18n="compareOnlineVaries">Tergantung layanannya</span></td>
-              <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareYes">Ya</span></td>
-              <td data-label="Kebutuhan dan batasan" data-i18n-data-label="compareColNeeds"><span data-i18n="compareOnlineNeeds">Biasanya tabel berisi data gaji atau pelanggan harus diunggah ke server milik orang lain</span></td>
-            </tr>
-            <tr class="compare-highlight">
-              <th scope="row"><span data-i18n="compareRoweaveTitle">RoWeave</span></th>
-              <td data-label="Pisahkan per kolom ke file" data-i18n-data-label="compareColSplit"><span data-i18n="compareRoweaveSplit">Ya, langsung ke file dengan pratinjau</span></td>
-              <td data-label="Gabungkan file jadi satu" data-i18n-data-label="compareColMerge"><span data-i18n="compareRoweaveMerge">Ya, dengan pengecekan header</span></td>
-              <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareRoweaveMac">Ya (Apple Silicon)</span></td>
-              <td data-label="Kebutuhan dan batasan" data-i18n-data-label="compareColNeeds"><span data-i18n="compareRoweaveNeeds">Aplikasi terpisah untuk Windows dan Mac; tidak perlu Excel, gratis selama beta 0.13</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section class="section section-tight container" id="keep" aria-labelledby="keep-title" tabindex="-1">
-      <div class="section-head">
-        <h2 id="keep-title"><span data-i18n="keepTitle">Apa yang ikut terbawa ke file baru dan apa yang tidak</span></h2>
-      </div>
-
-      <div class="spec-panel">
-        <div class="spec-columns">
-          <div class="spec-col spec-yes">
-            <h3><span class="spec-mark" aria-hidden="true">✓</span> <span data-i18n="keepYesTitle">Dipertahankan</span></h3>
-            <ul>
-              <li><span data-i18n="keepYes1">Font, warna isian, border, perataan</span></li>
-              <li><span data-i18n="keepYes2">Lebar kolom, format angka dan tanggal</span></li>
-              <li><span data-i18n="keepYes3">Baris header di atas tabel di setiap file</span></li>
-              <li><span data-i18n="keepYes4">Tinggi baris</span></li>
-            </ul>
-          </div>
-
-          <div class="spec-col spec-exp">
-            <h3><span class="spec-mark" aria-hidden="true">β</span> <span data-i18n="keepExpTitle">Beta, aktifkan di Pengaturan lanjutan (nonaktif secara default)</span></h3>
-            <ul>
-              <li><span data-i18n="keepExp1">Perlindungan lembar dan sel yang dapat diedit</span></li>
-              <li><span data-i18n="keepExp2">Daftar menurun dan validasi data</span></li>
-              <li><span data-i18n="keepExp3">Pemformatan bersyarat</span></li>
-            </ul>
-            <p class="spec-subnote"><span data-i18n="keepExpNote">Di bagian “Yang dipertahankan dari buku kerja sumber” pada Pisahkan dan Gabungkan.</span></p>
-          </div>
-
-          <div class="spec-col spec-no">
-            <h3><span class="spec-mark" aria-hidden="true">—</span> <span data-i18n="keepNoTitle">Tidak dibawa</span></h3>
-            <ul>
-              <li><span data-i18n="keepNo1">PivotTable, bagan, gambar</span></li>
-              <li><span data-i18n="keepNo2">Makro: hasilnya XLSX biasa</span></li>
-            </ul>
-          </div>
+    <section class="section" id="scenarios" aria-labelledby="scenarios-title" tabindex="-1">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="scenarios-title"><span data-i18n="useCasesTitle">Jika Anda mengerjakan ini manual setiap bulan</span></h2>
         </div>
 
-        <div class="spec-formats">
-          <div>
-            <strong><span data-i18n="formulasTitle">Rumus</span></strong>
-            <p><span data-i18n="formulasBody">Rumus biasanya diganti dengan nilai yang tersimpan di buku kerja. Dalam mode “Setiap lembar sebagai file terpisah”, rumus yang didukung dan hanya merujuk ke lembarnya sendiri bisa dipertahankan. Aplikasi menampilkan batasannya sebelum dijalankan.</span></p>
+        <div class="ledger-table" role="region" aria-label="Contoh tugas per tim" data-i18n-aria-label="scenariosLabel">
+          <div class="ledger-header" aria-hidden="true">
+            <span data-i18n="ledgerColRole">Tim atau sumber</span>
+            <span data-i18n="ledgerColTask">Tugas</span>
+            <span data-i18n="ledgerColResult">Yang dilakukan RoWeave</span>
           </div>
-          <div>
-            <strong><span data-i18n="formatsSplitTitle">File lama dan biner di Pisahkan</span></strong>
-            <p><span data-i18n="formatsSplitBody">Dari XLS (Excel 97–2003), Pisahkan membawa data, format angka, dan sel gabungan, tetapi tidak font, warna isian, atau border; dari XLSB biner, hanya nilai.</span></p>
-          </div>
-          <div>
-            <strong><span data-i18n="formatsCollectTitle">Sumber campuran di Gabungkan</span></strong>
-            <p><span data-i18n="formatsCollectBody">Jika sumbernya mencakup XLS, XLSB, atau file teks (CSV, TSV, TXT), Gabungkan menulis seluruh tabel sebagai nilai tanpa format, termasuk bagian dari buku kerja XLSX.</span></p>
-          </div>
+
+          <ul class="ledger-rows">
+            <li class="ledger-row">
+              <span class="ledger-role" data-i18n="use1Role">Keuangan &amp; akuntansi</span>
+              <h3 class="ledger-task"><span data-i18n="use1Task">Kirim laporan ke setiap cost center</span></h3>
+              <p class="ledger-desc"><span data-i18n="use1Body">Satu laporan seluruh perusahaan → satu file per cost center, dengan header dan format angka yang sama.</span></p>
+            </li>
+            <li class="ledger-row">
+              <span class="ledger-role" data-i18n="use2Role">HR</span>
+              <h3 class="ledger-task"><span data-i18n="use2Task">Beri setiap manajer hanya timnya sendiri</span></h3>
+              <p class="ledger-desc"><span data-i18n="use2Body">Daftar karyawan → satu file per departemen, masing-masing dengan kata sandi sendiri. RoWeave menyimpan kata sandi ke daftar terpisah.</span></p>
+            </li>
+            <li class="ledger-row">
+              <span class="ledger-role" data-i18n="use3Role">Logistik &amp; gudang</span>
+              <h3 class="ledger-task"><span data-i18n="use3Task">Gabungkan laporan gudang jadi satu lembar</span></h3>
+              <p class="ledger-desc"><span data-i18n="use3Body">30 file dari berbagai lokasi → satu tabel. Setiap baris bisa memuat nama file asalnya.</span></p>
+            </li>
+            <li class="ledger-row">
+              <span class="ledger-role" data-i18n="use4Role">Operasional penjualan</span>
+              <h3 class="ledger-task"><span data-i18n="use4Task">Kirim target vs. realisasi ke setiap tenaga penjual</span></h3>
+              <p class="ledger-desc"><span data-i18n="use4Body">Ekspor CRM dengan kolom Wilayah dan Tenaga penjual → satu folder per wilayah, berisi satu file untuk setiap tenaga penjual.</span></p>
+            </li>
+            <li class="ledger-row">
+              <span class="ledger-role" data-i18n="use5Role">Ekspor ERP &amp; bank</span>
+              <h3 class="ledger-task"><span data-i18n="use5Task">Buka CSV tanpa kehilangan angka nol di depan</span></h3>
+              <p class="ledger-desc"><span data-i18n="use5Body">CSV → XLSX, dengan kode produk, NPWP, dan nomor rekening persis seperti saat diekspor.</span></p>
+            </li>
+            <li class="ledger-row">
+              <span class="ledger-role" data-i18n="use6Role">Sekolah &amp; universitas</span>
+              <h3 class="ledger-task"><span data-i18n="use6Task">Pisahkan daftar nama per kelas atau kelompok</span></h3>
+              <p class="ledger-desc"><span data-i18n="use6Body">Satu daftar induk → satu file per kelompok. Nanti, gabungkan kembali file dari para guru menjadi satu buku kerja.</span></p>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section class="section container faq-layout" id="faq" aria-labelledby="faq-title" tabindex="-1">
-      <div class="faq-aside">
-        <h2 id="faq-title"><span data-i18n="faqTitle">Pertanyaan umum</span></h2>
-        <div class="about-box" id="about">
+    <section class="section section-ruled" id="compare" aria-labelledby="compare-title" tabindex="-1">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="compare-title"><span data-i18n="compareTitle">Cara yang biasa dipakai</span></h2>
+        </div>
+
+        <div class="compare-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th scope="col"><span data-i18n="compareColMethod">Cara</span></th>
+                <th scope="col"><span data-i18n="compareColSplit">Pisahkan per kolom ke file</span></th>
+                <th scope="col"><span data-i18n="compareColMerge">Gabungkan file jadi satu</span></th>
+                <th scope="col"><span data-i18n="compareColMac">Mac</span></th>
+                <th scope="col"><span data-i18n="compareColNeeds">Kebutuhan dan batasan</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><span data-i18n="compareManualTitle">Manual</span></th>
+                <td data-label="Pisahkan per kolom ke file" data-i18n-data-label="compareColSplit"><span data-i18n="compareManualSplit">Lambat, mudah salah baris</span></td>
+                <td data-label="Gabungkan file jadi satu" data-i18n-data-label="compareColMerge"><span data-i18n="compareManualMerge">Salin-tempel manual</span></td>
+                <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareYes">Ya</span></td>
+                <td data-label="Kebutuhan dan batasan" data-i18n-data-label="compareColNeeds"><span data-i18n="compareManualNeeds">Untuk setiap departemen, Anda harus memfilter baris, menyalinnya, dan menyimpannya sebagai file terpisah</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span data-i18n="comparePqTitle">Power Query (di Excel)</span></th>
+                <td data-label="Pisahkan per kolom ke file" data-i18n-data-label="compareColSplit"><span data-i18n="compareNo">Tidak</span></td>
+                <td data-label="Gabungkan file jadi satu" data-i18n-data-label="compareColMerge"><span data-i18n="comparePqMerge">Ya, dari folder</span></td>
+                <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="comparePqMac">Impor dari folder terbatas</span></td>
+                <td data-label="Kebutuhan dan batasan" data-i18n-data-label="compareColNeeds"><span data-i18n="comparePqNeeds">Sudah ada di Excel untuk Windows. Kueri perlu disiapkan</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span data-i18n="compareVbaTitle">Makro VBA</span></th>
+                <td data-label="Pisahkan per kolom ke file" data-i18n-data-label="compareColSplit"><span data-i18n="compareVbaCode">Jika ada kode siap pakai</span></td>
+                <td data-label="Gabungkan file jadi satu" data-i18n-data-label="compareColMerge"><span data-i18n="compareVbaCode">Jika ada kode siap pakai</span></td>
+                <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareVbaMac">Sering perlu diubah</span></td>
+                <td data-label="Kebutuhan dan batasan" data-i18n-data-label="compareColNeeds"><span data-i18n="compareVbaNeeds">Perlu makro yang dibuat untuk tugas Anda dan izin untuk menjalankannya</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span data-i18n="compareAddinsTitle">Add-in Excel</span></th>
+                <td data-label="Pisahkan per kolom ke file" data-i18n-data-label="compareColSplit"><span data-i18n="compareAddinsVaries">Tergantung add-in</span></td>
+                <td data-label="Gabungkan file jadi satu" data-i18n-data-label="compareColMerge"><span data-i18n="compareAddinsVaries">Tergantung add-in</span></td>
+                <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareAddinsVaries">Tergantung add-in</span></td>
+                <td data-label="Kebutuhan dan batasan" data-i18n-data-label="compareColNeeds"><span data-i18n="compareAddinsNeeds">Berjalan di dalam Excel; kompatibilitas dan ketentuan penggunaan tergantung produknya</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span data-i18n="compareOnlineTitle">Layanan online</span></th>
+                <td data-label="Pisahkan per kolom ke file" data-i18n-data-label="compareColSplit"><span data-i18n="compareOnlineVaries">Tergantung layanannya</span></td>
+                <td data-label="Gabungkan file jadi satu" data-i18n-data-label="compareColMerge"><span data-i18n="compareOnlineVaries">Tergantung layanannya</span></td>
+                <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareYes">Ya</span></td>
+                <td data-label="Kebutuhan dan batasan" data-i18n-data-label="compareColNeeds"><span data-i18n="compareOnlineNeeds">Biasanya tabel berisi data gaji atau pelanggan harus diunggah ke server milik orang lain</span></td>
+              </tr>
+              <tr class="compare-roweave">
+                <th scope="row"><span data-i18n="compareRoweaveTitle">RoWeave</span></th>
+                <td data-label="Pisahkan per kolom ke file" data-i18n-data-label="compareColSplit"><span data-i18n="compareRoweaveSplit">Ya, langsung ke file dengan pratinjau</span></td>
+                <td data-label="Gabungkan file jadi satu" data-i18n-data-label="compareColMerge"><span data-i18n="compareRoweaveMerge">Ya, dengan pengecekan header</span></td>
+                <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareRoweaveMac">Ya (Apple Silicon)</span></td>
+                <td data-label="Kebutuhan dan batasan" data-i18n-data-label="compareColNeeds"><span data-i18n="compareRoweaveNeeds">Aplikasi terpisah untuk Windows dan Mac; tidak perlu Excel, gratis selama beta 0.13</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-ruled" id="keep" aria-labelledby="keep-title" tabindex="-1">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="keep-title"><span data-i18n="keepTitle">Apa yang ikut terbawa ke file baru dan apa yang tidak</span></h2>
+        </div>
+
+        <div class="spec-sheet">
+          <div class="spec-main">
+            <div class="spec-col">
+              <h3 class="spec-heading spec-heading-yes"><span class="spec-badge" aria-hidden="true">✓</span> <span data-i18n="keepYesTitle">Dipertahankan</span></h3>
+              <ul class="spec-list">
+                <li><span data-i18n="keepYes1">Font, warna isian, border, perataan</span></li>
+                <li><span data-i18n="keepYes2">Lebar kolom, format angka dan tanggal</span></li>
+                <li><span data-i18n="keepYes3">Baris header di atas tabel di setiap file</span></li>
+                <li><span data-i18n="keepYes4">Tinggi baris</span></li>
+              </ul>
+            </div>
+
+            <div class="spec-col">
+              <h3 class="spec-heading spec-heading-beta"><span class="spec-badge" aria-hidden="true">β</span> <span data-i18n="keepExpTitle">Beta, aktifkan di Pengaturan lanjutan</span></h3>
+              <p class="spec-caption"><span data-i18n="keepExpNote">Nonaktif secara default. Di bagian “Yang dipertahankan dari buku kerja sumber” pada Pisahkan dan Gabungkan.</span></p>
+              <ul class="spec-list">
+                <li><span data-i18n="keepExp1">Perlindungan lembar dan sel yang dapat diedit</span></li>
+                <li><span data-i18n="keepExp2">Daftar menurun dan validasi data</span></li>
+                <li><span data-i18n="keepExp3">Pemformatan bersyarat</span></li>
+              </ul>
+            </div>
+
+            <div class="spec-col">
+              <h3 class="spec-heading spec-heading-no"><span class="spec-badge" aria-hidden="true">—</span> <span data-i18n="keepNoTitle">Tidak dibawa</span></h3>
+              <ul class="spec-list">
+                <li><span data-i18n="keepNo1">PivotTable, bagan, gambar</span></li>
+                <li><span data-i18n="keepNo2">Makro: hasilnya XLSX biasa</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="spec-notes">
+            <div class="spec-note">
+              <h4><span data-i18n="formulasTitle">Rumus</span></h4>
+              <p><span data-i18n="formulasBody">Rumus biasanya diganti dengan nilai yang tersimpan di buku kerja. Dalam mode “Setiap lembar sebagai file terpisah”, rumus yang didukung dan hanya merujuk ke lembarnya sendiri bisa dipertahankan. Aplikasi menampilkan batasannya sebelum dijalankan.</span></p>
+            </div>
+            <div class="spec-note">
+              <h4><span data-i18n="formatsSplitTitle">File lama dan biner di Pisahkan</span></h4>
+              <p><span data-i18n="formatsSplitBody">Dari XLS (Excel 97–2003), Pisahkan membawa data, format angka, dan sel gabungan, tetapi tidak font, warna isian, atau border; dari XLSB biner, hanya nilai.</span></p>
+            </div>
+            <div class="spec-note">
+              <h4><span data-i18n="formatsCollectTitle">Sumber campuran di Gabungkan</span></h4>
+              <p><span data-i18n="formatsCollectBody">Jika sumbernya mencakup XLS, XLSB, atau file teks (CSV, TSV, TXT), Gabungkan menulis seluruh tabel sebagai nilai tanpa format, termasuk bagian dari buku kerja XLSX.</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-ruled" id="faq" aria-labelledby="faq-title" tabindex="-1">
+      <div class="container split-section faq-grid">
+        <div class="split-rail">
+          <h2 id="faq-title"><span data-i18n="faqTitle">Pertanyaan umum</span></h2>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary><span data-i18n="faqSplitHow">Bagaimana cara memisahkan file Excel menjadi beberapa file?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faqSplitHowBody">Buka lembar di Pisahkan, pilih kolom seperti “Kota”, lalu jalankan. RoWeave membuat satu file untuk setiap nilai di kolom itu, dengan header, lebar kolom, dan format yang sama. Anda melihat daftar file sebelum apa pun dijalankan.</span></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faqMergeHow">Bagaimana cara menggabungkan beberapa file Excel menjadi satu?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faqMergeHowBody">Seret folder berisi file ke Gabungkan. RoWeave mengambil lembar yang tepat dari setiap buku kerja, memeriksa apakah header cocok, lalu menyusun barisnya menjadi satu tabel. Anda bisa menambahkan kolom berisi nama file sumber.</span></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faqCsvZeros">Mengapa Excel menghapus angka nol di depan saat membuka CSV?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faqCsvZerosBody">Excel mengubah kolom yang tampak seperti angka menjadi angka, sehingga 00123 menjadi 123 dan nomor panjang berubah menjadi “1,2E+15”. Ubah CSV ke XLSX dengan RoWeave: kode produk, ID, dan nomor rekening tetap seperti saat diekspor.</span></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faq10">Berapa harganya?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faq10Body">Saat ini RoWeave gratis untuk Windows dan Mac: semua fitur, tanpa batasan, tanpa pendaftaran, dan tanpa iklan.</span></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faq1">Di komputer apa RoWeave berjalan?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faq1Body">Windows 10 dan 11 (64-bit, x64), serta Mac dengan Apple Silicon (M1 atau lebih baru) yang menjalankan macOS 12.3 atau lebih baru.</span></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faq4">Apakah file asli saya akan berubah?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faq4Body">Tidak. RoWeave hanya membaca file sumber Anda dan tidak pernah menimpanya. Hasil disimpan terpisah, di folder yang Anda pilih.</span></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faq3">Apakah format dan rumus dipertahankan?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faq3Body">Pisahkan mempertahankan font, warna isian, border, lebar kolom, dan format angka. Rumus biasanya diganti dengan nilai yang tersimpan di buku kerja. Dalam mode “Setiap lembar sebagai file terpisah”, rumus yang didukung dan hanya merujuk ke lembarnya sendiri bisa dipertahankan; aplikasi menampilkan batasannya sebelum dijalankan. Gabungkan juga menulis nilai, dan mempertahankan format bila semua sumber adalah buku kerja XLSX atau XLSM.</span> <a href="#keep"><span data-i18n="faq3Link">Apa yang dipertahankan dan apa yang tidak</span></a></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faq6">Apakah bisa menangani file besar?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faq6Body">RoWeave mengonversi CSV besar ke Excel sebagian demi sebagian, tanpa memuat seluruh file ke memori. Batasnya 8 juta sel (misalnya 400.000 baris × 20 kolom) dan 4 juta baris. Jika baris lebih banyak daripada kapasitas satu lembar Excel (1.048.576), RoWeave menawarkan untuk membaginya ke beberapa lembar. Dalam mode biasa, batas Pisahkan dan Gabungkan bergantung pada memori komputer. Jika buku kerja terlalu besar, Pisahkan menawarkan mode “Pisahkan per bagian” dengan batasan tersendiri, yang ditampilkan sebelum dijalankan.</span></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faq7">Bagaimana dengan file yang dilindungi kata sandi?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faq7Body">Buku kerja XLSX, XLSM, dan XLSB bisa dibuka: Anda memasukkan kata sandi di aplikasi, dan kata sandi itu tidak pernah disimpan. File terenkripsi dalam format XLS lama (Excel 97–2003) tidak dapat dibuka. Pisahkan juga dapat memberi kata sandi pada file baru: satu kata sandi untuk semua, atau berbeda untuk tiap file, dengan daftarnya disimpan ke file terpisah.</span></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faq2">Apakah Excel harus terinstal?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faq2Body">Tidak. RoWeave membaca dan menulis file sendiri. Untuk membuka hasilnya, Anda hanya perlu Excel atau aplikasi spreadsheet lain.</span></p>
+            </div>
+          </details>
+        </div>
+
+        <aside class="about-colophon" id="about" aria-labelledby="about-title">
           <div class="about-head">
-            <img class="about-mascot" src="../assets/mascot-reading.webp" alt="" width="72" height="82" loading="lazy">
-            <h3><span data-i18n="aboutTitle">Tentang proyek</span></h3>
+            <img class="about-mascot" src="../assets/mascot-reading.webp" alt="" width="60" height="68" loading="lazy">
+            <h3 id="about-title"><span data-i18n="aboutTitle">Tentang proyek</span></h3>
           </div>
           <p><span data-i18n="aboutBody">RoWeave dibuat oleh satu pengembang. Saya terus menyempurnakan aplikasi ini berdasarkan masukan pengguna.</span></p>
           <p class="about-contact"><span data-i18n="aboutContactBefore">Jika ada yang tidak berfungsi atau kurang, tulis ke</span> <a href="mailto:support@roweave.app">support@roweave.app</a><span data-i18n="aboutContactAfter">.</span></p>
-        </div>
-      </div>
-
-      <div class="faq-list">
-        <details>
-          <summary><span data-i18n="faqSplitHow">Bagaimana cara memisahkan file Excel menjadi beberapa file?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faqSplitHowBody">Buka lembar di Pisahkan, pilih kolom seperti “Kota”, lalu jalankan. RoWeave membuat satu file untuk setiap nilai di kolom itu, dengan header, lebar kolom, dan format yang sama. Anda melihat daftar file sebelum apa pun dijalankan.</span></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faqMergeHow">Bagaimana cara menggabungkan beberapa file Excel menjadi satu?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faqMergeHowBody">Seret folder berisi file ke Gabungkan. RoWeave mengambil lembar yang tepat dari setiap buku kerja, memeriksa apakah header cocok, lalu menyusun barisnya menjadi satu tabel. Anda bisa menambahkan kolom berisi nama file sumber.</span></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faqCsvZeros">Mengapa Excel menghapus angka nol di depan saat membuka CSV?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faqCsvZerosBody">Excel mengubah kolom yang tampak seperti angka menjadi angka, sehingga 00123 menjadi 123 dan nomor panjang berubah menjadi “1,2E+15”. Ubah CSV ke XLSX dengan RoWeave: kode produk, ID, dan nomor rekening tetap seperti saat diekspor.</span></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faq10">Berapa harganya?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faq10Body">Saat ini RoWeave gratis untuk Windows dan Mac: semua fitur, tanpa batasan, tanpa pendaftaran, dan tanpa iklan.</span></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faq1">Di komputer apa RoWeave berjalan?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faq1Body">Windows 10 dan 11 (64-bit, x64), serta Mac dengan Apple Silicon (M1 atau lebih baru) yang menjalankan macOS 12.3 atau lebih baru.</span></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faq4">Apakah file asli saya akan berubah?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faq4Body">Tidak. RoWeave hanya membaca file sumber Anda dan tidak pernah menimpanya. Hasil disimpan terpisah, di folder yang Anda pilih.</span></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faq3">Apakah format dan rumus dipertahankan?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faq3Body">Pisahkan mempertahankan font, warna isian, border, lebar kolom, dan format angka. Rumus biasanya diganti dengan nilai yang tersimpan di buku kerja. Dalam mode “Setiap lembar sebagai file terpisah”, rumus yang didukung dan hanya merujuk ke lembarnya sendiri bisa dipertahankan; aplikasi menampilkan batasannya sebelum dijalankan. Gabungkan juga menulis nilai, dan mempertahankan format bila semua sumber adalah buku kerja XLSX atau XLSM.</span> <a href="#keep"><span data-i18n="faq3Link">Apa yang dipertahankan dan apa yang tidak</span></a></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faq6">Apakah bisa menangani file besar?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faq6Body">RoWeave mengonversi CSV besar ke Excel sebagian demi sebagian, tanpa memuat seluruh file ke memori. Batasnya 8 juta sel (misalnya 400.000 baris × 20 kolom) dan 4 juta baris. Jika baris lebih banyak daripada kapasitas satu lembar Excel (1.048.576), RoWeave menawarkan untuk membaginya ke beberapa lembar. Dalam mode biasa, batas Pisahkan dan Gabungkan bergantung pada memori komputer. Jika buku kerja terlalu besar, Pisahkan menawarkan mode “Pisahkan per bagian” dengan batasan tersendiri, yang ditampilkan sebelum dijalankan.</span></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faq7">Bagaimana dengan file yang dilindungi kata sandi?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faq7Body">Buku kerja XLSX, XLSM, dan XLSB bisa dibuka: Anda memasukkan kata sandi di aplikasi, dan kata sandi itu tidak pernah disimpan. File terenkripsi dalam format XLS lama (Excel 97–2003) tidak dapat dibuka. Pisahkan juga dapat memberi kata sandi pada file baru: satu kata sandi untuk semua, atau berbeda untuk tiap file, dengan daftarnya disimpan ke file terpisah.</span></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faq2">Apakah Excel harus terinstal?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faq2Body">Tidak. RoWeave membaca dan menulis file sendiri. Untuk membuka hasilnya, Anda hanya perlu Excel atau aplikasi spreadsheet lain.</span></p>
-          </div>
-        </details>
+        </aside>
       </div>
     </section>
 
-    <section class="container download-section" id="download" aria-labelledby="download-title" tabindex="-1">
-      <div class="download-panel">
-        <div class="download-head">
-          <img src="../assets/roweave-icon-160.webp" alt="" width="52" height="52" loading="lazy">
-          <div>
-            <h2 id="download-title"><span data-i18n="downloadTitle">RoWeave untuk Windows dan Mac</span></h2>
-            <p><span data-i18n="downloadStatus">Beta 0.13 gratis</span></p>
+    <section class="download-band" id="download" aria-labelledby="download-title" tabindex="-1">
+      <div class="container">
+        <div class="download-shell">
+          <div class="download-header">
+            <img src="../assets/roweave-icon-160.webp" alt="" width="56" height="56" loading="lazy">
+            <div>
+              <p class="download-kicker"><span data-i18n="downloadStatus">Beta 0.13 gratis</span></p>
+              <h2 id="download-title"><span data-i18n="downloadTitle">RoWeave untuk Windows dan Mac</span></h2>
+            </div>
+          </div>
+
+          <ul class="platform-grid" aria-label="Versi aplikasi" data-i18n-aria-label="platformsLabel">
+            <li class="platform-col">
+              <div class="platform-meta">
+                <h3>Windows</h3>
+                <p><span data-i18n="windowsPlatform">Windows 10/11 (x64)</span></p>
+              </div>
+              <a class="btn btn-download" href="https://github.com/RoWeave/releases/releases/latest/download/RoWeave-Windows-x64-setup.exe"><span data-i18n="downloadWindows">Unduh untuk Windows</span></a>
+              <p class="platform-file"><span data-i18n="windowsFile">.exe, sekitar 11 MB</span></p>
+              <details class="platform-hint">
+                <summary><span data-i18n="smartscreenSummary">Jika Windows menampilkan peringatan</span></summary>
+                <p><span data-i18n="smartscreenHint">Muncul “Windows melindungi PC Anda”? Klik “Info selengkapnya”, lalu “Tetap jalankan”. Penginstal belum ditandatangani Microsoft.</span></p>
+              </details>
+            </li>
+
+            <li class="platform-col">
+              <div class="platform-meta">
+                <h3>macOS</h3>
+                <p><span data-i18n="macPlatform">Apple Silicon (M1 atau lebih baru), macOS 12.3+</span></p>
+              </div>
+              <a class="btn btn-download" href="https://github.com/RoWeave/releases/releases/latest/download/RoWeave-macOS-arm64.dmg"><span data-i18n="downloadMac">Unduh untuk Mac</span></a>
+              <p class="platform-file"><span data-i18n="macFile">.dmg, sekitar 14 MB. Ditandatangani pengembang dan dinotarisasi oleh Apple.</span></p>
+            </li>
+          </ul>
+
+          <div class="download-footer">
+            <a class="download-link" href="https://github.com/RoWeave/releases/releases"><span data-i18n="downloadMeta">Semua versi di GitHub</span> <span aria-hidden="true">↗</span></a>
           </div>
         </div>
-
-        <ul class="platform-grid" aria-label="Versi aplikasi" data-i18n-aria-label="platformsLabel">
-          <li class="platform-card">
-            <div class="platform-head">
-              <h3>Windows</h3>
-              <p><span data-i18n="windowsPlatform">Windows 10 dan 11, 64-bit (x64)</span></p>
-            </div>
-            <a class="button store-button" href="#" data-store="msstore" hidden>Microsoft Store</a>
-            <a class="button direct-download" href="https://github.com/RoWeave/releases/releases/latest/download/RoWeave-Windows-x64-setup.exe"><span data-i18n="downloadWindows">Unduh untuk Windows</span></a>
-            <p class="platform-file"><span data-i18n="windowsFile">Penginstal .exe, sekitar 11 MB</span></p>
-            <details class="platform-hint">
-              <summary><span data-i18n="smartscreenSummary">Jika Windows menampilkan peringatan</span></summary>
-              <p><span data-i18n="smartscreenHint">Jika Windows menampilkan “Windows melindungi PC Anda”, klik “Info selengkapnya”, lalu “Tetap jalankan”: penginstal belum ditandatangani Microsoft.</span></p>
-            </details>
-          </li>
-
-          <li class="platform-card">
-            <div class="platform-head">
-              <h3>macOS</h3>
-              <p><span data-i18n="macPlatform">Apple Silicon (M1 atau lebih baru), macOS 12.3+</span></p>
-            </div>
-            <a class="button store-button" href="#" data-store="mas" hidden>Mac App Store</a>
-            <a class="button direct-download" href="https://github.com/RoWeave/releases/releases/latest/download/RoWeave-macOS-arm64.dmg"><span data-i18n="downloadMac">Unduh untuk Mac</span></a>
-            <p class="platform-file"><span data-i18n="macFile">Image .dmg, sekitar 14 MB. Ditandatangani dan dinotarisasi oleh Apple.</span></p>
-          </li>
-        </ul>
-
-        <p class="download-meta"><a class="text-link" href="https://github.com/RoWeave/releases/releases"><span data-i18n="downloadMeta">Semua versi di GitHub</span></a></p>
       </div>
     </section>
   </main>
 
-  <footer class="container site-footer">
-    <div class="footer-top">
-      <a class="brand" href="#" aria-label="RoWeave, kembali ke atas" data-i18n-aria-label="brandHome"><img src="../assets/roweave-icon-160.webp" alt="" width="28" height="28" loading="lazy"><span>RoWeave</span></a>
-      <p><span data-i18n="footerTagline">Aplikasi desktop untuk memisahkan dan menggabungkan buku kerja Excel.</span></p>
-    </div>
-
-    <nav class="language-links" aria-label="Bahasa halaman" data-i18n-aria-label="language"><a href="../id/index.html" hreflang="id" aria-current="page" lang="id">Bahasa Indonesia</a><a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a><a href="../de/index.html" hreflang="de" lang="de">Deutsch</a><a href="../en/index.html" hreflang="en" lang="en">English</a><a href="../es/index.html" hreflang="es" lang="es">Español</a><a href="../fr/index.html" hreflang="fr" lang="fr">Français</a><a href="../it/index.html" hreflang="it" lang="it">Italiano</a><a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a><a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a><a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a><a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a><a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a><a href="../ko/index.html" hreflang="ko" lang="ko">한국어</a><a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
-
-    <p class="footer-privacy"><a href="#privacy"><span data-i18n="privacyMore">Selengkapnya tentang privasi</span></a></p>
-
-    <div class="footer-bottom">
-      <p>© 2026 RoWeave</p>
-      <span><span data-i18n="footerSupport">Dukungan:</span> <a href="mailto:support@roweave.app">support@roweave.app</a></span>
-      <a href="../en/privacy/"><span data-i18n="footerPrivacy">Privasi</span></a>
-    </div>
-
-    <details class="privacy-disclosure" id="privacy">
-      <summary><span data-i18n="privacyDetails">Privasi di aplikasi dan di situs ini</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-      <div class="answer">
-        <p><span data-i18n="privacyDetails1">Aplikasi memproses file Excel hanya di komputer Anda dan tidak pernah mengirim isinya melalui jaringan. Aplikasi hanya terhubung ke internet untuk memeriksa pembaruan (updates.roweave.app, atau GitHub jika gagal) dan, saat Anda mengklik, untuk mengunduh versi baru dari GitHub. Tidak ada nama atau isi file yang dikirim, dan pemeriksaan otomatis dapat dimatikan. Situs ini tidak memiliki formulir, iklan, pelacak, atau cookie.</span></p>
-        <p><span data-i18n="privacySupport">“Hubungi dukungan” di aplikasi hanya menyiapkan email ke support@roweave.app: Anda sendiri yang mengirimnya dari email Anda, RoWeave tidak mengirim apa pun. Jika “Lampirkan diagnostik” dicentang, aplikasi menyimpan file berisi data teknis (versi RoWeave dan sistem, langkah dan waktu proses, kode kesalahan, perkiraan memori) lalu melampirkannya ke email. File itu tidak berisi isi tabel, jalur, atau kata sandi.</span></p>
-        <p><span data-i18n="privacyDetails2">Situs dan file unduhan di-hosting di GitHub, yang melihat data koneksi teknis seperti alamat IP Anda. Jika Anda mengirim email ke support@roweave.app, alamat Anda hanya dipakai untuk membalas.</span></p>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <a class="brand" href="#top" aria-label="RoWeave, kembali ke atas" data-i18n-aria-label="brandHome">
+          <img src="../assets/roweave-icon-160.webp" alt="" width="24" height="24" loading="lazy">
+          <span class="brand-name">RoWeave</span>
+        </a>
       </div>
-    </details>
+
+      <nav class="language-links" aria-label="Bahasa halaman" data-i18n-aria-label="language"><a href="../id/index.html" hreflang="id" aria-current="page" lang="id">Bahasa Indonesia</a><a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a><a href="../de/index.html" hreflang="de" lang="de">Deutsch</a><a href="../en/index.html" hreflang="en" lang="en">English</a><a href="../es/index.html" hreflang="es" lang="es">Español</a><a href="../fr/index.html" hreflang="fr" lang="fr">Français</a><a href="../it/index.html" hreflang="it" lang="it">Italiano</a><a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a><a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a><a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a><a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a><a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a><a href="../ko/index.html" hreflang="ko" lang="ko">한국어</a><a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
+
+      <div class="footer-meta">
+        <span>© 2026 RoWeave</span>
+        <span><span data-i18n="footerSupport">Dukungan:</span> <a href="mailto:support@roweave.app">support@roweave.app</a></span>
+        <a href="#privacy"><span data-i18n="privacyMore">Selengkapnya tentang privasi</span></a>
+        <a href="../en/privacy/"><span data-i18n="footerPrivacy">Privasi</span></a>
+      </div>
+
+      <details class="privacy-disclosure" id="privacy">
+        <summary><span data-i18n="privacyDetails">Privasi di aplikasi dan di situs ini</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+        <div class="faq-answer">
+          <p><span data-i18n="privacyDetails1">Aplikasi memproses file Excel hanya di komputer Anda dan tidak pernah mengirim isinya melalui jaringan. Aplikasi hanya terhubung ke internet untuk memeriksa pembaruan (updates.roweave.app, atau GitHub jika gagal) dan, saat Anda mengklik, untuk mengunduh versi baru dari GitHub. Tidak ada nama atau isi file yang dikirim, dan pemeriksaan otomatis dapat dimatikan. Situs ini tidak memiliki formulir, iklan, pelacak, atau cookie.</span></p>
+          <p><span data-i18n="privacySupport">“Hubungi dukungan” di aplikasi hanya menyiapkan email ke support@roweave.app: Anda sendiri yang mengirimnya dari email Anda, RoWeave tidak mengirim apa pun. Jika “Lampirkan diagnostik” dicentang, aplikasi menyimpan file berisi data teknis (versi RoWeave dan sistem, langkah dan waktu proses, kode kesalahan, perkiraan memori) lalu melampirkannya ke email. File itu tidak berisi isi tabel, jalur, atau kata sandi.</span></p>
+          <p><span data-i18n="privacyDetails2">Situs dan file unduhan di-hosting di GitHub, yang melihat data koneksi teknis seperti alamat IP Anda. Jika Anda mengirim email ke support@roweave.app, alamat Anda hanya dipakai untuk membalas.</span></p>
+        </div>
+      </details>
+    </div>
   </footer>
 </body>
 </html>

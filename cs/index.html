@@ -46,217 +46,179 @@
 <body>
   <a class="skip-link" href="#main"><span data-i18n="skip">Přeskočit na obsah</span></a>
 
-  <header class="site-header">
+  <header class="site-header" id="top">
     <div class="container header-inner">
-      <a class="brand" href="#" aria-label="RoWeave, zpět na začátek stránky" data-i18n-aria-label="brandHome"><img src="../assets/roweave-icon-160.webp" alt="" width="30" height="30"><span>RoWeave</span></a>
+      <a class="brand" href="#top" aria-label="RoWeave, zpět na začátek stránky" data-i18n-aria-label="brandHome">
+        <img src="../assets/roweave-icon-160.webp" alt="" width="28" height="28">
+        <span class="brand-name">RoWeave</span>
+      </a>
 
-      <nav class="navigation" id="navigation" aria-label="Hlavní navigace" data-i18n-aria-label="navigation">
+      <nav class="site-nav" id="navigation" aria-label="Hlavní navigace" data-i18n-aria-label="navigation">
         <a href="#features"><span data-i18n="navFeatures">Funkce</span></a>
         <a href="#scenarios"><span data-i18n="navUseCases">Pro koho</span></a>
         <a href="#compare"><span data-i18n="navCompare">Srovnání</span></a>
         <a href="#keep"><span data-i18n="navKeep">Co se zachová</span></a>
         <a href="#faq"><span data-i18n="navFaq">Časté dotazy</span></a>
+        <a class="nav-download" href="#download"><span data-i18n="navPlatforms">Stáhnout</span></a>
       </nav>
 
       <div class="header-actions">
         <label class="language-control" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c5 5 5 13 0 18-5-5-5-13 0-18Z"/></svg><span data-language-short aria-hidden="true">CS</span><select id="language" aria-label="Jazyk stránky" data-i18n-aria-label="language"><option value="id" data-href="../id/index.html">Bahasa Indonesia</option><option value="cs" selected data-href="../cs/index.html">Čeština</option><option value="de" data-href="../de/index.html">Deutsch</option><option value="en" data-href="../en/index.html">English</option><option value="es" data-href="../es/index.html">Español</option><option value="fr" data-href="../fr/index.html">Français</option><option value="it" data-href="../it/index.html">Italiano</option><option value="nl" data-href="../nl/index.html">Nederlands</option><option value="pl" data-href="../pl/index.html">Polski</option><option value="pt-BR" data-href="../pt-BR/index.html">Português (Brasil)</option><option value="vi" data-href="../vi/index.html">Tiếng Việt</option><option value="ru" data-href="../ru/index.html">Русский</option><option value="ja" data-href="../ja/index.html">日本語</option><option value="ko" data-href="../ko/index.html">한국어</option><option value="zh-Hans" data-href="../zh-Hans/index.html">简体中文</option></select></label>
 
-        <button class="icon-button theme-toggle" type="button" aria-label="Přepnout na tmavý motiv" data-label-light="Přepnout na světlý motiv" data-label-dark="Přepnout na tmavý motiv" data-i18n-aria-label="themeDark" data-i18n-data-label-light="themeLight" data-i18n-data-label-dark="themeDark" hidden>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20.7 13A8.8 8.8 0 0 1 11 3.3 8.8 8.8 0 1 0 20.7 13Z"/></svg>
+        <button class="theme-toggle" type="button" aria-label="Přepnout na tmavý motiv" data-label-light="Přepnout na světlý motiv" data-label-dark="Přepnout na tmavý motiv" data-text-light="Světlý" data-text-dark="Tmavý" data-i18n-aria-label="themeDark" data-i18n-data-label-light="themeLight" data-i18n-data-label-dark="themeDark" data-i18n-data-text-light="themeShortLight" data-i18n-data-text-dark="themeShortDark" hidden>
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20.7 13A8.8 8.8 0 0 1 11 3.3 8.8 8.8 0 1 0 20.7 13Z"/></svg>
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.4M12 19.6V22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M2 12h2.4M19.6 12H22M4.9 19.1l1.7-1.7M17.4 6.6l1.7-1.7"/></svg>
+          <span class="theme-toggle-text" data-theme-text><span data-i18n="themeShortDark">Tmavý</span></span>
         </button>
 
-        <a class="button button-small" href="#download"><span data-i18n="navPlatforms">Stáhnout</span></a>
+        <a class="btn btn-primary btn-sm" href="#download"><span data-i18n="navPlatforms">Stáhnout</span></a>
 
-        <button class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Otevřít nabídku" data-label-open="Otevřít nabídku" data-label-close="Zavřít nabídku" data-i18n-aria-label="menuOpen" data-i18n-data-label-open="menuOpen" data-i18n-data-label-close="menuClose" hidden>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Otevřít nabídku" data-label-open="Otevřít nabídku" data-label-close="Zavřít nabídku" data-i18n-aria-label="menuOpen" data-i18n-data-label-open="menuOpen" data-i18n-data-label-close="menuClose" hidden>
+          <svg class="icon-menu" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
         </button>
       </div>
     </div>
   </header>
 
   <main id="main" tabindex="-1">
-    <section class="hero container" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="hero-meta"><span data-i18n="heroMeta">Bezplatná beta 0.13 · Windows 10/11 a&nbsp;macOS 12.3+</span></p>
-        <h1 id="hero-title"><span data-i18n="heroTogether">Rozdělte Excel podle sloupce.</span> <span data-i18n="heroApart">Sloučte reporty do jednoho.</span></h1>
-        <p class="hero-description"><span data-i18n="heroDescription">RoWeave rozdělí soubor Excelu podle sloupce na&nbsp;samostatné soubory a&nbsp;sloučí reporty ze&nbsp;složky do&nbsp;jedné tabulky.</span></p>
-        <div class="hero-actions">
-          <a class="button" href="#download"><span data-i18n="ctaPlatforms">Stáhnout zdarma</span></a>
-          <a class="button button-quiet" href="#how-it-works"><span data-i18n="navHow">Jak to funguje</span></a>
-        </div>
-      </div>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-head">
+          <p class="hero-kicker">
+            <span class="kicker-dot" aria-hidden="true"></span>
+            <span data-i18n="downloadStatus">Bezplatná beta 0.13</span>
+            <span class="kicker-sep" aria-hidden="true">·</span>
+            <span data-i18n="heroPlatforms">Windows 10/11 a&nbsp;macOS 12.3+</span>
+          </p>
 
-      <div class="showcase" id="showcase">
-        <div class="showcase-bar">
-          <div class="segmented" role="tablist" aria-label="Režimy aplikace RoWeave" data-i18n-aria-label="showcaseLabel">
-            <button class="segment" type="button" role="tab" id="tab-split" aria-selected="true" aria-controls="panel-split" data-tab="split"><span data-i18n="splitLabel">Rozdělit</span></button>
-            <button class="segment" type="button" role="tab" id="tab-collect" aria-selected="false" aria-controls="panel-collect" data-tab="collect"><span data-i18n="collectLabel">Sloučit</span></button>
-            <button class="segment" type="button" role="tab" id="tab-csv" aria-selected="false" aria-controls="panel-csv" data-tab="csv"><span data-i18n="csvLabel">CSV → Excel</span></button>
-          </div>
-        </div>
+          <div class="hero-top">
+            <h1 id="hero-title">
+              <span class="hero-line-main" data-i18n="heroTogether">Rozdělte Excel podle sloupce.</span>
+              <span class="hero-line-sub" data-i18n="heroApart">Sloučte reporty do jednoho.</span>
+            </h1>
 
-        <div class="window-frame">
-          <div class="showcase-panel" id="panel-split" role="tabpanel" aria-labelledby="tab-split" tabindex="0">
-            <picture class="shot-light">
-              <source media="(max-width: 640px)" srcset="../assets/app-split-light-mobile.webp" width="936" height="838">
-              <img src="../assets/app-split-light.webp" alt="Okno funkce Rozdělit v&nbsp;RoWeave: je vybraný sloupec „Region“ a&nbsp;před spuštěním se zobrazuje seznam 7&nbsp;budoucích souborů" data-i18n-alt="shotSplitAlt" width="1536" height="864" fetchpriority="high">
-            </picture>
-            <picture class="shot-dark">
-              <source media="(max-width: 640px)" srcset="../assets/app-split-dark-mobile.webp" width="936" height="838">
-              <img src="../assets/app-split-dark.webp" alt="Okno funkce Rozdělit v&nbsp;RoWeave: je vybraný sloupec „Region“ a&nbsp;před spuštěním se zobrazuje seznam 7&nbsp;budoucích souborů" data-i18n-alt="shotSplitAlt" width="1536" height="864" fetchpriority="high">
-            </picture>
-          </div>
-          <div class="showcase-panel" id="panel-collect" role="tabpanel" aria-labelledby="tab-collect" tabindex="0" hidden>
-            <picture class="shot-light">
-              <source media="(max-width: 640px)" srcset="../assets/app-collect-light-mobile.webp" width="936" height="838">
-              <img src="../assets/app-collect-light.webp" alt="Okno funkce Sloučit v&nbsp;RoWeave: tři soubory poboček, kontrola záhlaví a&nbsp;náhled společné tabulky se sloupcem zdrojového souboru" data-i18n-alt="shotCollectAlt" width="1536" height="864" loading="lazy">
-            </picture>
-            <picture class="shot-dark">
-              <source media="(max-width: 640px)" srcset="../assets/app-collect-dark-mobile.webp" width="936" height="838">
-              <img src="../assets/app-collect-dark.webp" alt="Okno funkce Sloučit v&nbsp;RoWeave: tři soubory poboček, kontrola záhlaví a&nbsp;náhled společné tabulky se sloupcem zdrojového souboru" data-i18n-alt="shotCollectAlt" width="1536" height="864" loading="lazy">
-            </picture>
-          </div>
-          <div class="showcase-panel" id="panel-csv" role="tabpanel" aria-labelledby="tab-csv" tabindex="0" hidden>
-            <picture class="shot-light">
-              <source media="(max-width: 640px)" srcset="../assets/app-csv-light-mobile.webp" width="936" height="838">
-              <img src="../assets/app-csv-light.webp" alt="Převod CSV do&nbsp;Excelu v&nbsp;RoWeave: kódování a&nbsp;oddělovač rozpoznány automaticky, počáteční nuly v&nbsp;kódech zachovány" data-i18n-alt="shotCsvAlt" width="1536" height="864" loading="lazy">
-            </picture>
-            <picture class="shot-dark">
-              <source media="(max-width: 640px)" srcset="../assets/app-csv-dark-mobile.webp" width="936" height="838">
-              <img src="../assets/app-csv-dark.webp" alt="Převod CSV do&nbsp;Excelu v&nbsp;RoWeave: kódování a&nbsp;oddělovač rozpoznány automaticky, počáteční nuly v&nbsp;kódech zachovány" data-i18n-alt="shotCsvAlt" width="1536" height="864" loading="lazy">
-            </picture>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="container facts-strip" aria-label="Stručně" data-i18n-aria-label="trustLabel">
-      <div class="facts-grid">
-        <div class="fact-item">
-          <strong><span data-i18n="trustFiles">Nic se nenahrává</span></strong>
-          <p><span data-i18n="privacyBody">Soubory se zpracovávají ve&nbsp;vašem počítači a&nbsp;nikam se neodesílají. RoWeave se k&nbsp;internetu připojuje jen kvůli kontrole aktualizací a&nbsp;v&nbsp;nastavení to můžete vypnout.</span></p>
-        </div>
-        <div class="fact-item">
-          <strong><span data-i18n="fact2Title">Neinstaluje se do&nbsp;Excelu</span></strong>
-          <p><span data-i18n="fact2Body">Samostatná aplikace bez maker VBA a&nbsp;doplňků. Nainstalovaný Excel nepotřebujete a&nbsp;ve&nbsp;Windows se program instaluje bez práv správce.</span></p>
-        </div>
-        <div class="fact-item">
-          <strong><span data-i18n="fact3Title">Plán uvidíte před spuštěním</span></strong>
-          <p><span data-i18n="featuresIntro">Než se cokoli spustí, RoWeave ukáže, jaké soubory dostanete a&nbsp;co se nepřenese.</span></p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section container" id="features" aria-labelledby="features-title" tabindex="-1">
-      <div class="section-head">
-        <h2 id="features-title"><span data-i18n="featuresTitle">Tři úkoly, které se obvykle dělají ručně</span></h2>
-      </div>
-
-      <div class="ledger">
-        <article class="ledger-row">
-          <div class="ledger-id">
-            <span class="index-num">01</span>
-            <div>
-              <p class="ledger-tag"><span data-i18n="splitLabel">Rozdělit</span></p>
-              <h3><span data-i18n="splitTitle">Jeden list → soubor pro každou hodnotu</span></h3>
-              <p class="flow-badge"><span data-i18n="splitExampleIn">Mzdy celé firmy</span> <span aria-hidden="true">→</span> <span data-i18n="splitExampleOut">soubor pro oddělení</span></p>
+            <div class="hero-aside">
+              <p class="hero-desc"><span data-i18n="heroDescription">RoWeave rozdělí soubor Excelu podle sloupce na&nbsp;samostatné soubory a&nbsp;sloučí reporty ze&nbsp;složky do&nbsp;jedné tabulky.</span></p>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="#download"><span data-i18n="ctaPlatforms">Stáhnout zdarma</span></a>
+                <a class="btn btn-ghost" href="#how-it-works"><span data-i18n="navHow">Jak to funguje</span> <span aria-hidden="true">↓</span></a>
+              </div>
             </div>
           </div>
-          <div class="ledger-body">
-            <p><span data-i18n="splitBody">Vyberte sloupec, například „Oddělení“. RoWeave vytvoří jeden sešit pro každé oddělení a&nbsp;zachová řádky záhlaví, šířku sloupců, formáty čísel i&nbsp;barvy výplně a&nbsp;písma. Pokud vyberete více sloupců, první z&nbsp;nich určí podsložky. Každý soubor může dostat vlastní heslo.</span></p>
-            <p class="ledger-detail"><span data-i18n="splitDetail">K&nbsp;dispozici je i&nbsp;režim „Každý list jako samostatný soubor“. Hotové soubory můžete rovnou zabalit do&nbsp;ZIP nebo zamknout hesly: jedním pro všechny, nebo vlastním pro každý, se seznamem hesel v&nbsp;samostatném souboru.</span></p>
-          </div>
-        </article>
+        </div>
 
-        <article class="ledger-row">
-          <div class="ledger-id">
-            <span class="index-num">02</span>
-            <div>
-              <p class="ledger-tag"><span data-i18n="collectLabel">Sloučit</span></p>
-              <h3><span data-i18n="collectTitle">Mnoho souborů → jeden list</span></h3>
-              <p class="flow-badge"><span data-i18n="collectExampleIn">30 reportů poboček</span> <span aria-hidden="true">→</span> <span data-i18n="collectExampleOut">jeden list</span></p>
+        <div class="showcase" id="showcase">
+          <div class="mode-bar" role="tablist" aria-label="Režimy aplikace RoWeave" data-i18n-aria-label="showcaseLabel">
+            <button class="mode-tab" type="button" role="tab" id="tab-split" aria-selected="true" aria-controls="panel-split" data-tab="split"><span class="mode-name" data-i18n="splitLabel">Rozdělit</span></button>
+            <button class="mode-tab" type="button" role="tab" id="tab-collect" aria-selected="false" aria-controls="panel-collect" data-tab="collect" tabindex="-1"><span class="mode-name" data-i18n="collectLabel">Sloučit</span></button>
+            <button class="mode-tab" type="button" role="tab" id="tab-csv" aria-selected="false" aria-controls="panel-csv" data-tab="csv" tabindex="-1"><span class="mode-name" data-i18n="csvLabel">CSV → Excel</span></button>
+          </div>
+
+          <div class="specimen-frame">
+            <div class="showcase-panel" id="panel-split" role="tabpanel" aria-labelledby="tab-split" tabindex="0">
+              <picture class="shot-light">
+                <source media="(max-width: 640px)" srcset="../assets/app-split-light-mobile.webp" width="936" height="838">
+                <img src="../assets/app-split-light.webp" alt="Okno funkce Rozdělit v&nbsp;RoWeave: je vybraný sloupec „Region“ a&nbsp;před spuštěním se zobrazuje seznam 7&nbsp;budoucích souborů" data-i18n-alt="shotSplitAlt" width="1536" height="864" fetchpriority="high">
+              </picture>
+              <picture class="shot-dark">
+                <source media="(max-width: 640px)" srcset="../assets/app-split-dark-mobile.webp" width="936" height="838">
+                <img src="../assets/app-split-dark.webp" alt="Okno funkce Rozdělit v&nbsp;RoWeave: je vybraný sloupec „Region“ a&nbsp;před spuštěním se zobrazuje seznam 7&nbsp;budoucích souborů" data-i18n-alt="shotSplitAlt" width="1536" height="864" fetchpriority="high">
+              </picture>
+            </div>
+            <div class="showcase-panel" id="panel-collect" role="tabpanel" aria-labelledby="tab-collect" tabindex="0" hidden>
+              <picture class="shot-light">
+                <source media="(max-width: 640px)" srcset="../assets/app-collect-light-mobile.webp" width="936" height="838">
+                <img src="../assets/app-collect-light.webp" alt="Okno funkce Sloučit v&nbsp;RoWeave: tři soubory poboček, kontrola záhlaví a&nbsp;náhled společné tabulky se sloupcem zdrojového souboru" data-i18n-alt="shotCollectAlt" width="1536" height="864" loading="lazy">
+              </picture>
+              <picture class="shot-dark">
+                <source media="(max-width: 640px)" srcset="../assets/app-collect-dark-mobile.webp" width="936" height="838">
+                <img src="../assets/app-collect-dark.webp" alt="Okno funkce Sloučit v&nbsp;RoWeave: tři soubory poboček, kontrola záhlaví a&nbsp;náhled společné tabulky se sloupcem zdrojového souboru" data-i18n-alt="shotCollectAlt" width="1536" height="864" loading="lazy">
+              </picture>
+            </div>
+            <div class="showcase-panel" id="panel-csv" role="tabpanel" aria-labelledby="tab-csv" tabindex="0" hidden>
+              <picture class="shot-light">
+                <source media="(max-width: 640px)" srcset="../assets/app-csv-light-mobile.webp" width="936" height="838">
+                <img src="../assets/app-csv-light.webp" alt="Převod CSV do&nbsp;Excelu v&nbsp;RoWeave: kódování a&nbsp;oddělovač rozpoznány automaticky, počáteční nuly v&nbsp;kódech zachovány" data-i18n-alt="shotCsvAlt" width="1536" height="864" loading="lazy">
+              </picture>
+              <picture class="shot-dark">
+                <source media="(max-width: 640px)" srcset="../assets/app-csv-dark-mobile.webp" width="936" height="838">
+                <img src="../assets/app-csv-dark.webp" alt="Převod CSV do&nbsp;Excelu v&nbsp;RoWeave: kódování a&nbsp;oddělovač rozpoznány automaticky, počáteční nuly v&nbsp;kódech zachovány" data-i18n-alt="shotCsvAlt" width="1536" height="864" loading="lazy">
+              </picture>
             </div>
           </div>
-          <div class="ledger-body">
-            <p><span data-i18n="collectBody">Přetáhněte složku s&nbsp;reporty. RoWeave z&nbsp;každého sešitu vezme správný list, zkontroluje, že záhlaví odpovídají, a&nbsp;řádky naskládá do jedné tabulky. Volitelně přidá sloupec s&nbsp;názvem zdrojového souboru. Sešity chráněné heslem ve formátu XLSX, XLSM a&nbsp;XLSB fungují také; šifrované starší soubory XLS (Excel 97–2003) otevřít nelze.</span></p>
-          </div>
-        </article>
-
-        <article class="ledger-row">
-          <div class="ledger-id">
-            <span class="index-num">03</span>
-            <div>
-              <p class="ledger-tag"><span data-i18n="csvLabel">CSV → Excel</span></p>
-              <h3><span data-i18n="csvTitle">Export CSV → pořádný soubor Excelu</span></h3>
-              <p class="flow-badge"><span data-i18n="csvExampleIn">Export z ERP</span> <span aria-hidden="true">→</span> <span data-i18n="csvExampleOut">XLSX s nulami</span></p>
-            </div>
-          </div>
-          <div class="ledger-body">
-            <p><span data-i18n="csvBody">Převeďte CSV do&nbsp;XLSX a&nbsp;zachovejte počáteční nuly v&nbsp;kódech zboží, identifikátorech a&nbsp;číslech účtů, aby se dlouhá čísla neměnila na&nbsp;„1,2E+15“.</span></p>
-            <p class="ledger-detail"><span data-i18n="csvDetail">Kódování RoWeave rozpozná samo, včetně UTF-8 a&nbsp;Windows-1250. Když si není jisté, zobrazí náhled a&nbsp;nechá vás vybrat. Velké exporty čte po&nbsp;částech, až do&nbsp;8&nbsp;milionů buněk.</span></p>
-          </div>
-        </article>
+        </div>
       </div>
     </section>
 
-    <section class="section section-tight container" id="scenarios" aria-labelledby="scenarios-title" tabindex="-1">
-      <div class="section-head">
-        <h2 id="scenarios-title"><span data-i18n="useCasesTitle">Pokud to děláte ručně každý měsíc</span></h2>
-      </div>
-
-      <ul class="cell-grid">
-        <li class="cell-item">
-          <p class="cell-role"><span data-i18n="use1Role">Finance a&nbsp;účetnictví</span></p>
-          <h3><span data-i18n="use1Task">Rozeslat každému středisku jeho report</span></h3>
-          <p><span data-i18n="use1Body">Jeden celofiremní report → soubor pro každé středisko, se stejným záhlavím a&nbsp;formáty čísel.</span></p>
-        </li>
-        <li class="cell-item">
-          <p class="cell-role"><span data-i18n="use2Role">HR</span></p>
-          <h3><span data-i18n="use2Task">Dát každému vedoucímu jen jeho tým</span></h3>
-          <p><span data-i18n="use2Body">Seznam zaměstnanců → soubor pro každé oddělení, každý s&nbsp;vlastním heslem. RoWeave uloží hesla do samostatného seznamu.</span></p>
-        </li>
-        <li class="cell-item">
-          <p class="cell-role"><span data-i18n="use3Role">Logistika a&nbsp;sklad</span></p>
-          <h3><span data-i18n="use3Task">Sloučit skladové reporty do jednoho listu</span></h3>
-          <p><span data-i18n="use3Body">30&nbsp;souborů z&nbsp;různých provozů → jedna tabulka. Každý řádek může nést název souboru, ze kterého pochází.</span></p>
-        </li>
-        <li class="cell-item">
-          <p class="cell-role"><span data-i18n="use4Role">Obchodní oddělení</span></p>
-          <h3><span data-i18n="use4Task">Poslat každému obchodníkovi jeho plán a&nbsp;skutečnost</span></h3>
-          <p><span data-i18n="use4Body">Export z&nbsp;CRM se sloupci Region a&nbsp;Obchodník → složka pro každý region a&nbsp;v&nbsp;ní soubor pro každého obchodníka.</span></p>
-        </li>
-        <li class="cell-item">
-          <p class="cell-role"><span data-i18n="use5Role">Exporty z&nbsp;ERP a&nbsp;banky</span></p>
-          <h3><span data-i18n="use5Task">Otevřít CSV a&nbsp;nepřijít o&nbsp;počáteční nuly</span></h3>
-          <p><span data-i18n="use5Body">CSV → XLSX, kde kódy zboží, DIČ a&nbsp;čísla účtů zůstanou přesně tak, jak byly exportovány.</span></p>
-        </li>
-        <li class="cell-item">
-          <p class="cell-role"><span data-i18n="use6Role">Školy a&nbsp;univerzity</span></p>
-          <h3><span data-i18n="use6Task">Rozdělit seznamy podle tříd nebo skupin</span></h3>
-          <p><span data-i18n="use6Body">Jeden hlavní seznam → soubor pro každou skupinu. Později soubory od učitelů opět sloučíte do jednoho sešitu.</span></p>
-        </li>
-      </ul>
-    </section>
-
-    <section class="band-soft" id="how-it-works" aria-labelledby="workflow-title" tabindex="-1">
+    <section class="principles" aria-label="Stručně" data-i18n-aria-label="trustLabel">
       <div class="container">
-        <div class="section-head">
+        <div class="principles-grid">
+          <div class="principle-item">
+            <h2><span data-i18n="trustFiles">Nic se nenahrává</span></h2>
+            <p><span data-i18n="trustFilesBody">RoWeave zpracovává soubory ve&nbsp;vašem počítači. Automatickou kontrolu aktualizací můžete vypnout v&nbsp;nastavení.</span></p>
+          </div>
+          <div class="principle-item">
+            <h2><span data-i18n="fact2Title">Neinstaluje se do&nbsp;Excelu</span></h2>
+            <p><span data-i18n="fact2Body">Samostatná aplikace bez maker VBA a&nbsp;doplňků. Nainstalovaný Excel nepotřebujete a&nbsp;ve&nbsp;Windows se program instaluje bez práv správce.</span></p>
+          </div>
+          <div class="principle-item">
+            <h2><span data-i18n="fact3Title">Plán uvidíte před spuštěním</span></h2>
+            <p><span data-i18n="featuresIntro">Než se cokoli spustí, RoWeave ukáže, jaké soubory dostanete a&nbsp;co se nepřenese.</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features" aria-labelledby="features-title" tabindex="-1">
+      <div class="container split-section">
+        <div class="split-rail">
+          <h2 id="features-title"><span data-i18n="featuresTitle">Tři úkoly, které se obvykle dělají ručně</span></h2>
+        </div>
+
+        <div class="split-content">
+          <article class="feature-entry" id="mode-split">
+            <p class="entry-index"><span data-i18n="splitLabel">Rozdělit</span></p>
+            <h3><span data-i18n="splitTitle">Jeden list → soubor pro každou hodnotu</span></h3>
+            <p><span data-i18n="splitBody">Vyberte sloupec, například „Oddělení“. RoWeave vytvoří jeden sešit pro každé oddělení a&nbsp;zachová řádky záhlaví, šířku sloupců, formáty čísel i&nbsp;barvy výplně a&nbsp;písma. Pokud vyberete více sloupců, první z&nbsp;nich určí podsložky.</span></p>
+            <p class="entry-secondary"><span data-i18n="splitDetail">K&nbsp;dispozici je i&nbsp;režim „Každý list jako samostatný soubor“ (v&nbsp;něm lze zachovat podporované vzorce uvnitř listu) a&nbsp;režim „Rozdělit po částech“ pro velmi velké sešity. Hotové soubory můžete rovnou zabalit do&nbsp;ZIP nebo zamknout hesly: jedním pro všechny, nebo vlastním pro každý, se seznamem hesel v&nbsp;samostatném souboru.</span></p>
+          </article>
+
+          <article class="feature-entry" id="mode-collect">
+            <p class="entry-index"><span data-i18n="collectLabel">Sloučit</span></p>
+            <h3><span data-i18n="collectTitle">Mnoho souborů → jeden list</span></h3>
+            <p><span data-i18n="collectBody">Přetáhněte složku s&nbsp;reporty. RoWeave z&nbsp;každého sešitu vezme správný list, zkontroluje, že záhlaví odpovídají, a&nbsp;řádky naskládá do jedné tabulky. Volitelně přidá sloupec s&nbsp;názvem zdrojového souboru. Sešity chráněné heslem ve formátu XLSX, XLSM a&nbsp;XLSB fungují také; šifrované starší soubory XLS (Excel 97–2003) otevřít nelze.</span></p>
+          </article>
+
+          <article class="feature-entry" id="mode-csv">
+            <p class="entry-index"><span data-i18n="csvLabel">CSV → Excel</span></p>
+            <h3><span data-i18n="csvTitle">Export CSV → pořádný soubor Excelu</span></h3>
+            <p><span data-i18n="csvBody">Převeďte CSV do&nbsp;XLSX a&nbsp;zachovejte počáteční nuly v&nbsp;kódech zboží, identifikátorech a&nbsp;číslech účtů, aby se dlouhá čísla neměnila na&nbsp;„1,2E+15“.</span></p>
+            <p class="entry-secondary"><span data-i18n="csvDetail">Kódování RoWeave rozpozná samo, včetně UTF-8 a&nbsp;Windows-1250. Když si není jisté, zobrazí náhled a&nbsp;nechá vás vybrat. Velké exporty čte po&nbsp;částech, až do&nbsp;8&nbsp;milionů buněk.</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="workflow-band" id="how-it-works" aria-labelledby="workflow-title" tabindex="-1">
+      <div class="container">
+        <div class="band-head">
           <h2 id="workflow-title"><span data-i18n="workflowTitle">Jak to funguje</span></h2>
         </div>
 
-        <ol class="steps-row">
-          <li>
-            <span class="step-index" aria-hidden="true">01</span>
+        <ol class="workflow-steps">
+          <li class="workflow-step">
+            <span class="step-num" aria-hidden="true">01</span>
             <h3><span data-i18n="step1Title">Přetáhněte soubory</span></h3>
             <p><span data-i18n="step1Body">Jeden sešit, pár souborů nebo celou složku. Podporované formáty: XLSX, XLSM, XLS, XLSB, CSV, TSV a&nbsp;TXT.</span></p>
           </li>
-          <li>
-            <span class="step-index" aria-hidden="true">02</span>
+          <li class="workflow-step">
+            <span class="step-num" aria-hidden="true">02</span>
             <h3><span data-i18n="step2Title">Zkontrolujte výsledek</span></h3>
             <p><span data-i18n="step2Body">Vyberte list a&nbsp;sloupec. RoWeave vypíše soubory, které vytvoří, a&nbsp;upozorní vás, pokud se něco nepřenese.</span></p>
           </li>
-          <li>
-            <span class="step-index" aria-hidden="true">03</span>
+          <li class="workflow-step">
+            <span class="step-num" aria-hidden="true">03</span>
             <h3><span data-i18n="step3Title">Uložte výsledek</span></h3>
             <p><span data-i18n="step3Body">Nové soubory se uloží do složky, kterou zvolíte. Originál zůstane nedotčený a&nbsp;dřívější spuštění najdete v&nbsp;Historii.</span></p>
           </li>
@@ -264,266 +226,326 @@
       </div>
     </section>
 
-    <section class="section container" id="compare" aria-labelledby="compare-title" tabindex="-1">
-      <div class="section-head">
-        <h2 id="compare-title"><span data-i18n="compareTitle">Jak se to obvykle dělá</span></h2>
-        <p><span data-i18n="compareIntro">Doplňky umí víc a&nbsp;fungují přímo v&nbsp;Excelu. RoWeave se hodí, když nechcete instalovat doplňky ani makra, nebo pracujete na&nbsp;Macu.</span></p>
-      </div>
-
-      <div class="table-wrap">
-        <table class="compare-table">
-          <thead>
-            <tr>
-              <th scope="col"><span data-i18n="compareColMethod">Způsob</span></th>
-              <th scope="col"><span data-i18n="compareColSplit">Rozdělit podle sloupce do&nbsp;souborů</span></th>
-              <th scope="col"><span data-i18n="compareColMerge">Sloučit soubory do&nbsp;jednoho</span></th>
-              <th scope="col"><span data-i18n="compareColMac">Mac</span></th>
-              <th scope="col"><span data-i18n="compareColNeeds">Požadavky a&nbsp;omezení</span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row"><span data-i18n="compareManualTitle">Ručně</span></th>
-              <td data-label="Rozdělit podle sloupce do&nbsp;souborů" data-i18n-data-label="compareColSplit"><span data-i18n="compareManualSplit">Zdlouhavé, snadno vynecháte řádek</span></td>
-              <td data-label="Sloučit soubory do&nbsp;jednoho" data-i18n-data-label="compareColMerge"><span data-i18n="compareManualMerge">Ruční kopírování a&nbsp;vkládání</span></td>
-              <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareYes">Ano</span></td>
-              <td data-label="Požadavky a&nbsp;omezení" data-i18n-data-label="compareColNeeds"><span data-i18n="compareManualNeeds">Pro každé oddělení musíte vyfiltrovat řádky, zkopírovat je a&nbsp;uložit samostatný soubor</span></td>
-            </tr>
-            <tr>
-              <th scope="row"><span data-i18n="comparePqTitle">Power Query (v&nbsp;Excelu)</span></th>
-              <td data-label="Rozdělit podle sloupce do&nbsp;souborů" data-i18n-data-label="compareColSplit"><span data-i18n="compareNo">Ne</span></td>
-              <td data-label="Sloučit soubory do&nbsp;jednoho" data-i18n-data-label="compareColMerge"><span data-i18n="comparePqMerge">Ano, ze&nbsp;složky</span></td>
-              <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="comparePqMac">Import ze&nbsp;složky je omezený</span></td>
-              <td data-label="Požadavky a&nbsp;omezení" data-i18n-data-label="compareColNeeds"><span data-i18n="comparePqNeeds">Je součástí Excelu pro Windows, ale musíte nastavit dotaz; rozdělit do&nbsp;souborů neumí</span></td>
-            </tr>
-            <tr>
-              <th scope="row"><span data-i18n="compareVbaTitle">Makro ve VBA</span></th>
-              <td data-label="Rozdělit podle sloupce do&nbsp;souborů" data-i18n-data-label="compareColSplit"><span data-i18n="compareVbaCode">Pokud máte hotový kód</span></td>
-              <td data-label="Sloučit soubory do&nbsp;jednoho" data-i18n-data-label="compareColMerge"><span data-i18n="compareVbaCode">Pokud máte hotový kód</span></td>
-              <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareVbaMac">Často vyžaduje úpravy</span></td>
-              <td data-label="Požadavky a&nbsp;omezení" data-i18n-data-label="compareColNeeds"><span data-i18n="compareVbaNeeds">Potřebujete makro napsané pro váš úkol a&nbsp;povolení ho spustit</span></td>
-            </tr>
-            <tr>
-              <th scope="row"><span data-i18n="compareAddinsTitle">Doplňky pro Excel</span></th>
-              <td data-label="Rozdělit podle sloupce do&nbsp;souborů" data-i18n-data-label="compareColSplit"><span data-i18n="compareAddinsVaries">Záleží na&nbsp;doplňku</span></td>
-              <td data-label="Sloučit soubory do&nbsp;jednoho" data-i18n-data-label="compareColMerge"><span data-i18n="compareAddinsVaries">Záleží na&nbsp;doplňku</span></td>
-              <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareAddinsVaries">Záleží na&nbsp;doplňku</span></td>
-              <td data-label="Požadavky a&nbsp;omezení" data-i18n-data-label="compareColNeeds"><span data-i18n="compareAddinsNeeds">Fungují v&nbsp;Excelu; kompatibilita a&nbsp;podmínky použití závisí na&nbsp;produktu</span></td>
-            </tr>
-            <tr>
-              <th scope="row"><span data-i18n="compareOnlineTitle">Online nástroj</span></th>
-              <td data-label="Rozdělit podle sloupce do&nbsp;souborů" data-i18n-data-label="compareColSplit"><span data-i18n="compareOnlineVaries">Záleží na&nbsp;službě</span></td>
-              <td data-label="Sloučit soubory do&nbsp;jednoho" data-i18n-data-label="compareColMerge"><span data-i18n="compareOnlineVaries">Záleží na&nbsp;službě</span></td>
-              <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareYes">Ano</span></td>
-              <td data-label="Požadavky a&nbsp;omezení" data-i18n-data-label="compareColNeeds"><span data-i18n="compareOnlineNeeds">Tabulku se mzdami nebo daty zákazníků obvykle musíte nahrát na&nbsp;cizí server</span></td>
-            </tr>
-            <tr class="compare-highlight">
-              <th scope="row"><span data-i18n="compareRoweaveTitle">RoWeave</span></th>
-              <td data-label="Rozdělit podle sloupce do&nbsp;souborů" data-i18n-data-label="compareColSplit"><span data-i18n="compareRoweaveSplit">Ano, rovnou do&nbsp;souborů s&nbsp;náhledem</span></td>
-              <td data-label="Sloučit soubory do&nbsp;jednoho" data-i18n-data-label="compareColMerge"><span data-i18n="compareRoweaveMerge">Ano, s&nbsp;kontrolou záhlaví</span></td>
-              <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareRoweaveMac">Ano (Apple Silicon)</span></td>
-              <td data-label="Požadavky a&nbsp;omezení" data-i18n-data-label="compareColNeeds"><span data-i18n="compareRoweaveNeeds">Samostatná aplikace pro Windows a&nbsp;Mac; Excel není potřeba, zdarma v&nbsp;betaverzi 0.13</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section class="section section-tight container" id="keep" aria-labelledby="keep-title" tabindex="-1">
-      <div class="section-head">
-        <h2 id="keep-title"><span data-i18n="keepTitle">Co se do nových souborů přenese a&nbsp;co ne</span></h2>
-      </div>
-
-      <div class="spec-panel">
-        <div class="spec-columns">
-          <div class="spec-col spec-yes">
-            <h3><span class="spec-mark" aria-hidden="true">✓</span> <span data-i18n="keepYesTitle">Zachováno</span></h3>
-            <ul>
-              <li><span data-i18n="keepYes1">Písma, výplně, ohraničení, zarovnání</span></li>
-              <li><span data-i18n="keepYes2">Šířky sloupců, formáty čísel a&nbsp;dat</span></li>
-              <li><span data-i18n="keepYes3">Řádky záhlaví nad tabulkou v&nbsp;každém souboru</span></li>
-              <li><span data-i18n="keepYes4">Výšky řádků</span></li>
-            </ul>
-          </div>
-
-          <div class="spec-col spec-exp">
-            <h3><span class="spec-mark" aria-hidden="true">β</span> <span data-i18n="keepExpTitle">Beta, zapíná se v&nbsp;části „Upřesňující nastavení“ (ve výchozím stavu vypnuto)</span></h3>
-            <ul>
-              <li><span data-i18n="keepExp1">Zámek listu a&nbsp;upravitelné buňky</span></li>
-              <li><span data-i18n="keepExp2">Rozevírací seznamy a&nbsp;ověření dat</span></li>
-              <li><span data-i18n="keepExp3">Podmíněné formátování</span></li>
-            </ul>
-            <p class="spec-subnote"><span data-i18n="keepExpNote">V&nbsp;části „Co ze zdrojového sešitu zachovat“ u&nbsp;funkcí Rozdělit a&nbsp;Sloučit.</span></p>
-          </div>
-
-          <div class="spec-col spec-no">
-            <h3><span class="spec-mark" aria-hidden="true">—</span> <span data-i18n="keepNoTitle">Nepřenáší se</span></h3>
-            <ul>
-              <li><span data-i18n="keepNo1">Kontingenční tabulky, grafy, obrázky</span></li>
-              <li><span data-i18n="keepNo2">Makra: výsledkem je obyčejný XLSX</span></li>
-            </ul>
-          </div>
+    <section class="section" id="scenarios" aria-labelledby="scenarios-title" tabindex="-1">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="scenarios-title"><span data-i18n="useCasesTitle">Pokud to děláte ručně každý měsíc</span></h2>
         </div>
 
-        <div class="spec-formats">
-          <div>
-            <strong><span data-i18n="formulasTitle">Vzorce</span></strong>
-            <p><span data-i18n="formulasBody">Vzorce se obvykle nahradí hodnotami uloženými v&nbsp;sešitu. V&nbsp;režimu „Každý list jako samostatný soubor“ můžete zachovat podporované vzorce, které odkazují jen na&nbsp;vlastní list. Omezení program ukáže před spuštěním.</span></p>
+        <div class="ledger-table" role="region" aria-label="Příklady úkolů podle oddělení" data-i18n-aria-label="scenariosLabel">
+          <div class="ledger-header" aria-hidden="true">
+            <span data-i18n="ledgerColRole">Tým nebo zdroj</span>
+            <span data-i18n="ledgerColTask">Úkol</span>
+            <span data-i18n="ledgerColResult">Co dělá RoWeave</span>
           </div>
-          <div>
-            <strong><span data-i18n="formatsSplitTitle">Starší a&nbsp;binární soubory ve&nbsp;funkci Rozdělit</span></strong>
-            <p><span data-i18n="formatsSplitBody">Z&nbsp;XLS (Excel 97–2003) funkce Rozdělit přenese data, formáty čísel a&nbsp;sloučené buňky, ale ne písma, výplně ani ohraničení; z&nbsp;binárního XLSB jen hodnoty.</span></p>
-          </div>
-          <div>
-            <strong><span data-i18n="formatsCollectTitle">Smíšené zdroje ve&nbsp;funkci Sloučit</span></strong>
-            <p><span data-i18n="formatsCollectBody">Pokud je mezi zdroji soubor XLS, XLSB nebo textový soubor (CSV, TSV, TXT), funkce Sloučit zapíše celou tabulku jako hodnoty bez formátování, včetně částí ze&nbsp;sešitů XLSX.</span></p>
-          </div>
+
+          <ul class="ledger-rows">
+            <li class="ledger-row">
+              <span class="ledger-role" data-i18n="use1Role">Finance a&nbsp;účetnictví</span>
+              <h3 class="ledger-task"><span data-i18n="use1Task">Rozeslat každému středisku jeho report</span></h3>
+              <p class="ledger-desc"><span data-i18n="use1Body">Jeden celofiremní report → soubor pro každé středisko, se stejným záhlavím a&nbsp;formáty čísel.</span></p>
+            </li>
+            <li class="ledger-row">
+              <span class="ledger-role" data-i18n="use2Role">HR</span>
+              <h3 class="ledger-task"><span data-i18n="use2Task">Dát každému vedoucímu jen jeho tým</span></h3>
+              <p class="ledger-desc"><span data-i18n="use2Body">Seznam zaměstnanců → soubor pro každé oddělení, každý s&nbsp;vlastním heslem. RoWeave uloží hesla do samostatného seznamu.</span></p>
+            </li>
+            <li class="ledger-row">
+              <span class="ledger-role" data-i18n="use3Role">Logistika a&nbsp;sklad</span>
+              <h3 class="ledger-task"><span data-i18n="use3Task">Sloučit skladové reporty do jednoho listu</span></h3>
+              <p class="ledger-desc"><span data-i18n="use3Body">30&nbsp;souborů z&nbsp;různých provozů → jedna tabulka. Každý řádek může nést název souboru, ze kterého pochází.</span></p>
+            </li>
+            <li class="ledger-row">
+              <span class="ledger-role" data-i18n="use4Role">Obchodní oddělení</span>
+              <h3 class="ledger-task"><span data-i18n="use4Task">Poslat každému obchodníkovi jeho plán a&nbsp;skutečnost</span></h3>
+              <p class="ledger-desc"><span data-i18n="use4Body">Export z&nbsp;CRM se sloupci Region a&nbsp;Obchodník → složka pro každý region a&nbsp;v&nbsp;ní soubor pro každého obchodníka.</span></p>
+            </li>
+            <li class="ledger-row">
+              <span class="ledger-role" data-i18n="use5Role">Exporty z&nbsp;ERP a&nbsp;banky</span>
+              <h3 class="ledger-task"><span data-i18n="use5Task">Otevřít CSV a&nbsp;nepřijít o&nbsp;počáteční nuly</span></h3>
+              <p class="ledger-desc"><span data-i18n="use5Body">CSV → XLSX, kde kódy zboží, DIČ a&nbsp;čísla účtů zůstanou přesně tak, jak byly exportovány.</span></p>
+            </li>
+            <li class="ledger-row">
+              <span class="ledger-role" data-i18n="use6Role">Školy a&nbsp;univerzity</span>
+              <h3 class="ledger-task"><span data-i18n="use6Task">Rozdělit seznamy podle tříd nebo skupin</span></h3>
+              <p class="ledger-desc"><span data-i18n="use6Body">Jeden hlavní seznam → soubor pro každou skupinu. Později soubory od učitelů opět sloučíte do jednoho sešitu.</span></p>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section class="section container faq-layout" id="faq" aria-labelledby="faq-title" tabindex="-1">
-      <div class="faq-aside">
-        <h2 id="faq-title"><span data-i18n="faqTitle">Časté dotazy</span></h2>
-        <div class="about-box" id="about">
+    <section class="section section-ruled" id="compare" aria-labelledby="compare-title" tabindex="-1">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="compare-title"><span data-i18n="compareTitle">Jak se to obvykle dělá</span></h2>
+        </div>
+
+        <div class="compare-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th scope="col"><span data-i18n="compareColMethod">Způsob</span></th>
+                <th scope="col"><span data-i18n="compareColSplit">Rozdělit podle sloupce do&nbsp;souborů</span></th>
+                <th scope="col"><span data-i18n="compareColMerge">Sloučit soubory do&nbsp;jednoho</span></th>
+                <th scope="col"><span data-i18n="compareColMac">Mac</span></th>
+                <th scope="col"><span data-i18n="compareColNeeds">Požadavky a&nbsp;omezení</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><span data-i18n="compareManualTitle">Ručně</span></th>
+                <td data-label="Rozdělit podle sloupce do&nbsp;souborů" data-i18n-data-label="compareColSplit"><span data-i18n="compareManualSplit">Zdlouhavé, snadno vynecháte řádek</span></td>
+                <td data-label="Sloučit soubory do&nbsp;jednoho" data-i18n-data-label="compareColMerge"><span data-i18n="compareManualMerge">Ruční kopírování a&nbsp;vkládání</span></td>
+                <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareYes">Ano</span></td>
+                <td data-label="Požadavky a&nbsp;omezení" data-i18n-data-label="compareColNeeds"><span data-i18n="compareManualNeeds">Pro každé oddělení musíte vyfiltrovat řádky, zkopírovat je a&nbsp;uložit samostatný soubor</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span data-i18n="comparePqTitle">Power Query (v&nbsp;Excelu)</span></th>
+                <td data-label="Rozdělit podle sloupce do&nbsp;souborů" data-i18n-data-label="compareColSplit"><span data-i18n="compareNo">Ne</span></td>
+                <td data-label="Sloučit soubory do&nbsp;jednoho" data-i18n-data-label="compareColMerge"><span data-i18n="comparePqMerge">Ano, ze&nbsp;složky</span></td>
+                <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="comparePqMac">Import ze&nbsp;složky je omezený</span></td>
+                <td data-label="Požadavky a&nbsp;omezení" data-i18n-data-label="compareColNeeds"><span data-i18n="comparePqNeeds">Je součástí Excelu pro Windows. Musíte nastavit dotaz</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span data-i18n="compareVbaTitle">Makro ve VBA</span></th>
+                <td data-label="Rozdělit podle sloupce do&nbsp;souborů" data-i18n-data-label="compareColSplit"><span data-i18n="compareVbaCode">Pokud máte hotový kód</span></td>
+                <td data-label="Sloučit soubory do&nbsp;jednoho" data-i18n-data-label="compareColMerge"><span data-i18n="compareVbaCode">Pokud máte hotový kód</span></td>
+                <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareVbaMac">Často vyžaduje úpravy</span></td>
+                <td data-label="Požadavky a&nbsp;omezení" data-i18n-data-label="compareColNeeds"><span data-i18n="compareVbaNeeds">Potřebujete makro napsané pro váš úkol a&nbsp;povolení ho spustit</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span data-i18n="compareAddinsTitle">Doplňky pro Excel</span></th>
+                <td data-label="Rozdělit podle sloupce do&nbsp;souborů" data-i18n-data-label="compareColSplit"><span data-i18n="compareAddinsVaries">Záleží na&nbsp;doplňku</span></td>
+                <td data-label="Sloučit soubory do&nbsp;jednoho" data-i18n-data-label="compareColMerge"><span data-i18n="compareAddinsVaries">Záleží na&nbsp;doplňku</span></td>
+                <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareAddinsVaries">Záleží na&nbsp;doplňku</span></td>
+                <td data-label="Požadavky a&nbsp;omezení" data-i18n-data-label="compareColNeeds"><span data-i18n="compareAddinsNeeds">Fungují v&nbsp;Excelu; kompatibilita a&nbsp;podmínky použití závisí na&nbsp;produktu</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span data-i18n="compareOnlineTitle">Online nástroj</span></th>
+                <td data-label="Rozdělit podle sloupce do&nbsp;souborů" data-i18n-data-label="compareColSplit"><span data-i18n="compareOnlineVaries">Záleží na&nbsp;službě</span></td>
+                <td data-label="Sloučit soubory do&nbsp;jednoho" data-i18n-data-label="compareColMerge"><span data-i18n="compareOnlineVaries">Záleží na&nbsp;službě</span></td>
+                <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareYes">Ano</span></td>
+                <td data-label="Požadavky a&nbsp;omezení" data-i18n-data-label="compareColNeeds"><span data-i18n="compareOnlineNeeds">Tabulku se mzdami nebo daty zákazníků obvykle musíte nahrát na&nbsp;cizí server</span></td>
+              </tr>
+              <tr class="compare-roweave">
+                <th scope="row"><span data-i18n="compareRoweaveTitle">RoWeave</span></th>
+                <td data-label="Rozdělit podle sloupce do&nbsp;souborů" data-i18n-data-label="compareColSplit"><span data-i18n="compareRoweaveSplit">Ano, rovnou do&nbsp;souborů s&nbsp;náhledem</span></td>
+                <td data-label="Sloučit soubory do&nbsp;jednoho" data-i18n-data-label="compareColMerge"><span data-i18n="compareRoweaveMerge">Ano, s&nbsp;kontrolou záhlaví</span></td>
+                <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareRoweaveMac">Ano (Apple Silicon)</span></td>
+                <td data-label="Požadavky a&nbsp;omezení" data-i18n-data-label="compareColNeeds"><span data-i18n="compareRoweaveNeeds">Samostatná aplikace pro Windows a&nbsp;Mac; Excel není potřeba, zdarma v&nbsp;betaverzi 0.13</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-ruled" id="keep" aria-labelledby="keep-title" tabindex="-1">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="keep-title"><span data-i18n="keepTitle">Co se do nových souborů přenese a&nbsp;co ne</span></h2>
+        </div>
+
+        <div class="spec-sheet">
+          <div class="spec-main">
+            <div class="spec-col">
+              <h3 class="spec-heading spec-heading-yes"><span class="spec-badge" aria-hidden="true">✓</span> <span data-i18n="keepYesTitle">Zachováno</span></h3>
+              <ul class="spec-list">
+                <li><span data-i18n="keepYes1">Písma, výplně, ohraničení, zarovnání</span></li>
+                <li><span data-i18n="keepYes2">Šířky sloupců, formáty čísel a&nbsp;dat</span></li>
+                <li><span data-i18n="keepYes3">Řádky záhlaví nad tabulkou v&nbsp;každém souboru</span></li>
+                <li><span data-i18n="keepYes4">Výšky řádků</span></li>
+              </ul>
+            </div>
+
+            <div class="spec-col">
+              <h3 class="spec-heading spec-heading-beta"><span class="spec-badge" aria-hidden="true">β</span> <span data-i18n="keepExpTitle">Beta, zapíná se v&nbsp;části „Upřesňující nastavení“</span></h3>
+              <p class="spec-caption"><span data-i18n="keepExpNote">Ve výchozím stavu vypnuto. V&nbsp;části „Co ze zdrojového sešitu zachovat“ u&nbsp;funkcí Rozdělit a&nbsp;Sloučit.</span></p>
+              <ul class="spec-list">
+                <li><span data-i18n="keepExp1">Zámek listu a&nbsp;upravitelné buňky</span></li>
+                <li><span data-i18n="keepExp2">Rozevírací seznamy a&nbsp;ověření dat</span></li>
+                <li><span data-i18n="keepExp3">Podmíněné formátování</span></li>
+              </ul>
+            </div>
+
+            <div class="spec-col">
+              <h3 class="spec-heading spec-heading-no"><span class="spec-badge" aria-hidden="true">—</span> <span data-i18n="keepNoTitle">Nepřenáší se</span></h3>
+              <ul class="spec-list">
+                <li><span data-i18n="keepNo1">Kontingenční tabulky, grafy, obrázky</span></li>
+                <li><span data-i18n="keepNo2">Makra: výsledkem je obyčejný XLSX</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="spec-notes">
+            <div class="spec-note">
+              <h4><span data-i18n="formulasTitle">Vzorce</span></h4>
+              <p><span data-i18n="formulasBody">Vzorce se obvykle nahradí hodnotami uloženými v&nbsp;sešitu. V&nbsp;režimu „Každý list jako samostatný soubor“ můžete zachovat podporované vzorce, které odkazují jen na&nbsp;vlastní list. Omezení program ukáže před spuštěním.</span></p>
+            </div>
+            <div class="spec-note">
+              <h4><span data-i18n="formatsSplitTitle">Starší a&nbsp;binární soubory ve&nbsp;funkci Rozdělit</span></h4>
+              <p><span data-i18n="formatsSplitBody">Z&nbsp;XLS (Excel 97–2003) funkce Rozdělit přenese data, formáty čísel a&nbsp;sloučené buňky, ale ne písma, výplně ani ohraničení; z&nbsp;binárního XLSB jen hodnoty.</span></p>
+            </div>
+            <div class="spec-note">
+              <h4><span data-i18n="formatsCollectTitle">Smíšené zdroje ve&nbsp;funkci Sloučit</span></h4>
+              <p><span data-i18n="formatsCollectBody">Pokud je mezi zdroji soubor XLS, XLSB nebo textový soubor (CSV, TSV, TXT), funkce Sloučit zapíše celou tabulku jako hodnoty bez formátování, včetně částí ze&nbsp;sešitů XLSX.</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-ruled" id="faq" aria-labelledby="faq-title" tabindex="-1">
+      <div class="container split-section faq-grid">
+        <div class="split-rail">
+          <h2 id="faq-title"><span data-i18n="faqTitle">Časté dotazy</span></h2>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary><span data-i18n="faqSplitHow">Jak rozdělit soubor Excelu na více souborů?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faqSplitHowBody">Otevřete list v nástroji Rozdělit, zvolte sloupec, například „Město“, a spusťte. RoWeave vytvoří samostatný soubor pro každou hodnotu ve sloupci, se stejnou hlavičkou, šířkami sloupců a formáty. Seznam souborů uvidíte dřív, než se cokoli spustí.</span></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faqMergeHow">Jak sloučit více souborů Excelu do jednoho?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faqMergeHowBody">Přetáhněte složku se soubory do nástroje Sloučit. RoWeave vezme z každého sešitu správný list, zkontroluje, že záhlaví sedí, a poskládá řádky do jedné tabulky. Můžete přidat sloupec s názvem zdrojového souboru.</span></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faqCsvZeros">Proč Excel při otevření CSV odstraní úvodní nuly?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faqCsvZerosBody">Excel převádí sloupce, které vypadají jako čísla, na čísla, takže z 00123 je 123 a dlouhá čísla se změní na „1,2E+15“. Převeďte CSV na XLSX v RoWeave: kódy, identifikátory a čísla účtů zůstanou přesně jako v exportu.</span></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faq10">Kolik to stojí?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faq10Body">RoWeave je teď pro&nbsp;Windows a&nbsp;Mac zdarma: všechny funkce, bez&nbsp;omezení, bez&nbsp;registrace a&nbsp;bez&nbsp;reklam.</span></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faq1">Na kterých počítačích RoWeave funguje?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faq1Body">Na Windows 10 a&nbsp;11 (64bitových, x64) a&nbsp;na Macích s&nbsp;čipem Apple Silicon (M1 nebo novějším) se systémem macOS 12.3 nebo novějším.</span></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faq4">Změní se můj původní soubor?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faq4Body">Ne. RoWeave zdrojové soubory jen čte a&nbsp;nikdy je nepřepisuje. Výsledky se ukládají samostatně, do složky, kterou zvolíte.</span></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faq3">Zachová se formátování a&nbsp;vzorce?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faq3Body">Rozdělit zachová písma, výplně, ohraničení, šířky sloupců a&nbsp;formáty čísel. Vzorce se obvykle nahradí hodnotami uloženými v&nbsp;sešitu. V&nbsp;režimu „Každý list jako samostatný soubor“ můžete zachovat podporované vzorce, které odkazují jen na&nbsp;vlastní list; omezení program ukáže před spuštěním. Sloučit také zapisuje hodnoty a&nbsp;formátování zachová, když jsou všechny zdroje sešity XLSX nebo XLSM.</span> <a href="#keep"><span data-i18n="faq3Link">Co se zachová a&nbsp;co ne</span></a></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faq6">Zvládne velké soubory?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faq6Body">Velké soubory CSV převádí RoWeave do&nbsp;Excelu po&nbsp;částech, bez načtení celého souboru do&nbsp;paměti. Limit je 8&nbsp;milionů buněk (např. 400&nbsp;000&nbsp;řádků × 20 sloupců) a&nbsp;4&nbsp;miliony řádků. Pokud je řádků víc, než pojme list Excelu (1&nbsp;048&nbsp;576), RoWeave nabídne rozložit je do&nbsp;více listů. V&nbsp;běžném režimu závisí limit funkcí Rozdělit a&nbsp;Sloučit na&nbsp;paměti počítače. Pokud je sešit příliš velký, Rozdělit nabídne režim „Rozdělit po&nbsp;částech“ s&nbsp;vlastními omezeními, která ukáže před spuštěním.</span></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faq7">Co soubory chráněné heslem?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faq7Body">Sešity XLSX, XLSM a&nbsp;XLSB se otevřou: heslo zadáte v&nbsp;aplikaci a&nbsp;nikdy se neukládá. Šifrované soubory ve starším formátu XLS (Excel 97–2003) otevřít nelze. Rozdělit umí nové soubory také zabezpečit heslem: jedním pro všechny, nebo pro každý jiným, se seznamem uloženým do samostatného souboru.</span></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faq2">Potřebuji nainstalovaný Excel?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faq2Body">Ne. RoWeave soubory čte i&nbsp;zapisuje samo. Excel nebo jiný tabulkový procesor potřebujete jen k&nbsp;otevření výsledku.</span></p>
+            </div>
+          </details>
+        </div>
+
+        <aside class="about-colophon" id="about" aria-labelledby="about-title">
           <div class="about-head">
-            <img class="about-mascot" src="../assets/mascot-reading.webp" alt="" width="72" height="82" loading="lazy">
-            <h3><span data-i18n="aboutTitle">O&nbsp;projektu</span></h3>
+            <img class="about-mascot" src="../assets/mascot-reading.webp" alt="" width="60" height="68" loading="lazy">
+            <h3 id="about-title"><span data-i18n="aboutTitle">O&nbsp;projektu</span></h3>
           </div>
           <p><span data-i18n="aboutBody">RoWeave vytváří jeden vývojář. Aplikaci vylepšuji podle zpětné vazby uživatelů.</span></p>
           <p class="about-contact"><span data-i18n="aboutContactBefore">Pokud něco nefunguje nebo něco chybí, napište na</span> <a href="mailto:support@roweave.app">support@roweave.app</a><span data-i18n="aboutContactAfter">.</span></p>
-        </div>
-      </div>
-
-      <div class="faq-list">
-        <details>
-          <summary><span data-i18n="faqSplitHow">Jak rozdělit soubor Excelu na více souborů?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faqSplitHowBody">Otevřete list v nástroji Rozdělit, zvolte sloupec, například „Město“, a spusťte. RoWeave vytvoří samostatný soubor pro každou hodnotu ve sloupci, se stejnou hlavičkou, šířkami sloupců a formáty. Seznam souborů uvidíte dřív, než se cokoli spustí.</span></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faqMergeHow">Jak sloučit více souborů Excelu do jednoho?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faqMergeHowBody">Přetáhněte složku se soubory do nástroje Sloučit. RoWeave vezme z každého sešitu správný list, zkontroluje, že záhlaví sedí, a poskládá řádky do jedné tabulky. Můžete přidat sloupec s názvem zdrojového souboru.</span></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faqCsvZeros">Proč Excel při otevření CSV odstraní úvodní nuly?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faqCsvZerosBody">Excel převádí sloupce, které vypadají jako čísla, na čísla, takže z 00123 je 123 a dlouhá čísla se změní na „1,2E+15“. Převeďte CSV na XLSX v RoWeave: kódy, identifikátory a čísla účtů zůstanou přesně jako v exportu.</span></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faq10">Kolik to stojí?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faq10Body">RoWeave je teď pro&nbsp;Windows a&nbsp;Mac zdarma: všechny funkce, bez&nbsp;omezení, bez&nbsp;registrace a&nbsp;bez&nbsp;reklam.</span></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faq1">Na kterých počítačích RoWeave funguje?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faq1Body">Na Windows 10 a&nbsp;11 (64bitových, x64) a&nbsp;na Macích s&nbsp;čipem Apple Silicon (M1 nebo novějším) se systémem macOS 12.3 nebo novějším.</span></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faq4">Změní se můj původní soubor?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faq4Body">Ne. RoWeave zdrojové soubory jen čte a&nbsp;nikdy je nepřepisuje. Výsledky se ukládají samostatně, do složky, kterou zvolíte.</span></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faq3">Zachová se formátování a&nbsp;vzorce?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faq3Body">Rozdělit zachová písma, výplně, ohraničení, šířky sloupců a&nbsp;formáty čísel. Vzorce se obvykle nahradí hodnotami uloženými v&nbsp;sešitu. V&nbsp;režimu „Každý list jako samostatný soubor“ můžete zachovat podporované vzorce, které odkazují jen na&nbsp;vlastní list; omezení program ukáže před spuštěním. Sloučit také zapisuje hodnoty a&nbsp;formátování zachová, když jsou všechny zdroje sešity XLSX nebo XLSM.</span> <a href="#keep"><span data-i18n="faq3Link">Co se zachová a&nbsp;co ne</span></a></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faq6">Zvládne velké soubory?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faq6Body">Velké soubory CSV převádí RoWeave do&nbsp;Excelu po&nbsp;částech, bez načtení celého souboru do&nbsp;paměti. Limit je 8&nbsp;milionů buněk (např. 400&nbsp;000&nbsp;řádků × 20 sloupců) a&nbsp;4&nbsp;miliony řádků. Pokud je řádků víc, než pojme list Excelu (1&nbsp;048&nbsp;576), RoWeave nabídne rozložit je do&nbsp;více listů. V&nbsp;běžném režimu závisí limit funkcí Rozdělit a&nbsp;Sloučit na&nbsp;paměti počítače. Pokud je sešit příliš velký, Rozdělit nabídne režim „Rozdělit po&nbsp;částech“ s&nbsp;vlastními omezeními, která ukáže před spuštěním.</span></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faq7">Co soubory chráněné heslem?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faq7Body">Sešity XLSX, XLSM a&nbsp;XLSB se otevřou: heslo zadáte v&nbsp;aplikaci a&nbsp;nikdy se neukládá. Šifrované soubory ve starším formátu XLS (Excel 97–2003) otevřít nelze. Rozdělit umí nové soubory také zabezpečit heslem: jedním pro všechny, nebo pro každý jiným, se seznamem uloženým do samostatného souboru.</span></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faq2">Potřebuji nainstalovaný Excel?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faq2Body">Ne. RoWeave soubory čte i&nbsp;zapisuje samo. Excel nebo jiný tabulkový procesor potřebujete jen k&nbsp;otevření výsledku.</span></p>
-          </div>
-        </details>
+        </aside>
       </div>
     </section>
 
-    <section class="container download-section" id="download" aria-labelledby="download-title" tabindex="-1">
-      <div class="download-panel">
-        <div class="download-head">
-          <img src="../assets/roweave-icon-160.webp" alt="" width="52" height="52" loading="lazy">
-          <div>
-            <h2 id="download-title"><span data-i18n="downloadTitle">RoWeave pro Windows a&nbsp;Mac</span></h2>
-            <p><span data-i18n="downloadStatus">Bezplatná beta 0.13</span></p>
+    <section class="download-band" id="download" aria-labelledby="download-title" tabindex="-1">
+      <div class="container">
+        <div class="download-shell">
+          <div class="download-header">
+            <img src="../assets/roweave-icon-160.webp" alt="" width="56" height="56" loading="lazy">
+            <div>
+              <p class="download-kicker"><span data-i18n="downloadStatus">Bezplatná beta 0.13</span></p>
+              <h2 id="download-title"><span data-i18n="downloadTitle">RoWeave pro Windows a&nbsp;Mac</span></h2>
+            </div>
+          </div>
+
+          <ul class="platform-grid" aria-label="Verze aplikace" data-i18n-aria-label="platformsLabel">
+            <li class="platform-col">
+              <div class="platform-meta">
+                <h3>Windows</h3>
+                <p><span data-i18n="windowsPlatform">Windows 10/11 (x64)</span></p>
+              </div>
+              <a class="btn btn-download" href="https://github.com/RoWeave/releases/releases/latest/download/RoWeave-Windows-x64-setup.exe"><span data-i18n="downloadWindows">Stáhnout pro&nbsp;Windows</span></a>
+              <p class="platform-file"><span data-i18n="windowsFile">.exe, asi 11&nbsp;MB</span></p>
+              <details class="platform-hint">
+                <summary><span data-i18n="smartscreenSummary">Pokud Windows zobrazí varování</span></summary>
+                <p><span data-i18n="smartscreenHint">Zobrazuje se „Systém Windows ochránil váš počítač“? Klikněte na&nbsp;„Další informace“ a&nbsp;pak na&nbsp;„Přesto spustit“. Instalační program zatím nemá podpis Microsoftu.</span></p>
+              </details>
+            </li>
+
+            <li class="platform-col">
+              <div class="platform-meta">
+                <h3>macOS</h3>
+                <p><span data-i18n="macPlatform">Apple Silicon (M1 nebo novější), macOS 12.3+</span></p>
+              </div>
+              <a class="btn btn-download" href="https://github.com/RoWeave/releases/releases/latest/download/RoWeave-macOS-arm64.dmg"><span data-i18n="downloadMac">Stáhnout pro&nbsp;Mac</span></a>
+              <p class="platform-file"><span data-i18n="macFile">.dmg, asi 14&nbsp;MB. Podepsáno vývojářem a&nbsp;ověřeno společností Apple.</span></p>
+            </li>
+          </ul>
+
+          <div class="download-footer">
+            <a class="download-link" href="https://github.com/RoWeave/releases/releases"><span data-i18n="downloadMeta">Všechny verze na&nbsp;GitHubu</span> <span aria-hidden="true">↗</span></a>
           </div>
         </div>
-
-        <ul class="platform-grid" aria-label="Verze aplikace" data-i18n-aria-label="platformsLabel">
-          <li class="platform-card">
-            <div class="platform-head">
-              <h3>Windows</h3>
-              <p><span data-i18n="windowsPlatform">Windows 10 a&nbsp;11, 64bitové (x64)</span></p>
-            </div>
-            <a class="button store-button" href="#" data-store="msstore" hidden>Microsoft Store</a>
-            <a class="button direct-download" href="https://github.com/RoWeave/releases/releases/latest/download/RoWeave-Windows-x64-setup.exe"><span data-i18n="downloadWindows">Stáhnout pro&nbsp;Windows</span></a>
-            <p class="platform-file"><span data-i18n="windowsFile">Instalační program .exe, asi 11&nbsp;MB</span></p>
-            <details class="platform-hint">
-              <summary><span data-i18n="smartscreenSummary">Pokud Windows zobrazí varování</span></summary>
-              <p><span data-i18n="smartscreenHint">Pokud Windows zobrazí „Systém Windows ochránil váš počítač“, klikněte na&nbsp;„Další informace“ a&nbsp;pak „Přesto spustit“: instalační program zatím nemá podpis Microsoftu.</span></p>
-            </details>
-          </li>
-
-          <li class="platform-card">
-            <div class="platform-head">
-              <h3>macOS</h3>
-              <p><span data-i18n="macPlatform">Apple Silicon (M1 nebo novější), macOS 12.3+</span></p>
-            </div>
-            <a class="button store-button" href="#" data-store="mas" hidden>Mac App Store</a>
-            <a class="button direct-download" href="https://github.com/RoWeave/releases/releases/latest/download/RoWeave-macOS-arm64.dmg"><span data-i18n="downloadMac">Stáhnout pro&nbsp;Mac</span></a>
-            <p class="platform-file"><span data-i18n="macFile">Obraz .dmg, asi 14&nbsp;MB. Podepsáno a&nbsp;ověřeno společností Apple.</span></p>
-          </li>
-        </ul>
-
-        <p class="download-meta"><a class="text-link" href="https://github.com/RoWeave/releases/releases"><span data-i18n="downloadMeta">Všechny verze na&nbsp;GitHubu</span></a></p>
       </div>
     </section>
   </main>
 
-  <footer class="container site-footer">
-    <div class="footer-top">
-      <a class="brand" href="#" aria-label="RoWeave, zpět na začátek stránky" data-i18n-aria-label="brandHome"><img src="../assets/roweave-icon-160.webp" alt="" width="28" height="28" loading="lazy"><span>RoWeave</span></a>
-      <p><span data-i18n="footerTagline">Desktopová aplikace pro rozdělování a&nbsp;slučování sešitů Excelu.</span></p>
-    </div>
-
-    <nav class="language-links" aria-label="Jazyk stránky" data-i18n-aria-label="language"><a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a><a href="../cs/index.html" hreflang="cs" aria-current="page" lang="cs">Čeština</a><a href="../de/index.html" hreflang="de" lang="de">Deutsch</a><a href="../en/index.html" hreflang="en" lang="en">English</a><a href="../es/index.html" hreflang="es" lang="es">Español</a><a href="../fr/index.html" hreflang="fr" lang="fr">Français</a><a href="../it/index.html" hreflang="it" lang="it">Italiano</a><a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a><a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a><a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a><a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a><a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a><a href="../ko/index.html" hreflang="ko" lang="ko">한국어</a><a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
-
-    <p class="footer-privacy"><a href="#privacy"><span data-i18n="privacyMore">Více o&nbsp;soukromí</span></a></p>
-
-    <div class="footer-bottom">
-      <p>© 2026 RoWeave</p>
-      <span><span data-i18n="footerSupport">Podpora:</span> <a href="mailto:support@roweave.app">support@roweave.app</a></span>
-      <a href="../en/privacy/"><span data-i18n="footerPrivacy">Soukromí</span></a>
-    </div>
-
-    <details class="privacy-disclosure" id="privacy">
-      <summary><span data-i18n="privacyDetails">Soukromí v&nbsp;aplikaci a&nbsp;na tomto webu</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-      <div class="answer">
-        <p><span data-i18n="privacyDetails1">Aplikace zpracovává soubory Excelu jen ve vašem počítači a jejich obsah nikdy neposílá po síti. Na internet se připojuje jen kvůli kontrole aktualizací (updates.roweave.app, při výpadku GitHub) a po vašem kliknutí kvůli stažení nové verze z GitHubu. Názvy ani obsah souborů se přitom nepřenášejí a automatickou kontrolu lze vypnout. Na tomto webu nejsou formuláře, reklamy, měřicí kódy ani cookies.</span></p>
-        <p><span data-i18n="privacySupport">„Kontaktovat podporu“ v&nbsp;aplikaci jen připraví e-mail na&nbsp;support@roweave.app: odešlete ho sami ze své pošty, RoWeave sám nic neodesílá. Se zaškrtnutou volbou „Přiložit diagnostiku“ aplikace uloží soubor s technickými údaji (verze RoWeave a systému, kroky a časy operací, kódy chyb, odhad paměti) a přiloží ho k e-mailu. Neobsahuje obsah tabulek, cesty ani hesla.</span></p>
-        <p><span data-i18n="privacyDetails2">Web i soubory ke stažení jsou umístěné na GitHubu, který vidí technické údaje o připojení, například IP adresu. Pokud napíšete na support@roweave.app, vaše adresa se použije jen k odpovědi.</span></p>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <a class="brand" href="#top" aria-label="RoWeave, zpět na začátek stránky" data-i18n-aria-label="brandHome">
+          <img src="../assets/roweave-icon-160.webp" alt="" width="24" height="24" loading="lazy">
+          <span class="brand-name">RoWeave</span>
+        </a>
       </div>
-    </details>
+
+      <nav class="language-links" aria-label="Jazyk stránky" data-i18n-aria-label="language"><a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a><a href="../cs/index.html" hreflang="cs" aria-current="page" lang="cs">Čeština</a><a href="../de/index.html" hreflang="de" lang="de">Deutsch</a><a href="../en/index.html" hreflang="en" lang="en">English</a><a href="../es/index.html" hreflang="es" lang="es">Español</a><a href="../fr/index.html" hreflang="fr" lang="fr">Français</a><a href="../it/index.html" hreflang="it" lang="it">Italiano</a><a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a><a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a><a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a><a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a><a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a><a href="../ko/index.html" hreflang="ko" lang="ko">한국어</a><a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
+
+      <div class="footer-meta">
+        <span>© 2026 RoWeave</span>
+        <span><span data-i18n="footerSupport">Podpora:</span> <a href="mailto:support@roweave.app">support@roweave.app</a></span>
+        <a href="#privacy"><span data-i18n="privacyMore">Více o&nbsp;soukromí</span></a>
+        <a href="../en/privacy/"><span data-i18n="footerPrivacy">Soukromí</span></a>
+      </div>
+
+      <details class="privacy-disclosure" id="privacy">
+        <summary><span data-i18n="privacyDetails">Soukromí v&nbsp;aplikaci a&nbsp;na tomto webu</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+        <div class="faq-answer">
+          <p><span data-i18n="privacyDetails1">Aplikace zpracovává soubory Excelu jen ve vašem počítači a jejich obsah nikdy neposílá po síti. Na internet se připojuje jen kvůli kontrole aktualizací (updates.roweave.app, při výpadku GitHub) a po vašem kliknutí kvůli stažení nové verze z GitHubu. Názvy ani obsah souborů se přitom nepřenášejí a automatickou kontrolu lze vypnout. Na tomto webu nejsou formuláře, reklamy, měřicí kódy ani cookies.</span></p>
+          <p><span data-i18n="privacySupport">„Kontaktovat podporu“ v&nbsp;aplikaci jen připraví e-mail na&nbsp;support@roweave.app: odešlete ho sami ze své pošty, RoWeave sám nic neodesílá. Se zaškrtnutou volbou „Přiložit diagnostiku“ aplikace uloží soubor s technickými údaji (verze RoWeave a systému, kroky a časy operací, kódy chyb, odhad paměti) a přiloží ho k e-mailu. Neobsahuje obsah tabulek, cesty ani hesla.</span></p>
+          <p><span data-i18n="privacyDetails2">Web i soubory ke stažení jsou umístěné na GitHubu, který vidí technické údaje o připojení, například IP adresu. Pokud napíšete na support@roweave.app, vaše adresa se použije jen k odpovědi.</span></p>
+        </div>
+      </details>
+    </div>
   </footer>
 </body>
 </html>

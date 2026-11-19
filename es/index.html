@@ -46,217 +46,179 @@
 <body>
   <a class="skip-link" href="#main"><span data-i18n="skip">Saltar al contenido</span></a>
 
-  <header class="site-header">
+  <header class="site-header" id="top">
     <div class="container header-inner">
-      <a class="brand" href="#" aria-label="RoWeave: volver al inicio" data-i18n-aria-label="brandHome"><img src="../assets/roweave-icon-160.webp" alt="" width="30" height="30"><span>RoWeave</span></a>
+      <a class="brand" href="#top" aria-label="RoWeave: volver al inicio" data-i18n-aria-label="brandHome">
+        <img src="../assets/roweave-icon-160.webp" alt="" width="28" height="28">
+        <span class="brand-name">RoWeave</span>
+      </a>
 
-      <nav class="navigation" id="navigation" aria-label="Navegación principal" data-i18n-aria-label="navigation">
+      <nav class="site-nav" id="navigation" aria-label="Navegación principal" data-i18n-aria-label="navigation">
         <a href="#features"><span data-i18n="navFeatures">Funciones</span></a>
         <a href="#scenarios"><span data-i18n="navUseCases">Para quién</span></a>
         <a href="#compare"><span data-i18n="navCompare">Comparativa</span></a>
         <a href="#keep"><span data-i18n="navKeep">Qué se conserva</span></a>
         <a href="#faq"><span data-i18n="navFaq">Preguntas</span></a>
+        <a class="nav-download" href="#download"><span data-i18n="navPlatforms">Descargar</span></a>
       </nav>
 
       <div class="header-actions">
         <label class="language-control" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c5 5 5 13 0 18-5-5-5-13 0-18Z"/></svg><span data-language-short aria-hidden="true">ES</span><select id="language" aria-label="Idioma de la página" data-i18n-aria-label="language"><option value="id" data-href="../id/index.html">Bahasa Indonesia</option><option value="cs" data-href="../cs/index.html">Čeština</option><option value="de" data-href="../de/index.html">Deutsch</option><option value="en" data-href="../en/index.html">English</option><option value="es" selected data-href="../es/index.html">Español</option><option value="fr" data-href="../fr/index.html">Français</option><option value="it" data-href="../it/index.html">Italiano</option><option value="nl" data-href="../nl/index.html">Nederlands</option><option value="pl" data-href="../pl/index.html">Polski</option><option value="pt-BR" data-href="../pt-BR/index.html">Português (Brasil)</option><option value="vi" data-href="../vi/index.html">Tiếng Việt</option><option value="ru" data-href="../ru/index.html">Русский</option><option value="ja" data-href="../ja/index.html">日本語</option><option value="ko" data-href="../ko/index.html">한국어</option><option value="zh-Hans" data-href="../zh-Hans/index.html">简体中文</option></select></label>
 
-        <button class="icon-button theme-toggle" type="button" aria-label="Cambiar al tema oscuro" data-label-light="Cambiar al tema claro" data-label-dark="Cambiar al tema oscuro" data-i18n-aria-label="themeDark" data-i18n-data-label-light="themeLight" data-i18n-data-label-dark="themeDark" hidden>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20.7 13A8.8 8.8 0 0 1 11 3.3 8.8 8.8 0 1 0 20.7 13Z"/></svg>
+        <button class="theme-toggle" type="button" aria-label="Cambiar al tema oscuro" data-label-light="Cambiar al tema claro" data-label-dark="Cambiar al tema oscuro" data-text-light="Claro" data-text-dark="Oscuro" data-i18n-aria-label="themeDark" data-i18n-data-label-light="themeLight" data-i18n-data-label-dark="themeDark" data-i18n-data-text-light="themeShortLight" data-i18n-data-text-dark="themeShortDark" hidden>
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20.7 13A8.8 8.8 0 0 1 11 3.3 8.8 8.8 0 1 0 20.7 13Z"/></svg>
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.4M12 19.6V22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M2 12h2.4M19.6 12H22M4.9 19.1l1.7-1.7M17.4 6.6l1.7-1.7"/></svg>
+          <span class="theme-toggle-text" data-theme-text><span data-i18n="themeShortDark">Oscuro</span></span>
         </button>
 
-        <a class="button button-small" href="#download"><span data-i18n="navPlatforms">Descargar</span></a>
+        <a class="btn btn-primary btn-sm" href="#download"><span data-i18n="navPlatforms">Descargar</span></a>
 
-        <button class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Abrir menú" data-label-open="Abrir menú" data-label-close="Cerrar menú" data-i18n-aria-label="menuOpen" data-i18n-data-label-open="menuOpen" data-i18n-data-label-close="menuClose" hidden>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Abrir menú" data-label-open="Abrir menú" data-label-close="Cerrar menú" data-i18n-aria-label="menuOpen" data-i18n-data-label-open="menuOpen" data-i18n-data-label-close="menuClose" hidden>
+          <svg class="icon-menu" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
         </button>
       </div>
     </div>
   </header>
 
   <main id="main" tabindex="-1">
-    <section class="hero container" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="hero-meta"><span data-i18n="heroMeta">Beta gratuita 0.13 · Windows 10/11 y macOS 12.3+</span></p>
-        <h1 id="hero-title"><span data-i18n="heroTogether">Divide un Excel por columna.</span> <span data-i18n="heroApart">Combina informes en uno.</span></h1>
-        <p class="hero-description"><span data-i18n="heroDescription">RoWeave divide un archivo de Excel por columna en archivos separados y reúne en una sola tabla los informes de una carpeta.</span></p>
-        <div class="hero-actions">
-          <a class="button" href="#download"><span data-i18n="ctaPlatforms">Descargar gratis</span></a>
-          <a class="button button-quiet" href="#how-it-works"><span data-i18n="navHow">Cómo funciona</span></a>
-        </div>
-      </div>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-head">
+          <p class="hero-kicker">
+            <span class="kicker-dot" aria-hidden="true"></span>
+            <span data-i18n="downloadStatus">Beta 0.13 gratis</span>
+            <span class="kicker-sep" aria-hidden="true">·</span>
+            <span data-i18n="heroPlatforms">Windows 10/11 y macOS 12.3+</span>
+          </p>
 
-      <div class="showcase" id="showcase">
-        <div class="showcase-bar">
-          <div class="segmented" role="tablist" aria-label="Modos de la aplicación RoWeave" data-i18n-aria-label="showcaseLabel">
-            <button class="segment" type="button" role="tab" id="tab-split" aria-selected="true" aria-controls="panel-split" data-tab="split"><span data-i18n="splitLabel">Dividir</span></button>
-            <button class="segment" type="button" role="tab" id="tab-collect" aria-selected="false" aria-controls="panel-collect" data-tab="collect"><span data-i18n="collectLabel">Combinar</span></button>
-            <button class="segment" type="button" role="tab" id="tab-csv" aria-selected="false" aria-controls="panel-csv" data-tab="csv"><span data-i18n="csvLabel">CSV → Excel</span></button>
-          </div>
-        </div>
+          <div class="hero-top">
+            <h1 id="hero-title">
+              <span class="hero-line-main" data-i18n="heroTogether">Divide un Excel por columna.</span>
+              <span class="hero-line-sub" data-i18n="heroApart">Combina informes en uno.</span>
+            </h1>
 
-        <div class="window-frame">
-          <div class="showcase-panel" id="panel-split" role="tabpanel" aria-labelledby="tab-split" tabindex="0">
-            <picture class="shot-light">
-              <source media="(max-width: 640px)" srcset="../assets/app-split-light-mobile.webp" width="936" height="838">
-              <img src="../assets/app-split-light.webp" alt="Ventana de Dividir de RoWeave: está seleccionada la columna «Región» y, antes de ejecutar, se muestra la lista de los 7 archivos que se crearán" data-i18n-alt="shotSplitAlt" width="1536" height="864" fetchpriority="high">
-            </picture>
-            <picture class="shot-dark">
-              <source media="(max-width: 640px)" srcset="../assets/app-split-dark-mobile.webp" width="936" height="838">
-              <img src="../assets/app-split-dark.webp" alt="Ventana de Dividir de RoWeave: está seleccionada la columna «Región» y, antes de ejecutar, se muestra la lista de los 7 archivos que se crearán" data-i18n-alt="shotSplitAlt" width="1536" height="864" fetchpriority="high">
-            </picture>
-          </div>
-          <div class="showcase-panel" id="panel-collect" role="tabpanel" aria-labelledby="tab-collect" tabindex="0" hidden>
-            <picture class="shot-light">
-              <source media="(max-width: 640px)" srcset="../assets/app-collect-light-mobile.webp" width="936" height="838">
-              <img src="../assets/app-collect-light.webp" alt="Ventana de Combinar de RoWeave: tres archivos de sucursales, verificación de encabezados y vista previa de la tabla común con una columna del archivo de origen" data-i18n-alt="shotCollectAlt" width="1536" height="864" loading="lazy">
-            </picture>
-            <picture class="shot-dark">
-              <source media="(max-width: 640px)" srcset="../assets/app-collect-dark-mobile.webp" width="936" height="838">
-              <img src="../assets/app-collect-dark.webp" alt="Ventana de Combinar de RoWeave: tres archivos de sucursales, verificación de encabezados y vista previa de la tabla común con una columna del archivo de origen" data-i18n-alt="shotCollectAlt" width="1536" height="864" loading="lazy">
-            </picture>
-          </div>
-          <div class="showcase-panel" id="panel-csv" role="tabpanel" aria-labelledby="tab-csv" tabindex="0" hidden>
-            <picture class="shot-light">
-              <source media="(max-width: 640px)" srcset="../assets/app-csv-light-mobile.webp" width="936" height="838">
-              <img src="../assets/app-csv-light.webp" alt="Conversor de CSV a Excel de RoWeave: codificación y separador detectados automáticamente, ceros a la izquierda de los códigos conservados" data-i18n-alt="shotCsvAlt" width="1536" height="864" loading="lazy">
-            </picture>
-            <picture class="shot-dark">
-              <source media="(max-width: 640px)" srcset="../assets/app-csv-dark-mobile.webp" width="936" height="838">
-              <img src="../assets/app-csv-dark.webp" alt="Conversor de CSV a Excel de RoWeave: codificación y separador detectados automáticamente, ceros a la izquierda de los códigos conservados" data-i18n-alt="shotCsvAlt" width="1536" height="864" loading="lazy">
-            </picture>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="container facts-strip" aria-label="Datos clave" data-i18n-aria-label="trustLabel">
-      <div class="facts-grid">
-        <div class="fact-item">
-          <strong><span data-i18n="trustFiles">Sin subir archivos</span></strong>
-          <p><span data-i18n="privacyBody">Los archivos se procesan en tu ordenador y no se envían a ningún sitio. RoWeave solo se conecta para buscar actualizaciones, y puedes desactivarlo en los ajustes.</span></p>
-        </div>
-        <div class="fact-item">
-          <strong><span data-i18n="fact2Title">No se instala dentro de Excel</span></strong>
-          <p><span data-i18n="fact2Body">Una aplicación independiente, sin macros VBA ni complementos. No necesitas tener Excel instalado, y en Windows se instala sin permisos de administrador.</span></p>
-        </div>
-        <div class="fact-item">
-          <strong><span data-i18n="fact3Title">Ves el plan antes de ejecutar</span></strong>
-          <p><span data-i18n="featuresIntro">Antes de empezar, RoWeave te muestra qué archivos obtendrás y qué no se va a transferir.</span></p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section container" id="features" aria-labelledby="features-title" tabindex="-1">
-      <div class="section-head">
-        <h2 id="features-title"><span data-i18n="featuresTitle">Tres tareas que se suelen hacer a mano</span></h2>
-      </div>
-
-      <div class="ledger">
-        <article class="ledger-row">
-          <div class="ledger-id">
-            <span class="index-num">01</span>
-            <div>
-              <p class="ledger-tag"><span data-i18n="splitLabel">Dividir</span></p>
-              <h3><span data-i18n="splitTitle">Una hoja → un archivo por valor</span></h3>
-              <p class="flow-badge"><span data-i18n="splitExampleIn">Nómina</span> <span aria-hidden="true">→</span> <span data-i18n="splitExampleOut">un archivo por área</span></p>
+            <div class="hero-aside">
+              <p class="hero-desc"><span data-i18n="heroDescription">RoWeave divide un archivo de Excel por columna en archivos separados y reúne en una sola tabla los informes de una carpeta.</span></p>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="#download"><span data-i18n="ctaPlatforms">Descargar gratis</span></a>
+                <a class="btn btn-ghost" href="#how-it-works"><span data-i18n="navHow">Cómo funciona</span> <span aria-hidden="true">↓</span></a>
+              </div>
             </div>
           </div>
-          <div class="ledger-body">
-            <p><span data-i18n="splitBody">Elige una columna, por ejemplo «Departamento». RoWeave crea un libro por departamento y conserva las filas de encabezado, el ancho de las columnas, los formatos de número y los colores de relleno y de fuente. Si eliges varias columnas, la primera define las subcarpetas. Cada archivo puede llevar su propia contraseña.</span></p>
-            <p class="ledger-detail"><span data-i18n="splitDetail">También hay un modo «Cada hoja en un archivo». Los archivos generados pueden ir directamente a un ZIP o protegerse con contraseña: una para todos o una distinta para cada uno, con la lista de contraseñas en un archivo aparte.</span></p>
-          </div>
-        </article>
+        </div>
 
-        <article class="ledger-row">
-          <div class="ledger-id">
-            <span class="index-num">02</span>
-            <div>
-              <p class="ledger-tag"><span data-i18n="collectLabel">Combinar</span></p>
-              <h3><span data-i18n="collectTitle">Muchos archivos → una hoja</span></h3>
-              <p class="flow-badge"><span data-i18n="collectExampleIn">30 informes</span> <span aria-hidden="true">→</span> <span data-i18n="collectExampleOut">una sola hoja</span></p>
+        <div class="showcase" id="showcase">
+          <div class="mode-bar" role="tablist" aria-label="Modos de la aplicación RoWeave" data-i18n-aria-label="showcaseLabel">
+            <button class="mode-tab" type="button" role="tab" id="tab-split" aria-selected="true" aria-controls="panel-split" data-tab="split"><span class="mode-name" data-i18n="splitLabel">Dividir</span></button>
+            <button class="mode-tab" type="button" role="tab" id="tab-collect" aria-selected="false" aria-controls="panel-collect" data-tab="collect" tabindex="-1"><span class="mode-name" data-i18n="collectLabel">Combinar</span></button>
+            <button class="mode-tab" type="button" role="tab" id="tab-csv" aria-selected="false" aria-controls="panel-csv" data-tab="csv" tabindex="-1"><span class="mode-name" data-i18n="csvLabel">CSV → Excel</span></button>
+          </div>
+
+          <div class="specimen-frame">
+            <div class="showcase-panel" id="panel-split" role="tabpanel" aria-labelledby="tab-split" tabindex="0">
+              <picture class="shot-light">
+                <source media="(max-width: 640px)" srcset="../assets/app-split-light-mobile.webp" width="936" height="838">
+                <img src="../assets/app-split-light.webp" alt="Ventana de Dividir de RoWeave: está seleccionada la columna «Región» y, antes de ejecutar, se muestra la lista de los 7 archivos que se crearán" data-i18n-alt="shotSplitAlt" width="1536" height="864" fetchpriority="high">
+              </picture>
+              <picture class="shot-dark">
+                <source media="(max-width: 640px)" srcset="../assets/app-split-dark-mobile.webp" width="936" height="838">
+                <img src="../assets/app-split-dark.webp" alt="Ventana de Dividir de RoWeave: está seleccionada la columna «Región» y, antes de ejecutar, se muestra la lista de los 7 archivos que se crearán" data-i18n-alt="shotSplitAlt" width="1536" height="864" fetchpriority="high">
+              </picture>
+            </div>
+            <div class="showcase-panel" id="panel-collect" role="tabpanel" aria-labelledby="tab-collect" tabindex="0" hidden>
+              <picture class="shot-light">
+                <source media="(max-width: 640px)" srcset="../assets/app-collect-light-mobile.webp" width="936" height="838">
+                <img src="../assets/app-collect-light.webp" alt="Ventana de Combinar de RoWeave: tres archivos de sucursales, verificación de encabezados y vista previa de la tabla común con una columna del archivo de origen" data-i18n-alt="shotCollectAlt" width="1536" height="864" loading="lazy">
+              </picture>
+              <picture class="shot-dark">
+                <source media="(max-width: 640px)" srcset="../assets/app-collect-dark-mobile.webp" width="936" height="838">
+                <img src="../assets/app-collect-dark.webp" alt="Ventana de Combinar de RoWeave: tres archivos de sucursales, verificación de encabezados y vista previa de la tabla común con una columna del archivo de origen" data-i18n-alt="shotCollectAlt" width="1536" height="864" loading="lazy">
+              </picture>
+            </div>
+            <div class="showcase-panel" id="panel-csv" role="tabpanel" aria-labelledby="tab-csv" tabindex="0" hidden>
+              <picture class="shot-light">
+                <source media="(max-width: 640px)" srcset="../assets/app-csv-light-mobile.webp" width="936" height="838">
+                <img src="../assets/app-csv-light.webp" alt="Conversor de CSV a Excel de RoWeave: codificación y separador detectados automáticamente, ceros a la izquierda de los códigos conservados" data-i18n-alt="shotCsvAlt" width="1536" height="864" loading="lazy">
+              </picture>
+              <picture class="shot-dark">
+                <source media="(max-width: 640px)" srcset="../assets/app-csv-dark-mobile.webp" width="936" height="838">
+                <img src="../assets/app-csv-dark.webp" alt="Conversor de CSV a Excel de RoWeave: codificación y separador detectados automáticamente, ceros a la izquierda de los códigos conservados" data-i18n-alt="shotCsvAlt" width="1536" height="864" loading="lazy">
+              </picture>
             </div>
           </div>
-          <div class="ledger-body">
-            <p><span data-i18n="collectBody">Arrastra una carpeta con informes. RoWeave toma la hoja correcta de cada libro, comprueba que los encabezados coinciden y apila las filas en una sola tabla. Si quieres, añade una columna con el nombre del archivo de origen. También admite libros XLSX, XLSM y XLSB protegidos con contraseña; los XLS antiguos cifrados (Excel 97–2003) no se pueden abrir.</span></p>
-          </div>
-        </article>
-
-        <article class="ledger-row">
-          <div class="ledger-id">
-            <span class="index-num">03</span>
-            <div>
-              <p class="ledger-tag"><span data-i18n="csvLabel">CSV → Excel</span></p>
-              <h3><span data-i18n="csvTitle">Exportación CSV → un Excel en condiciones</span></h3>
-              <p class="flow-badge"><span data-i18n="csvExampleIn">Datos del ERP</span> <span aria-hidden="true">→</span> <span data-i18n="csvExampleOut">XLSX con ceros</span></p>
-            </div>
-          </div>
-          <div class="ledger-body">
-            <p><span data-i18n="csvBody">Convierte CSV a XLSX conservando los ceros a la izquierda de códigos de producto, identificadores y números de cuenta, para que los números largos no se conviertan en «1,2E+15».</span></p>
-            <p class="ledger-detail"><span data-i18n="csvDetail">RoWeave detecta solo la codificación, incluidas UTF-8 y Windows-1252. Si no está seguro, muestra una vista previa y te deja elegir. Las exportaciones grandes las lee por partes, hasta 8 millones de celdas.</span></p>
-          </div>
-        </article>
+        </div>
       </div>
     </section>
 
-    <section class="section section-tight container" id="scenarios" aria-labelledby="scenarios-title" tabindex="-1">
-      <div class="section-head">
-        <h2 id="scenarios-title"><span data-i18n="useCasesTitle">Si lo haces a mano cada mes</span></h2>
-      </div>
-
-      <ul class="cell-grid">
-        <li class="cell-item">
-          <p class="cell-role"><span data-i18n="use1Role">Finanzas y contabilidad</span></p>
-          <h3><span data-i18n="use1Task">Enviar a cada centro de coste su informe</span></h3>
-          <p><span data-i18n="use1Body">Un informe de toda la empresa → un archivo por centro de coste, con el mismo encabezado y los mismos formatos de número.</span></p>
-        </li>
-        <li class="cell-item">
-          <p class="cell-role"><span data-i18n="use2Role">RR. HH.</span></p>
-          <h3><span data-i18n="use2Task">Que cada responsable vea solo a su equipo</span></h3>
-          <p><span data-i18n="use2Body">Lista de empleados → un archivo por departamento, cada uno con su propia contraseña. RoWeave guarda las contraseñas en una lista aparte.</span></p>
-        </li>
-        <li class="cell-item">
-          <p class="cell-role"><span data-i18n="use3Role">Logística y almacén</span></p>
-          <h3><span data-i18n="use3Task">Unir los informes de almacén en una hoja</span></h3>
-          <p><span data-i18n="use3Body">30 archivos de distintos centros → una sola tabla. Cada fila puede llevar el nombre del archivo del que procede.</span></p>
-        </li>
-        <li class="cell-item">
-          <p class="cell-role"><span data-i18n="use4Role">Operaciones de ventas</span></p>
-          <h3><span data-i18n="use4Task">Repartir objetivos y resultados entre los comerciales</span></h3>
-          <p><span data-i18n="use4Body">Exportación del CRM con las columnas Región y Comercial → una carpeta por región y, dentro, un archivo por comercial.</span></p>
-        </li>
-        <li class="cell-item">
-          <p class="cell-role"><span data-i18n="use5Role">ERP y bancos</span></p>
-          <h3><span data-i18n="use5Task">Abrir un CSV sin perder los ceros a la izquierda</span></h3>
-          <p><span data-i18n="use5Body">CSV → XLSX, con códigos de producto, NIF y números de cuenta tal como se exportaron.</span></p>
-        </li>
-        <li class="cell-item">
-          <p class="cell-role"><span data-i18n="use6Role">Colegios y universidades</span></p>
-          <h3><span data-i18n="use6Task">Dividir listas por clase o grupo</span></h3>
-          <p><span data-i18n="use6Body">Una lista general → un archivo por grupo. Después, vuelve a reunir en un libro los archivos de los profesores.</span></p>
-        </li>
-      </ul>
-    </section>
-
-    <section class="band-soft" id="how-it-works" aria-labelledby="workflow-title" tabindex="-1">
+    <section class="principles" aria-label="Datos clave" data-i18n-aria-label="trustLabel">
       <div class="container">
-        <div class="section-head">
+        <div class="principles-grid">
+          <div class="principle-item">
+            <h2><span data-i18n="trustFiles">Sin subir archivos</span></h2>
+            <p><span data-i18n="trustFilesBody">RoWeave procesa los archivos en tu ordenador. Puedes desactivar la búsqueda automática de actualizaciones en los ajustes.</span></p>
+          </div>
+          <div class="principle-item">
+            <h2><span data-i18n="fact2Title">No se instala dentro de Excel</span></h2>
+            <p><span data-i18n="fact2Body">Una aplicación independiente, sin macros VBA ni complementos. No necesitas tener Excel instalado, y en Windows se instala sin permisos de administrador.</span></p>
+          </div>
+          <div class="principle-item">
+            <h2><span data-i18n="fact3Title">Ves el plan antes de ejecutar</span></h2>
+            <p><span data-i18n="featuresIntro">Antes de empezar, RoWeave te muestra qué archivos obtendrás y qué no se va a transferir.</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features" aria-labelledby="features-title" tabindex="-1">
+      <div class="container split-section">
+        <div class="split-rail">
+          <h2 id="features-title"><span data-i18n="featuresTitle">Tres tareas que se suelen hacer a mano</span></h2>
+        </div>
+
+        <div class="split-content">
+          <article class="feature-entry" id="mode-split">
+            <p class="entry-index"><span data-i18n="splitLabel">Dividir</span></p>
+            <h3><span data-i18n="splitTitle">Una hoja → un archivo por valor</span></h3>
+            <p><span data-i18n="splitBody">Elige una columna, por ejemplo «Departamento». RoWeave crea un libro por departamento y conserva las filas de encabezado, el ancho de las columnas, los formatos de número y los colores de relleno y de fuente. Si eliges varias columnas, la primera define las subcarpetas.</span></p>
+            <p class="entry-secondary"><span data-i18n="splitDetail">También hay un modo «Cada hoja en un archivo» (permite conservar las fórmulas compatibles dentro de la misma hoja) y otro, «Dividir por partes», para libros muy grandes. Los archivos generados pueden ir directamente a un ZIP o protegerse con contraseña: una para todos o una distinta para cada uno, con la lista de contraseñas en un archivo aparte.</span></p>
+          </article>
+
+          <article class="feature-entry" id="mode-collect">
+            <p class="entry-index"><span data-i18n="collectLabel">Combinar</span></p>
+            <h3><span data-i18n="collectTitle">Muchos archivos → una hoja</span></h3>
+            <p><span data-i18n="collectBody">Arrastra una carpeta con informes. RoWeave toma la hoja correcta de cada libro, comprueba que los encabezados coinciden y apila las filas en una sola tabla. Si quieres, añade una columna con el nombre del archivo de origen. También admite libros XLSX, XLSM y XLSB protegidos con contraseña; los XLS antiguos cifrados (Excel 97–2003) no se pueden abrir.</span></p>
+          </article>
+
+          <article class="feature-entry" id="mode-csv">
+            <p class="entry-index"><span data-i18n="csvLabel">CSV → Excel</span></p>
+            <h3><span data-i18n="csvTitle">Exportación CSV → un Excel en condiciones</span></h3>
+            <p><span data-i18n="csvBody">Convierte CSV a XLSX conservando los ceros a la izquierda de códigos de producto, identificadores y números de cuenta, para que los números largos no se conviertan en «1,2E+15».</span></p>
+            <p class="entry-secondary"><span data-i18n="csvDetail">RoWeave detecta solo la codificación, incluidas UTF-8 y Windows-1252. Si no está seguro, muestra una vista previa y te deja elegir. Las exportaciones grandes las lee por partes, hasta 8 millones de celdas.</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="workflow-band" id="how-it-works" aria-labelledby="workflow-title" tabindex="-1">
+      <div class="container">
+        <div class="band-head">
           <h2 id="workflow-title"><span data-i18n="workflowTitle">Cómo funciona</span></h2>
         </div>
 
-        <ol class="steps-row">
-          <li>
-            <span class="step-index" aria-hidden="true">01</span>
+        <ol class="workflow-steps">
+          <li class="workflow-step">
+            <span class="step-num" aria-hidden="true">01</span>
             <h3><span data-i18n="step1Title">Arrastra tus archivos</span></h3>
             <p><span data-i18n="step1Body">Un libro, varios archivos o una carpeta entera. Admite XLSX, XLSM, XLS, XLSB, CSV, TSV y TXT.</span></p>
           </li>
-          <li>
-            <span class="step-index" aria-hidden="true">02</span>
+          <li class="workflow-step">
+            <span class="step-num" aria-hidden="true">02</span>
             <h3><span data-i18n="step2Title">Revisa qué vas a obtener</span></h3>
             <p><span data-i18n="step2Body">Elige una hoja y una columna. RoWeave enumera los archivos que va a crear y te avisa si algo no se puede transferir.</span></p>
           </li>
-          <li>
-            <span class="step-index" aria-hidden="true">03</span>
+          <li class="workflow-step">
+            <span class="step-num" aria-hidden="true">03</span>
             <h3><span data-i18n="step3Title">Guarda el resultado</span></h3>
             <p><span data-i18n="step3Body">Los archivos nuevos se guardan en la carpeta que elijas. El original queda intacto y las operaciones anteriores se conservan en el Historial.</span></p>
           </li>
@@ -264,266 +226,326 @@
       </div>
     </section>
 
-    <section class="section container" id="compare" aria-labelledby="compare-title" tabindex="-1">
-      <div class="section-head">
-        <h2 id="compare-title"><span data-i18n="compareTitle">Cómo se suele hacer</span></h2>
-        <p><span data-i18n="compareIntro">Los complementos hacen más cosas y funcionan dentro de Excel. RoWeave es para cuando no quieres instalar complementos ni macros, o trabajas en Mac.</span></p>
-      </div>
-
-      <div class="table-wrap">
-        <table class="compare-table">
-          <thead>
-            <tr>
-              <th scope="col"><span data-i18n="compareColMethod">Método</span></th>
-              <th scope="col"><span data-i18n="compareColSplit">Dividir en archivos por columna</span></th>
-              <th scope="col"><span data-i18n="compareColMerge">Unir archivos en uno</span></th>
-              <th scope="col"><span data-i18n="compareColMac">Mac</span></th>
-              <th scope="col"><span data-i18n="compareColNeeds">Requisitos y límites</span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row"><span data-i18n="compareManualTitle">A mano</span></th>
-              <td data-label="Dividir en archivos por columna" data-i18n-data-label="compareColSplit"><span data-i18n="compareManualSplit">Lento, es fácil saltarse una fila</span></td>
-              <td data-label="Unir archivos en uno" data-i18n-data-label="compareColMerge"><span data-i18n="compareManualMerge">Copiar y pegar a mano</span></td>
-              <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareYes">Sí</span></td>
-              <td data-label="Requisitos y límites" data-i18n-data-label="compareColNeeds"><span data-i18n="compareManualNeeds">Para cada departamento hay que filtrar las filas, copiarlas y guardar un archivo aparte</span></td>
-            </tr>
-            <tr>
-              <th scope="row"><span data-i18n="comparePqTitle">Power Query (en Excel)</span></th>
-              <td data-label="Dividir en archivos por columna" data-i18n-data-label="compareColSplit"><span data-i18n="compareNo">No</span></td>
-              <td data-label="Unir archivos en uno" data-i18n-data-label="compareColMerge"><span data-i18n="comparePqMerge">Sí, desde una carpeta</span></td>
-              <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="comparePqMac">Importación de carpetas limitada</span></td>
-              <td data-label="Requisitos y límites" data-i18n-data-label="compareColNeeds"><span data-i18n="comparePqNeeds">Ya viene en Excel para Windows, pero hay que configurar una consulta; no divide en archivos</span></td>
-            </tr>
-            <tr>
-              <th scope="row"><span data-i18n="compareVbaTitle">Una macro VBA</span></th>
-              <td data-label="Dividir en archivos por columna" data-i18n-data-label="compareColSplit"><span data-i18n="compareVbaCode">Si tienes código que funcione</span></td>
-              <td data-label="Unir archivos en uno" data-i18n-data-label="compareColMerge"><span data-i18n="compareVbaCode">Si tienes código que funcione</span></td>
-              <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareVbaMac">Suele requerir cambios</span></td>
-              <td data-label="Requisitos y límites" data-i18n-data-label="compareColNeeds"><span data-i18n="compareVbaNeeds">Necesitas una macro hecha para tu tarea y permiso para ejecutarla</span></td>
-            </tr>
-            <tr>
-              <th scope="row"><span data-i18n="compareAddinsTitle">Complementos de Excel</span></th>
-              <td data-label="Dividir en archivos por columna" data-i18n-data-label="compareColSplit"><span data-i18n="compareAddinsVaries">Depende del complemento</span></td>
-              <td data-label="Unir archivos en uno" data-i18n-data-label="compareColMerge"><span data-i18n="compareAddinsVaries">Depende del complemento</span></td>
-              <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareAddinsVaries">Depende del complemento</span></td>
-              <td data-label="Requisitos y límites" data-i18n-data-label="compareColNeeds"><span data-i18n="compareAddinsNeeds">Funcionan dentro de Excel; la compatibilidad y las condiciones de uso dependen del producto</span></td>
-            </tr>
-            <tr>
-              <th scope="row"><span data-i18n="compareOnlineTitle">Una herramienta online</span></th>
-              <td data-label="Dividir en archivos por columna" data-i18n-data-label="compareColSplit"><span data-i18n="compareOnlineVaries">Depende del servicio</span></td>
-              <td data-label="Unir archivos en uno" data-i18n-data-label="compareColMerge"><span data-i18n="compareOnlineVaries">Depende del servicio</span></td>
-              <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareYes">Sí</span></td>
-              <td data-label="Requisitos y límites" data-i18n-data-label="compareColNeeds"><span data-i18n="compareOnlineNeeds">Normalmente tienes que subir hojas con nóminas o datos de clientes al servidor de otra empresa</span></td>
-            </tr>
-            <tr class="compare-highlight">
-              <th scope="row"><span data-i18n="compareRoweaveTitle">RoWeave</span></th>
-              <td data-label="Dividir en archivos por columna" data-i18n-data-label="compareColSplit"><span data-i18n="compareRoweaveSplit">Sí, directo a archivos con vista previa</span></td>
-              <td data-label="Unir archivos en uno" data-i18n-data-label="compareColMerge"><span data-i18n="compareRoweaveMerge">Sí, con verificación de encabezados</span></td>
-              <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareRoweaveMac">Sí (Apple Silicon)</span></td>
-              <td data-label="Requisitos y límites" data-i18n-data-label="compareColNeeds"><span data-i18n="compareRoweaveNeeds">Aplicación independiente para Windows y Mac; no necesita Excel, gratis en la beta 0.13</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section class="section section-tight container" id="keep" aria-labelledby="keep-title" tabindex="-1">
-      <div class="section-head">
-        <h2 id="keep-title"><span data-i18n="keepTitle">Qué pasa a los archivos nuevos y qué no</span></h2>
-      </div>
-
-      <div class="spec-panel">
-        <div class="spec-columns">
-          <div class="spec-col spec-yes">
-            <h3><span class="spec-mark" aria-hidden="true">✓</span> <span data-i18n="keepYesTitle">Se conserva</span></h3>
-            <ul>
-              <li><span data-i18n="keepYes1">Fuentes, rellenos, bordes y alineación</span></li>
-              <li><span data-i18n="keepYes2">Ancho de columnas, formatos de número y fecha</span></li>
-              <li><span data-i18n="keepYes3">Filas de encabezado sobre la tabla, en cada archivo</span></li>
-              <li><span data-i18n="keepYes4">Alto de las filas</span></li>
-            </ul>
-          </div>
-
-          <div class="spec-col spec-exp">
-            <h3><span class="spec-mark" aria-hidden="true">β</span> <span data-i18n="keepExpTitle">Beta, se activa en «Configuración avanzada» (desactivado por defecto)</span></h3>
-            <ul>
-              <li><span data-i18n="keepExp1">Protección de hojas y celdas editables</span></li>
-              <li><span data-i18n="keepExp2">Listas desplegables y validación de datos</span></li>
-              <li><span data-i18n="keepExp3">Formato condicional</span></li>
-            </ul>
-            <p class="spec-subnote"><span data-i18n="keepExpNote">En la sección «Qué conservar del libro de origen» de Dividir y Combinar.</span></p>
-          </div>
-
-          <div class="spec-col spec-no">
-            <h3><span class="spec-mark" aria-hidden="true">—</span> <span data-i18n="keepNoTitle">No se transfiere</span></h3>
-            <ul>
-              <li><span data-i18n="keepNo1">Tablas dinámicas, gráficos, imágenes</span></li>
-              <li><span data-i18n="keepNo2">Macros: el resultado es un XLSX normal</span></li>
-            </ul>
-          </div>
+    <section class="section" id="scenarios" aria-labelledby="scenarios-title" tabindex="-1">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="scenarios-title"><span data-i18n="useCasesTitle">Si lo haces a mano cada mes</span></h2>
         </div>
 
-        <div class="spec-formats">
-          <div>
-            <strong><span data-i18n="formulasTitle">Fórmulas</span></strong>
-            <p><span data-i18n="formulasBody">Las fórmulas suelen sustituirse por los valores guardados en el libro. En el modo «Cada hoja en un archivo» puedes conservar las fórmulas compatibles que solo hacen referencia a su propia hoja. La aplicación muestra las limitaciones antes de ejecutar.</span></p>
+        <div class="ledger-table" role="region" aria-label="Ejemplos de tareas por departamento" data-i18n-aria-label="scenariosLabel">
+          <div class="ledger-header" aria-hidden="true">
+            <span data-i18n="ledgerColRole">Equipo u origen</span>
+            <span data-i18n="ledgerColTask">Tarea</span>
+            <span data-i18n="ledgerColResult">Qué hace RoWeave</span>
           </div>
-          <div>
-            <strong><span data-i18n="formatsSplitTitle">Archivos antiguos y binarios en Dividir</span></strong>
-            <p><span data-i18n="formatsSplitBody">Del XLS (Excel 97–2003), Dividir traslada los datos, los formatos de número y las celdas combinadas, pero no las fuentes, rellenos ni bordes; del XLSB binario, solo los valores.</span></p>
-          </div>
-          <div>
-            <strong><span data-i18n="formatsCollectTitle">Fuentes mixtas en Combinar</span></strong>
-            <p><span data-i18n="formatsCollectBody">Si alguna fuente es XLS, XLSB o un archivo de texto (CSV, TSV, TXT), Combinar escribe toda la tabla como valores, sin formato, también lo que viene de libros XLSX.</span></p>
-          </div>
+
+          <ul class="ledger-rows">
+            <li class="ledger-row">
+              <span class="ledger-role" data-i18n="use1Role">Finanzas y contabilidad</span>
+              <h3 class="ledger-task"><span data-i18n="use1Task">Enviar a cada centro de coste su informe</span></h3>
+              <p class="ledger-desc"><span data-i18n="use1Body">Un informe de toda la empresa → un archivo por centro de coste, con el mismo encabezado y los mismos formatos de número.</span></p>
+            </li>
+            <li class="ledger-row">
+              <span class="ledger-role" data-i18n="use2Role">RR. HH.</span>
+              <h3 class="ledger-task"><span data-i18n="use2Task">Que cada responsable vea solo a su equipo</span></h3>
+              <p class="ledger-desc"><span data-i18n="use2Body">Lista de empleados → un archivo por departamento, cada uno con su propia contraseña. RoWeave guarda las contraseñas en una lista aparte.</span></p>
+            </li>
+            <li class="ledger-row">
+              <span class="ledger-role" data-i18n="use3Role">Logística y almacén</span>
+              <h3 class="ledger-task"><span data-i18n="use3Task">Unir los informes de almacén en una hoja</span></h3>
+              <p class="ledger-desc"><span data-i18n="use3Body">30 archivos de distintos centros → una sola tabla. Cada fila puede llevar el nombre del archivo del que procede.</span></p>
+            </li>
+            <li class="ledger-row">
+              <span class="ledger-role" data-i18n="use4Role">Operaciones de ventas</span>
+              <h3 class="ledger-task"><span data-i18n="use4Task">Repartir objetivos y resultados entre los comerciales</span></h3>
+              <p class="ledger-desc"><span data-i18n="use4Body">Exportación del CRM con las columnas Región y Comercial → una carpeta por región y, dentro, un archivo por comercial.</span></p>
+            </li>
+            <li class="ledger-row">
+              <span class="ledger-role" data-i18n="use5Role">ERP y bancos</span>
+              <h3 class="ledger-task"><span data-i18n="use5Task">Abrir un CSV sin perder los ceros a la izquierda</span></h3>
+              <p class="ledger-desc"><span data-i18n="use5Body">CSV → XLSX, con códigos de producto, NIF y números de cuenta tal como se exportaron.</span></p>
+            </li>
+            <li class="ledger-row">
+              <span class="ledger-role" data-i18n="use6Role">Colegios y universidades</span>
+              <h3 class="ledger-task"><span data-i18n="use6Task">Dividir listas por clase o grupo</span></h3>
+              <p class="ledger-desc"><span data-i18n="use6Body">Una lista general → un archivo por grupo. Después, vuelve a reunir en un libro los archivos de los profesores.</span></p>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section class="section container faq-layout" id="faq" aria-labelledby="faq-title" tabindex="-1">
-      <div class="faq-aside">
-        <h2 id="faq-title"><span data-i18n="faqTitle">Preguntas frecuentes</span></h2>
-        <div class="about-box" id="about">
+    <section class="section section-ruled" id="compare" aria-labelledby="compare-title" tabindex="-1">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="compare-title"><span data-i18n="compareTitle">Cómo se suele hacer</span></h2>
+        </div>
+
+        <div class="compare-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th scope="col"><span data-i18n="compareColMethod">Método</span></th>
+                <th scope="col"><span data-i18n="compareColSplit">Dividir en archivos por columna</span></th>
+                <th scope="col"><span data-i18n="compareColMerge">Unir archivos en uno</span></th>
+                <th scope="col"><span data-i18n="compareColMac">Mac</span></th>
+                <th scope="col"><span data-i18n="compareColNeeds">Requisitos y límites</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><span data-i18n="compareManualTitle">A mano</span></th>
+                <td data-label="Dividir en archivos por columna" data-i18n-data-label="compareColSplit"><span data-i18n="compareManualSplit">Lento, es fácil saltarse una fila</span></td>
+                <td data-label="Unir archivos en uno" data-i18n-data-label="compareColMerge"><span data-i18n="compareManualMerge">Copiar y pegar a mano</span></td>
+                <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareYes">Sí</span></td>
+                <td data-label="Requisitos y límites" data-i18n-data-label="compareColNeeds"><span data-i18n="compareManualNeeds">Para cada departamento hay que filtrar las filas, copiarlas y guardar un archivo aparte</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span data-i18n="comparePqTitle">Power Query (en Excel)</span></th>
+                <td data-label="Dividir en archivos por columna" data-i18n-data-label="compareColSplit"><span data-i18n="compareNo">No</span></td>
+                <td data-label="Unir archivos en uno" data-i18n-data-label="compareColMerge"><span data-i18n="comparePqMerge">Sí, desde una carpeta</span></td>
+                <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="comparePqMac">Importación de carpetas limitada</span></td>
+                <td data-label="Requisitos y límites" data-i18n-data-label="compareColNeeds"><span data-i18n="comparePqNeeds">Integrado en Excel para Windows. Hay que configurar una consulta</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span data-i18n="compareVbaTitle">Una macro VBA</span></th>
+                <td data-label="Dividir en archivos por columna" data-i18n-data-label="compareColSplit"><span data-i18n="compareVbaCode">Si tienes código que funcione</span></td>
+                <td data-label="Unir archivos en uno" data-i18n-data-label="compareColMerge"><span data-i18n="compareVbaCode">Si tienes código que funcione</span></td>
+                <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareVbaMac">Suele requerir cambios</span></td>
+                <td data-label="Requisitos y límites" data-i18n-data-label="compareColNeeds"><span data-i18n="compareVbaNeeds">Necesitas una macro hecha para tu tarea y permiso para ejecutarla</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span data-i18n="compareAddinsTitle">Complementos de Excel</span></th>
+                <td data-label="Dividir en archivos por columna" data-i18n-data-label="compareColSplit"><span data-i18n="compareAddinsVaries">Depende del complemento</span></td>
+                <td data-label="Unir archivos en uno" data-i18n-data-label="compareColMerge"><span data-i18n="compareAddinsVaries">Depende del complemento</span></td>
+                <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareAddinsVaries">Depende del complemento</span></td>
+                <td data-label="Requisitos y límites" data-i18n-data-label="compareColNeeds"><span data-i18n="compareAddinsNeeds">Funcionan dentro de Excel; la compatibilidad y las condiciones de uso dependen del producto</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span data-i18n="compareOnlineTitle">Una herramienta online</span></th>
+                <td data-label="Dividir en archivos por columna" data-i18n-data-label="compareColSplit"><span data-i18n="compareOnlineVaries">Depende del servicio</span></td>
+                <td data-label="Unir archivos en uno" data-i18n-data-label="compareColMerge"><span data-i18n="compareOnlineVaries">Depende del servicio</span></td>
+                <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareYes">Sí</span></td>
+                <td data-label="Requisitos y límites" data-i18n-data-label="compareColNeeds"><span data-i18n="compareOnlineNeeds">Normalmente tienes que subir hojas con nóminas o datos de clientes al servidor de otra empresa</span></td>
+              </tr>
+              <tr class="compare-roweave">
+                <th scope="row"><span data-i18n="compareRoweaveTitle">RoWeave</span></th>
+                <td data-label="Dividir en archivos por columna" data-i18n-data-label="compareColSplit"><span data-i18n="compareRoweaveSplit">Sí, directo a archivos con vista previa</span></td>
+                <td data-label="Unir archivos en uno" data-i18n-data-label="compareColMerge"><span data-i18n="compareRoweaveMerge">Sí, con verificación de encabezados</span></td>
+                <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareRoweaveMac">Sí (Apple Silicon)</span></td>
+                <td data-label="Requisitos y límites" data-i18n-data-label="compareColNeeds"><span data-i18n="compareRoweaveNeeds">Aplicación independiente para Windows y Mac; no necesita Excel, gratis en la beta 0.13</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-ruled" id="keep" aria-labelledby="keep-title" tabindex="-1">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="keep-title"><span data-i18n="keepTitle">Qué pasa a los archivos nuevos y qué no</span></h2>
+        </div>
+
+        <div class="spec-sheet">
+          <div class="spec-main">
+            <div class="spec-col">
+              <h3 class="spec-heading spec-heading-yes"><span class="spec-badge" aria-hidden="true">✓</span> <span data-i18n="keepYesTitle">Se conserva</span></h3>
+              <ul class="spec-list">
+                <li><span data-i18n="keepYes1">Fuentes, rellenos, bordes y alineación</span></li>
+                <li><span data-i18n="keepYes2">Ancho de columnas, formatos de número y fecha</span></li>
+                <li><span data-i18n="keepYes3">Filas de encabezado sobre la tabla, en cada archivo</span></li>
+                <li><span data-i18n="keepYes4">Alto de las filas</span></li>
+              </ul>
+            </div>
+
+            <div class="spec-col">
+              <h3 class="spec-heading spec-heading-beta"><span class="spec-badge" aria-hidden="true">β</span> <span data-i18n="keepExpTitle">Beta, se activa en «Configuración avanzada»</span></h3>
+              <p class="spec-caption"><span data-i18n="keepExpNote">Desactivado por defecto. En la sección «Qué conservar del libro de origen» de Dividir y Combinar.</span></p>
+              <ul class="spec-list">
+                <li><span data-i18n="keepExp1">Protección de hojas y celdas editables</span></li>
+                <li><span data-i18n="keepExp2">Listas desplegables y validación de datos</span></li>
+                <li><span data-i18n="keepExp3">Formato condicional</span></li>
+              </ul>
+            </div>
+
+            <div class="spec-col">
+              <h3 class="spec-heading spec-heading-no"><span class="spec-badge" aria-hidden="true">—</span> <span data-i18n="keepNoTitle">No se transfiere</span></h3>
+              <ul class="spec-list">
+                <li><span data-i18n="keepNo1">Tablas dinámicas, gráficos, imágenes</span></li>
+                <li><span data-i18n="keepNo2">Macros: el resultado es un XLSX normal</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="spec-notes">
+            <div class="spec-note">
+              <h4><span data-i18n="formulasTitle">Fórmulas</span></h4>
+              <p><span data-i18n="formulasBody">Las fórmulas suelen sustituirse por los valores guardados en el libro. En el modo «Cada hoja en un archivo» puedes conservar las fórmulas compatibles que solo hacen referencia a su propia hoja. La aplicación muestra las limitaciones antes de ejecutar.</span></p>
+            </div>
+            <div class="spec-note">
+              <h4><span data-i18n="formatsSplitTitle">Archivos antiguos y binarios en Dividir</span></h4>
+              <p><span data-i18n="formatsSplitBody">Del XLS (Excel 97–2003), Dividir traslada los datos, los formatos de número y las celdas combinadas, pero no las fuentes, rellenos ni bordes; del XLSB binario, solo los valores.</span></p>
+            </div>
+            <div class="spec-note">
+              <h4><span data-i18n="formatsCollectTitle">Fuentes mixtas en Combinar</span></h4>
+              <p><span data-i18n="formatsCollectBody">Si alguna fuente es XLS, XLSB o un archivo de texto (CSV, TSV, TXT), Combinar escribe toda la tabla como valores, sin formato, también lo que viene de libros XLSX.</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-ruled" id="faq" aria-labelledby="faq-title" tabindex="-1">
+      <div class="container split-section faq-grid">
+        <div class="split-rail">
+          <h2 id="faq-title"><span data-i18n="faqTitle">Preguntas frecuentes</span></h2>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary><span data-i18n="faqSplitHow">¿Cómo divido un archivo de Excel en varios archivos?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faqSplitHowBody">Abre la hoja en Dividir, elige una columna como «Ciudad» y ejecuta. RoWeave crea un archivo por cada valor de esa columna, con el mismo encabezado, anchos de columna y formatos. Ves la lista de archivos antes de que empiece nada.</span></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faqMergeHow">¿Cómo uno varios archivos de Excel en uno?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faqMergeHowBody">Arrastra una carpeta de archivos a Combinar. RoWeave toma la hoja correcta de cada libro, comprueba que los encabezados coinciden y apila las filas en una sola tabla. Puedes añadir una columna con el nombre del archivo de origen.</span></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faqCsvZeros">¿Por qué Excel quita los ceros a la izquierda al abrir un CSV?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faqCsvZerosBody">Excel convierte en números las columnas que parecen números: 00123 pasa a ser 123 y los identificadores largos se vuelven «1,2E+15». Convierte el CSV a XLSX con RoWeave: los códigos, identificadores y números de cuenta quedan tal como se exportaron.</span></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faq10">¿Cuánto cuesta?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faq10Body">RoWeave es gratis por ahora para Windows y Mac: todas las funciones, sin límites, sin registro y sin anuncios.</span></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faq1">¿En qué equipos funciona RoWeave?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faq1Body">Windows 10 y 11 (64 bits, x64) y Mac con Apple Silicon (M1 o posterior) y macOS 12.3 o posterior.</span></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faq4">¿Se modificará mi archivo original?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faq4Body">No. RoWeave solo lee los archivos de origen y nunca los sobrescribe. Los resultados se guardan aparte, en la carpeta que elijas.</span></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faq3">¿Se conservan el formato y las fórmulas?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faq3Body">Dividir conserva fuentes, rellenos, bordes, ancho de columnas y formatos de número. Las fórmulas suelen sustituirse por los valores guardados en el libro. En el modo «Cada hoja en un archivo» puedes conservar las fórmulas compatibles que solo hacen referencia a su propia hoja; la aplicación muestra las limitaciones antes de ejecutar. Combinar también escribe valores y conserva el formato cuando todas las fuentes son libros XLSX o XLSM.</span> <a href="#keep"><span data-i18n="faq3Link">Qué se conserva y qué no</span></a></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faq6">¿Puede con archivos grandes?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faq6Body">RoWeave convierte los CSV grandes a Excel por partes, sin cargar todo el archivo en memoria. El límite es de 8 millones de celdas (por ejemplo, 400 000 filas × 20 columnas) y 4 millones de filas. Si hay más filas de las que caben en una hoja de Excel (1 048 576), RoWeave propone repartirlas en varias hojas. En el modo normal, el límite de Dividir y Combinar depende de la memoria del equipo. Si un libro es demasiado grande, Dividir ofrece la opción «Dividir por partes», con sus propios límites, que muestra antes de ejecutar.</span></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faq7">¿Y los archivos protegidos con contraseña?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faq7Body">Los libros XLSX, XLSM y XLSB se abren sin problema: introduces la contraseña en la aplicación y no se guarda en ningún sitio. Los archivos cifrados en el antiguo formato XLS (Excel 97–2003) no se pueden abrir. Dividir también puede proteger con contraseña los archivos nuevos: una para todos o una distinta para cada uno, con la lista guardada en un archivo aparte.</span></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faq2">¿Necesito tener Excel instalado?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faq2Body">No. RoWeave lee y escribe los archivos por sí mismo. Excel, u otra aplicación de hojas de cálculo, solo hace falta para abrir el resultado.</span></p>
+            </div>
+          </details>
+        </div>
+
+        <aside class="about-colophon" id="about" aria-labelledby="about-title">
           <div class="about-head">
-            <img class="about-mascot" src="../assets/mascot-reading.webp" alt="" width="72" height="82" loading="lazy">
-            <h3><span data-i18n="aboutTitle">Sobre el proyecto</span></h3>
+            <img class="about-mascot" src="../assets/mascot-reading.webp" alt="" width="60" height="68" loading="lazy">
+            <h3 id="about-title"><span data-i18n="aboutTitle">Sobre el proyecto</span></h3>
           </div>
           <p><span data-i18n="aboutBody">RoWeave lo hace un solo desarrollador. Voy mejorando la aplicación según los comentarios de los usuarios.</span></p>
           <p class="about-contact"><span data-i18n="aboutContactBefore">Si algo no funciona o echas algo en falta, escribe a</span> <a href="mailto:support@roweave.app">support@roweave.app</a><span data-i18n="aboutContactAfter">.</span></p>
-        </div>
-      </div>
-
-      <div class="faq-list">
-        <details>
-          <summary><span data-i18n="faqSplitHow">¿Cómo divido un archivo de Excel en varios archivos?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faqSplitHowBody">Abre la hoja en Dividir, elige una columna como «Ciudad» y ejecuta. RoWeave crea un archivo por cada valor de esa columna, con el mismo encabezado, anchos de columna y formatos. Ves la lista de archivos antes de que empiece nada.</span></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faqMergeHow">¿Cómo uno varios archivos de Excel en uno?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faqMergeHowBody">Arrastra una carpeta de archivos a Combinar. RoWeave toma la hoja correcta de cada libro, comprueba que los encabezados coinciden y apila las filas en una sola tabla. Puedes añadir una columna con el nombre del archivo de origen.</span></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faqCsvZeros">¿Por qué Excel quita los ceros a la izquierda al abrir un CSV?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faqCsvZerosBody">Excel convierte en números las columnas que parecen números: 00123 pasa a ser 123 y los identificadores largos se vuelven «1,2E+15». Convierte el CSV a XLSX con RoWeave: los códigos, identificadores y números de cuenta quedan tal como se exportaron.</span></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faq10">¿Cuánto cuesta?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faq10Body">RoWeave es gratis por ahora para Windows y Mac: todas las funciones, sin límites, sin registro y sin anuncios.</span></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faq1">¿En qué equipos funciona RoWeave?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faq1Body">Windows 10 y 11 (64 bits, x64) y Mac con Apple Silicon (M1 o posterior) y macOS 12.3 o posterior.</span></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faq4">¿Se modificará mi archivo original?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faq4Body">No. RoWeave solo lee los archivos de origen y nunca los sobrescribe. Los resultados se guardan aparte, en la carpeta que elijas.</span></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faq3">¿Se conservan el formato y las fórmulas?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faq3Body">Dividir conserva fuentes, rellenos, bordes, ancho de columnas y formatos de número. Las fórmulas suelen sustituirse por los valores guardados en el libro. En el modo «Cada hoja en un archivo» puedes conservar las fórmulas compatibles que solo hacen referencia a su propia hoja; la aplicación muestra las limitaciones antes de ejecutar. Combinar también escribe valores y conserva el formato cuando todas las fuentes son libros XLSX o XLSM.</span> <a href="#keep"><span data-i18n="faq3Link">Qué se conserva y qué no</span></a></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faq6">¿Puede con archivos grandes?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faq6Body">RoWeave convierte los CSV grandes a Excel por partes, sin cargar todo el archivo en memoria. El límite es de 8 millones de celdas (por ejemplo, 400 000 filas × 20 columnas) y 4 millones de filas. Si hay más filas de las que caben en una hoja de Excel (1 048 576), RoWeave propone repartirlas en varias hojas. En el modo normal, el límite de Dividir y Combinar depende de la memoria del equipo. Si un libro es demasiado grande, Dividir ofrece la opción «Dividir por partes», con sus propios límites, que muestra antes de ejecutar.</span></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faq7">¿Y los archivos protegidos con contraseña?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faq7Body">Los libros XLSX, XLSM y XLSB se abren sin problema: introduces la contraseña en la aplicación y no se guarda en ningún sitio. Los archivos cifrados en el antiguo formato XLS (Excel 97–2003) no se pueden abrir. Dividir también puede proteger con contraseña los archivos nuevos: una para todos o una distinta para cada uno, con la lista guardada en un archivo aparte.</span></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faq2">¿Necesito tener Excel instalado?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faq2Body">No. RoWeave lee y escribe los archivos por sí mismo. Excel, u otra aplicación de hojas de cálculo, solo hace falta para abrir el resultado.</span></p>
-          </div>
-        </details>
+        </aside>
       </div>
     </section>
 
-    <section class="container download-section" id="download" aria-labelledby="download-title" tabindex="-1">
-      <div class="download-panel">
-        <div class="download-head">
-          <img src="../assets/roweave-icon-160.webp" alt="" width="52" height="52" loading="lazy">
-          <div>
-            <h2 id="download-title"><span data-i18n="downloadTitle">RoWeave para Windows y Mac</span></h2>
-            <p><span data-i18n="downloadStatus">Beta 0.13 gratis</span></p>
+    <section class="download-band" id="download" aria-labelledby="download-title" tabindex="-1">
+      <div class="container">
+        <div class="download-shell">
+          <div class="download-header">
+            <img src="../assets/roweave-icon-160.webp" alt="" width="56" height="56" loading="lazy">
+            <div>
+              <p class="download-kicker"><span data-i18n="downloadStatus">Beta 0.13 gratis</span></p>
+              <h2 id="download-title"><span data-i18n="downloadTitle">RoWeave para Windows y Mac</span></h2>
+            </div>
+          </div>
+
+          <ul class="platform-grid" aria-label="Versiones de la aplicación" data-i18n-aria-label="platformsLabel">
+            <li class="platform-col">
+              <div class="platform-meta">
+                <h3>Windows</h3>
+                <p><span data-i18n="windowsPlatform">Windows 10/11 (x64)</span></p>
+              </div>
+              <a class="btn btn-download" href="https://github.com/RoWeave/releases/releases/latest/download/RoWeave-Windows-x64-setup.exe"><span data-i18n="downloadWindows">Descargar para Windows</span></a>
+              <p class="platform-file"><span data-i18n="windowsFile">.exe, unos 11 MB</span></p>
+              <details class="platform-hint">
+                <summary><span data-i18n="smartscreenSummary">Si Windows muestra un aviso</span></summary>
+                <p><span data-i18n="smartscreenHint">¿Ves «Windows protegió su PC»? Haz clic en «Más información» y luego en «Ejecutar de todas formas». El instalador aún no está firmado por Microsoft.</span></p>
+              </details>
+            </li>
+
+            <li class="platform-col">
+              <div class="platform-meta">
+                <h3>macOS</h3>
+                <p><span data-i18n="macPlatform">Apple Silicon (M1 o posterior), macOS 12.3+</span></p>
+              </div>
+              <a class="btn btn-download" href="https://github.com/RoWeave/releases/releases/latest/download/RoWeave-macOS-arm64.dmg"><span data-i18n="downloadMac">Descargar para Mac</span></a>
+              <p class="platform-file"><span data-i18n="macFile">.dmg, unos 14 MB. Firmado por el desarrollador y notarizado por Apple.</span></p>
+            </li>
+          </ul>
+
+          <div class="download-footer">
+            <a class="download-link" href="https://github.com/RoWeave/releases/releases"><span data-i18n="downloadMeta">Todas las versiones en GitHub</span> <span aria-hidden="true">↗</span></a>
           </div>
         </div>
-
-        <ul class="platform-grid" aria-label="Versiones de la aplicación" data-i18n-aria-label="platformsLabel">
-          <li class="platform-card">
-            <div class="platform-head">
-              <h3>Windows</h3>
-              <p><span data-i18n="windowsPlatform">Windows 10 y 11, 64 bits (x64)</span></p>
-            </div>
-            <a class="button store-button" href="#" data-store="msstore" hidden>Microsoft Store</a>
-            <a class="button direct-download" href="https://github.com/RoWeave/releases/releases/latest/download/RoWeave-Windows-x64-setup.exe"><span data-i18n="downloadWindows">Descargar para Windows</span></a>
-            <p class="platform-file"><span data-i18n="windowsFile">Instalador .exe, unos 11 MB</span></p>
-            <details class="platform-hint">
-              <summary><span data-i18n="smartscreenSummary">Si Windows muestra un aviso</span></summary>
-              <p><span data-i18n="smartscreenHint">Si Windows muestra «Windows protegió su PC», haz clic en «Más información» y luego en «Ejecutar de todas formas»: el instalador aún no está firmado por Microsoft.</span></p>
-            </details>
-          </li>
-
-          <li class="platform-card">
-            <div class="platform-head">
-              <h3>macOS</h3>
-              <p><span data-i18n="macPlatform">Apple Silicon (M1 o posterior), macOS 12.3+</span></p>
-            </div>
-            <a class="button store-button" href="#" data-store="mas" hidden>Mac App Store</a>
-            <a class="button direct-download" href="https://github.com/RoWeave/releases/releases/latest/download/RoWeave-macOS-arm64.dmg"><span data-i18n="downloadMac">Descargar para Mac</span></a>
-            <p class="platform-file"><span data-i18n="macFile">Imagen .dmg, unos 14 MB. Firmada y notarizada por Apple.</span></p>
-          </li>
-        </ul>
-
-        <p class="download-meta"><a class="text-link" href="https://github.com/RoWeave/releases/releases"><span data-i18n="downloadMeta">Todas las versiones en GitHub</span></a></p>
       </div>
     </section>
   </main>
 
-  <footer class="container site-footer">
-    <div class="footer-top">
-      <a class="brand" href="#" aria-label="RoWeave: volver al inicio" data-i18n-aria-label="brandHome"><img src="../assets/roweave-icon-160.webp" alt="" width="28" height="28" loading="lazy"><span>RoWeave</span></a>
-      <p><span data-i18n="footerTagline">Una aplicación para dividir y combinar libros de Excel.</span></p>
-    </div>
-
-    <nav class="language-links" aria-label="Idioma de la página" data-i18n-aria-label="language"><a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a><a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a><a href="../de/index.html" hreflang="de" lang="de">Deutsch</a><a href="../en/index.html" hreflang="en" lang="en">English</a><a href="../es/index.html" hreflang="es" aria-current="page" lang="es">Español</a><a href="../fr/index.html" hreflang="fr" lang="fr">Français</a><a href="../it/index.html" hreflang="it" lang="it">Italiano</a><a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a><a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a><a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a><a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a><a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a><a href="../ko/index.html" hreflang="ko" lang="ko">한국어</a><a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
-
-    <p class="footer-privacy"><a href="#privacy"><span data-i18n="privacyMore">Más sobre privacidad</span></a></p>
-
-    <div class="footer-bottom">
-      <p>© 2026 RoWeave</p>
-      <span><span data-i18n="footerSupport">Soporte:</span> <a href="mailto:support@roweave.app">support@roweave.app</a></span>
-      <a href="../en/privacy/"><span data-i18n="footerPrivacy">Privacidad</span></a>
-    </div>
-
-    <details class="privacy-disclosure" id="privacy">
-      <summary><span data-i18n="privacyDetails">Privacidad en la aplicación y en este sitio</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-      <div class="answer">
-        <p><span data-i18n="privacyDetails1">La aplicación procesa los archivos de Excel solo en tu equipo y nunca envía su contenido por la red. Solo se conecta para buscar actualizaciones (updates.roweave.app o, si falla, GitHub) y, cuando haces clic, para descargar la nueva versión desde GitHub. No envía nombres ni contenido de archivos, y la comprobación automática se puede desactivar. Este sitio no tiene formularios, publicidad, contadores ni cookies.</span></p>
-        <p><span data-i18n="privacySupport">«Contactar con soporte» solo prepara un correo a support@roweave.app: lo envías tú desde tu correo y RoWeave no envía nada por sí mismo. Con «Adjuntar diagnóstico» marcado, la aplicación guarda un archivo con datos técnicos (versión de RoWeave y del sistema, pasos y tiempos, códigos de error, estimación de memoria) y lo adjunta al correo. No contiene datos de las tablas, rutas ni contraseñas.</span></p>
-        <p><span data-i18n="privacyDetails2">El sitio y las descargas están alojados en GitHub, que ve datos técnicos de conexión como tu dirección IP. Si escribes a support@roweave.app, tu dirección solo se usa para responderte.</span></p>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <a class="brand" href="#top" aria-label="RoWeave: volver al inicio" data-i18n-aria-label="brandHome">
+          <img src="../assets/roweave-icon-160.webp" alt="" width="24" height="24" loading="lazy">
+          <span class="brand-name">RoWeave</span>
+        </a>
       </div>
-    </details>
+
+      <nav class="language-links" aria-label="Idioma de la página" data-i18n-aria-label="language"><a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a><a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a><a href="../de/index.html" hreflang="de" lang="de">Deutsch</a><a href="../en/index.html" hreflang="en" lang="en">English</a><a href="../es/index.html" hreflang="es" aria-current="page" lang="es">Español</a><a href="../fr/index.html" hreflang="fr" lang="fr">Français</a><a href="../it/index.html" hreflang="it" lang="it">Italiano</a><a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a><a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a><a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a><a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a><a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a><a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a><a href="../ko/index.html" hreflang="ko" lang="ko">한국어</a><a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
+
+      <div class="footer-meta">
+        <span>© 2026 RoWeave</span>
+        <span><span data-i18n="footerSupport">Soporte:</span> <a href="mailto:support@roweave.app">support@roweave.app</a></span>
+        <a href="#privacy"><span data-i18n="privacyMore">Más sobre privacidad</span></a>
+        <a href="../en/privacy/"><span data-i18n="footerPrivacy">Privacidad</span></a>
+      </div>
+
+      <details class="privacy-disclosure" id="privacy">
+        <summary><span data-i18n="privacyDetails">Privacidad en la aplicación y en este sitio</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+        <div class="faq-answer">
+          <p><span data-i18n="privacyDetails1">La aplicación procesa los archivos de Excel solo en tu equipo y nunca envía su contenido por la red. Solo se conecta para buscar actualizaciones (updates.roweave.app o, si falla, GitHub) y, cuando haces clic, para descargar la nueva versión desde GitHub. No envía nombres ni contenido de archivos, y la comprobación automática se puede desactivar. Este sitio no tiene formularios, publicidad, contadores ni cookies.</span></p>
+          <p><span data-i18n="privacySupport">«Contactar con soporte» solo prepara un correo a support@roweave.app: lo envías tú desde tu correo y RoWeave no envía nada por sí mismo. Con «Adjuntar diagnóstico» marcado, la aplicación guarda un archivo con datos técnicos (versión de RoWeave y del sistema, pasos y tiempos, códigos de error, estimación de memoria) y lo adjunta al correo. No contiene datos de las tablas, rutas ni contraseñas.</span></p>
+          <p><span data-i18n="privacyDetails2">El sitio y las descargas están alojados en GitHub, que ve datos técnicos de conexión como tu dirección IP. Si escribes a support@roweave.app, tu dirección solo se usa para responderte.</span></p>
+        </div>
+      </details>
+    </div>
   </footer>
 </body>
 </html>

@@ -46,217 +46,179 @@
 <body>
   <a class="skip-link" href="#main"><span data-i18n="skip">Chuyển đến nội dung</span></a>
 
-  <header class="site-header">
+  <header class="site-header" id="top">
     <div class="container header-inner">
-      <a class="brand" href="#" aria-label="RoWeave, về đầu trang" data-i18n-aria-label="brandHome"><img src="../assets/roweave-icon-160.webp" alt="" width="30" height="30"><span>RoWeave</span></a>
+      <a class="brand" href="#top" aria-label="RoWeave, về đầu trang" data-i18n-aria-label="brandHome">
+        <img src="../assets/roweave-icon-160.webp" alt="" width="28" height="28">
+        <span class="brand-name">RoWeave</span>
+      </a>
 
-      <nav class="navigation" id="navigation" aria-label="Điều hướng chính" data-i18n-aria-label="navigation">
+      <nav class="site-nav" id="navigation" aria-label="Điều hướng chính" data-i18n-aria-label="navigation">
         <a href="#features"><span data-i18n="navFeatures">Tính năng</span></a>
         <a href="#scenarios"><span data-i18n="navUseCases">Dành cho ai</span></a>
         <a href="#compare"><span data-i18n="navCompare">So sánh</span></a>
         <a href="#keep"><span data-i18n="navKeep">Những gì được giữ</span></a>
         <a href="#faq"><span data-i18n="navFaq">Câu hỏi thường gặp</span></a>
+        <a class="nav-download" href="#download"><span data-i18n="navPlatforms">Tải xuống</span></a>
       </nav>
 
       <div class="header-actions">
         <label class="language-control" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c5 5 5 13 0 18-5-5-5-13 0-18Z"/></svg><span data-language-short aria-hidden="true">VI</span><select id="language" aria-label="Ngôn ngữ trang" data-i18n-aria-label="language"><option value="id" data-href="../id/index.html">Bahasa Indonesia</option><option value="cs" data-href="../cs/index.html">Čeština</option><option value="de" data-href="../de/index.html">Deutsch</option><option value="en" data-href="../en/index.html">English</option><option value="es" data-href="../es/index.html">Español</option><option value="fr" data-href="../fr/index.html">Français</option><option value="it" data-href="../it/index.html">Italiano</option><option value="nl" data-href="../nl/index.html">Nederlands</option><option value="pl" data-href="../pl/index.html">Polski</option><option value="pt-BR" data-href="../pt-BR/index.html">Português (Brasil)</option><option value="vi" selected data-href="../vi/index.html">Tiếng Việt</option><option value="ru" data-href="../ru/index.html">Русский</option><option value="ja" data-href="../ja/index.html">日本語</option><option value="ko" data-href="../ko/index.html">한국어</option><option value="zh-Hans" data-href="../zh-Hans/index.html">简体中文</option></select></label>
 
-        <button class="icon-button theme-toggle" type="button" aria-label="Chuyển sang giao diện tối" data-label-light="Chuyển sang giao diện sáng" data-label-dark="Chuyển sang giao diện tối" data-i18n-aria-label="themeDark" data-i18n-data-label-light="themeLight" data-i18n-data-label-dark="themeDark" hidden>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20.7 13A8.8 8.8 0 0 1 11 3.3 8.8 8.8 0 1 0 20.7 13Z"/></svg>
+        <button class="theme-toggle" type="button" aria-label="Chuyển sang giao diện tối" data-label-light="Chuyển sang giao diện sáng" data-label-dark="Chuyển sang giao diện tối" data-text-light="Sáng" data-text-dark="Tối" data-i18n-aria-label="themeDark" data-i18n-data-label-light="themeLight" data-i18n-data-label-dark="themeDark" data-i18n-data-text-light="themeShortLight" data-i18n-data-text-dark="themeShortDark" hidden>
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20.7 13A8.8 8.8 0 0 1 11 3.3 8.8 8.8 0 1 0 20.7 13Z"/></svg>
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.4M12 19.6V22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M2 12h2.4M19.6 12H22M4.9 19.1l1.7-1.7M17.4 6.6l1.7-1.7"/></svg>
+          <span class="theme-toggle-text" data-theme-text><span data-i18n="themeShortDark">Tối</span></span>
         </button>
 
-        <a class="button button-small" href="#download"><span data-i18n="navPlatforms">Tải xuống</span></a>
+        <a class="btn btn-primary btn-sm" href="#download"><span data-i18n="navPlatforms">Tải xuống</span></a>
 
-        <button class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Mở menu" data-label-open="Mở menu" data-label-close="Đóng menu" data-i18n-aria-label="menuOpen" data-i18n-data-label-open="menuOpen" data-i18n-data-label-close="menuClose" hidden>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Mở menu" data-label-open="Mở menu" data-label-close="Đóng menu" data-i18n-aria-label="menuOpen" data-i18n-data-label-open="menuOpen" data-i18n-data-label-close="menuClose" hidden>
+          <svg class="icon-menu" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
         </button>
       </div>
     </div>
   </header>
 
   <main id="main" tabindex="-1">
-    <section class="hero container" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="hero-meta"><span data-i18n="heroMeta">Bản beta miễn phí 0.13 · Windows 10/11 và macOS 12.3+</span></p>
-        <h1 id="hero-title"><span data-i18n="heroTogether">Tách Excel theo cột.</span> <span data-i18n="heroApart">Gộp các báo cáo thành một.</span></h1>
-        <p class="hero-description"><span data-i18n="heroDescription">RoWeave tách một tệp Excel theo cột thành các tệp riêng và gộp các báo cáo trong một thư mục thành một bảng.</span></p>
-        <div class="hero-actions">
-          <a class="button" href="#download"><span data-i18n="ctaPlatforms">Tải miễn phí</span></a>
-          <a class="button button-quiet" href="#how-it-works"><span data-i18n="navHow">Cách hoạt động</span></a>
-        </div>
-      </div>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-head">
+          <p class="hero-kicker">
+            <span class="kicker-dot" aria-hidden="true"></span>
+            <span data-i18n="downloadStatus">Beta 0.13 miễn phí</span>
+            <span class="kicker-sep" aria-hidden="true">·</span>
+            <span data-i18n="heroPlatforms">Windows 10/11 và macOS 12.3+</span>
+          </p>
 
-      <div class="showcase" id="showcase">
-        <div class="showcase-bar">
-          <div class="segmented" role="tablist" aria-label="Các chế độ của ứng dụng RoWeave" data-i18n-aria-label="showcaseLabel">
-            <button class="segment" type="button" role="tab" id="tab-split" aria-selected="true" aria-controls="panel-split" data-tab="split"><span data-i18n="splitLabel">Tách</span></button>
-            <button class="segment" type="button" role="tab" id="tab-collect" aria-selected="false" aria-controls="panel-collect" data-tab="collect"><span data-i18n="collectLabel">Gộp</span></button>
-            <button class="segment" type="button" role="tab" id="tab-csv" aria-selected="false" aria-controls="panel-csv" data-tab="csv"><span data-i18n="csvLabel">CSV → Excel</span></button>
-          </div>
-        </div>
+          <div class="hero-top">
+            <h1 id="hero-title">
+              <span class="hero-line-main" data-i18n="heroTogether">Tách Excel theo cột.</span>
+              <span class="hero-line-sub" data-i18n="heroApart">Gộp các báo cáo thành một.</span>
+            </h1>
 
-        <div class="window-frame">
-          <div class="showcase-panel" id="panel-split" role="tabpanel" aria-labelledby="tab-split" tabindex="0">
-            <picture class="shot-light">
-              <source media="(max-width: 640px)" srcset="../assets/app-split-light-mobile.webp" width="936" height="838">
-              <img src="../assets/app-split-light.webp" alt="Cửa sổ Tách của RoWeave: đã chọn cột “Khu vực” và danh sách 7 tệp sẽ được tạo hiện ra trước khi chạy" data-i18n-alt="shotSplitAlt" width="1536" height="864" fetchpriority="high">
-            </picture>
-            <picture class="shot-dark">
-              <source media="(max-width: 640px)" srcset="../assets/app-split-dark-mobile.webp" width="936" height="838">
-              <img src="../assets/app-split-dark.webp" alt="Cửa sổ Tách của RoWeave: đã chọn cột “Khu vực” và danh sách 7 tệp sẽ được tạo hiện ra trước khi chạy" data-i18n-alt="shotSplitAlt" width="1536" height="864" fetchpriority="high">
-            </picture>
-          </div>
-          <div class="showcase-panel" id="panel-collect" role="tabpanel" aria-labelledby="tab-collect" tabindex="0" hidden>
-            <picture class="shot-light">
-              <source media="(max-width: 640px)" srcset="../assets/app-collect-light-mobile.webp" width="936" height="838">
-              <img src="../assets/app-collect-light.webp" alt="Cửa sổ Gộp của RoWeave: ba tệp của các chi nhánh, kiểm tra tiêu đề và bản xem trước bảng đã gộp kèm cột tệp nguồn" data-i18n-alt="shotCollectAlt" width="1536" height="864" loading="lazy">
-            </picture>
-            <picture class="shot-dark">
-              <source media="(max-width: 640px)" srcset="../assets/app-collect-dark-mobile.webp" width="936" height="838">
-              <img src="../assets/app-collect-dark.webp" alt="Cửa sổ Gộp của RoWeave: ba tệp của các chi nhánh, kiểm tra tiêu đề và bản xem trước bảng đã gộp kèm cột tệp nguồn" data-i18n-alt="shotCollectAlt" width="1536" height="864" loading="lazy">
-            </picture>
-          </div>
-          <div class="showcase-panel" id="panel-csv" role="tabpanel" aria-labelledby="tab-csv" tabindex="0" hidden>
-            <picture class="shot-light">
-              <source media="(max-width: 640px)" srcset="../assets/app-csv-light-mobile.webp" width="936" height="838">
-              <img src="../assets/app-csv-light.webp" alt="Trình chuyển CSV sang Excel của RoWeave: mã hóa và dấu phân cách được nhận diện tự động, số 0 ở đầu các mã được giữ nguyên" data-i18n-alt="shotCsvAlt" width="1536" height="864" loading="lazy">
-            </picture>
-            <picture class="shot-dark">
-              <source media="(max-width: 640px)" srcset="../assets/app-csv-dark-mobile.webp" width="936" height="838">
-              <img src="../assets/app-csv-dark.webp" alt="Trình chuyển CSV sang Excel của RoWeave: mã hóa và dấu phân cách được nhận diện tự động, số 0 ở đầu các mã được giữ nguyên" data-i18n-alt="shotCsvAlt" width="1536" height="864" loading="lazy">
-            </picture>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="container facts-strip" aria-label="Tóm tắt" data-i18n-aria-label="trustLabel">
-      <div class="facts-grid">
-        <div class="fact-item">
-          <strong><span data-i18n="trustFiles">Không tải gì lên mạng</span></strong>
-          <p><span data-i18n="privacyBody">Tệp được xử lý trên máy tính của bạn và không được gửi đi đâu cả. RoWeave chỉ kết nối mạng để kiểm tra bản cập nhật, và bạn có thể tắt việc này trong cài đặt.</span></p>
-        </div>
-        <div class="fact-item">
-          <strong><span data-i18n="fact2Title">Không cài vào Excel</span></strong>
-          <p><span data-i18n="fact2Body">Ứng dụng độc lập, không dùng macro VBA hay phần bổ trợ. Không cần cài Excel, và trên Windows có thể cài đặt mà không cần quyền quản trị.</span></p>
-        </div>
-        <div class="fact-item">
-          <strong><span data-i18n="fact3Title">Xem kế hoạch trước khi chạy</span></strong>
-          <p><span data-i18n="featuresIntro">Trước khi chạy, RoWeave cho bạn biết sẽ nhận được những tệp nào và những gì sẽ không được chuyển sang.</span></p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section container" id="features" aria-labelledby="features-title" tabindex="-1">
-      <div class="section-head">
-        <h2 id="features-title"><span data-i18n="featuresTitle">Ba việc thường phải làm bằng tay</span></h2>
-      </div>
-
-      <div class="ledger">
-        <article class="ledger-row">
-          <div class="ledger-id">
-            <span class="index-num">01</span>
-            <div>
-              <p class="ledger-tag"><span data-i18n="splitLabel">Tách</span></p>
-              <h3><span data-i18n="splitTitle">Một trang tính → mỗi giá trị một tệp</span></h3>
-              <p class="flow-badge"><span data-i18n="splitExampleIn">Bảng lương</span> <span aria-hidden="true">→</span> <span data-i18n="splitExampleOut">mỗi phòng ban một tệp</span></p>
+            <div class="hero-aside">
+              <p class="hero-desc"><span data-i18n="heroDescription">RoWeave tách một tệp Excel theo cột thành các tệp riêng và gộp các báo cáo trong một thư mục thành một bảng.</span></p>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="#download"><span data-i18n="ctaPlatforms">Tải miễn phí</span></a>
+                <a class="btn btn-ghost" href="#how-it-works"><span data-i18n="navHow">Cách hoạt động</span> <span aria-hidden="true">↓</span></a>
+              </div>
             </div>
           </div>
-          <div class="ledger-body">
-            <p><span data-i18n="splitBody">Chọn một cột, ví dụ “Phòng ban”. RoWeave tạo mỗi phòng ban một sổ làm việc, giữ nguyên các hàng tiêu đề, độ rộng cột, định dạng số, màu nền và màu phông chữ. Chọn nhiều cột thì cột đầu tiên quyết định các thư mục con. Mỗi tệp có thể có mật khẩu riêng.</span></p>
-            <p class="ledger-detail"><span data-i18n="splitDetail">Còn có chế độ “Mỗi trang tính một tệp riêng”. Các tệp mới có thể được nén ngay vào ZIP hoặc đặt mật khẩu: một mật khẩu chung cho tất cả hoặc mỗi tệp một mật khẩu riêng, kèm danh sách mật khẩu lưu trong một tệp riêng.</span></p>
-          </div>
-        </article>
+        </div>
 
-        <article class="ledger-row">
-          <div class="ledger-id">
-            <span class="index-num">02</span>
-            <div>
-              <p class="ledger-tag"><span data-i18n="collectLabel">Gộp</span></p>
-              <h3><span data-i18n="collectTitle">Nhiều tệp → một trang tính</span></h3>
-              <p class="flow-badge"><span data-i18n="collectExampleIn">30 báo cáo chi nhánh</span> <span aria-hidden="true">→</span> <span data-i18n="collectExampleOut">một trang tính</span></p>
+        <div class="showcase" id="showcase">
+          <div class="mode-bar" role="tablist" aria-label="Các chế độ của ứng dụng RoWeave" data-i18n-aria-label="showcaseLabel">
+            <button class="mode-tab" type="button" role="tab" id="tab-split" aria-selected="true" aria-controls="panel-split" data-tab="split"><span class="mode-name" data-i18n="splitLabel">Tách</span></button>
+            <button class="mode-tab" type="button" role="tab" id="tab-collect" aria-selected="false" aria-controls="panel-collect" data-tab="collect" tabindex="-1"><span class="mode-name" data-i18n="collectLabel">Gộp</span></button>
+            <button class="mode-tab" type="button" role="tab" id="tab-csv" aria-selected="false" aria-controls="panel-csv" data-tab="csv" tabindex="-1"><span class="mode-name" data-i18n="csvLabel">CSV → Excel</span></button>
+          </div>
+
+          <div class="specimen-frame">
+            <div class="showcase-panel" id="panel-split" role="tabpanel" aria-labelledby="tab-split" tabindex="0">
+              <picture class="shot-light">
+                <source media="(max-width: 640px)" srcset="../assets/app-split-light-mobile.webp" width="936" height="838">
+                <img src="../assets/app-split-light.webp" alt="Cửa sổ Tách của RoWeave: đã chọn cột “Khu vực” và danh sách 7 tệp sẽ được tạo hiện ra trước khi chạy" data-i18n-alt="shotSplitAlt" width="1536" height="864" fetchpriority="high">
+              </picture>
+              <picture class="shot-dark">
+                <source media="(max-width: 640px)" srcset="../assets/app-split-dark-mobile.webp" width="936" height="838">
+                <img src="../assets/app-split-dark.webp" alt="Cửa sổ Tách của RoWeave: đã chọn cột “Khu vực” và danh sách 7 tệp sẽ được tạo hiện ra trước khi chạy" data-i18n-alt="shotSplitAlt" width="1536" height="864" fetchpriority="high">
+              </picture>
+            </div>
+            <div class="showcase-panel" id="panel-collect" role="tabpanel" aria-labelledby="tab-collect" tabindex="0" hidden>
+              <picture class="shot-light">
+                <source media="(max-width: 640px)" srcset="../assets/app-collect-light-mobile.webp" width="936" height="838">
+                <img src="../assets/app-collect-light.webp" alt="Cửa sổ Gộp của RoWeave: ba tệp của các chi nhánh, kiểm tra tiêu đề và bản xem trước bảng đã gộp kèm cột tệp nguồn" data-i18n-alt="shotCollectAlt" width="1536" height="864" loading="lazy">
+              </picture>
+              <picture class="shot-dark">
+                <source media="(max-width: 640px)" srcset="../assets/app-collect-dark-mobile.webp" width="936" height="838">
+                <img src="../assets/app-collect-dark.webp" alt="Cửa sổ Gộp của RoWeave: ba tệp của các chi nhánh, kiểm tra tiêu đề và bản xem trước bảng đã gộp kèm cột tệp nguồn" data-i18n-alt="shotCollectAlt" width="1536" height="864" loading="lazy">
+              </picture>
+            </div>
+            <div class="showcase-panel" id="panel-csv" role="tabpanel" aria-labelledby="tab-csv" tabindex="0" hidden>
+              <picture class="shot-light">
+                <source media="(max-width: 640px)" srcset="../assets/app-csv-light-mobile.webp" width="936" height="838">
+                <img src="../assets/app-csv-light.webp" alt="Trình chuyển CSV sang Excel của RoWeave: mã hóa và dấu phân cách được nhận diện tự động, số 0 ở đầu các mã được giữ nguyên" data-i18n-alt="shotCsvAlt" width="1536" height="864" loading="lazy">
+              </picture>
+              <picture class="shot-dark">
+                <source media="(max-width: 640px)" srcset="../assets/app-csv-dark-mobile.webp" width="936" height="838">
+                <img src="../assets/app-csv-dark.webp" alt="Trình chuyển CSV sang Excel của RoWeave: mã hóa và dấu phân cách được nhận diện tự động, số 0 ở đầu các mã được giữ nguyên" data-i18n-alt="shotCsvAlt" width="1536" height="864" loading="lazy">
+              </picture>
             </div>
           </div>
-          <div class="ledger-body">
-            <p><span data-i18n="collectBody">Thả vào một thư mục báo cáo. RoWeave lấy đúng trang tính từ mỗi sổ làm việc, kiểm tra tiêu đề có khớp không rồi xếp các hàng nối tiếp nhau vào một bảng. Có thể thêm một cột chứa tên tệp nguồn. Sổ làm việc XLSX, XLSM và XLSB có mật khẩu cũng dùng được; tệp XLS cũ đã mã hóa (Excel 97–2003) thì không mở được.</span></p>
-          </div>
-        </article>
-
-        <article class="ledger-row">
-          <div class="ledger-id">
-            <span class="index-num">03</span>
-            <div>
-              <p class="ledger-tag"><span data-i18n="csvLabel">CSV → Excel</span></p>
-              <h3><span data-i18n="csvTitle">Dữ liệu xuất CSV → tệp Excel chuẩn</span></h3>
-              <p class="flow-badge"><span data-i18n="csvExampleIn">Dữ liệu từ ERP</span> <span aria-hidden="true">→</span> <span data-i18n="csvExampleOut">XLSX giữ số 0</span></p>
-            </div>
-          </div>
-          <div class="ledger-body">
-            <p><span data-i18n="csvBody">Chuyển CSV sang XLSX mà vẫn giữ các số 0 ở đầu mã sản phẩm, mã định danh và số tài khoản, để số dài không biến thành “1,2E+15”.</span></p>
-            <p class="ledger-detail"><span data-i18n="csvDetail">RoWeave tự nhận diện mã hóa, kể cả UTF-8 và Windows-1258. Khi chưa chắc chắn, ứng dụng hiện bản xem trước và để bạn chọn. Dữ liệu xuất lớn được đọc theo từng phần, tối đa 8 triệu ô.</span></p>
-          </div>
-        </article>
+        </div>
       </div>
     </section>
 
-    <section class="section section-tight container" id="scenarios" aria-labelledby="scenarios-title" tabindex="-1">
-      <div class="section-head">
-        <h2 id="scenarios-title"><span data-i18n="useCasesTitle">Nếu hằng tháng bạn vẫn làm việc này bằng tay</span></h2>
-      </div>
-
-      <ul class="cell-grid">
-        <li class="cell-item">
-          <p class="cell-role"><span data-i18n="use1Role">Tài chính và kế toán</span></p>
-          <h3><span data-i18n="use1Task">Gửi cho mỗi trung tâm chi phí báo cáo riêng</span></h3>
-          <p><span data-i18n="use1Body">Một báo cáo chung của công ty → một tệp cho mỗi trung tâm chi phí, với cùng tiêu đề và định dạng số.</span></p>
-        </li>
-        <li class="cell-item">
-          <p class="cell-role"><span data-i18n="use2Role">Nhân sự</span></p>
-          <h3><span data-i18n="use2Task">Mỗi quản lý chỉ nhận danh sách nhóm của mình</span></h3>
-          <p><span data-i18n="use2Body">Danh sách nhân viên → mỗi phòng ban một tệp, mỗi tệp một mật khẩu riêng. RoWeave lưu các mật khẩu vào một danh sách tách biệt.</span></p>
-        </li>
-        <li class="cell-item">
-          <p class="cell-role"><span data-i18n="use3Role">Logistics và kho</span></p>
-          <h3><span data-i18n="use3Task">Gộp báo cáo của các kho thành một bảng</span></h3>
-          <p><span data-i18n="use3Body">30 tệp từ các kho khác nhau → một bảng. Mỗi hàng có thể kèm tên tệp mà nó đến từ đó.</span></p>
-        </li>
-        <li class="cell-item">
-          <p class="cell-role"><span data-i18n="use4Role">Vận hành bán hàng</span></p>
-          <h3><span data-i18n="use4Task">Gửi cho từng nhân viên kinh doanh bảng kế hoạch và thực tế của họ</span></h3>
-          <p><span data-i18n="use4Body">Dữ liệu xuất từ CRM có cột Khu vực và Nhân viên kinh doanh → mỗi khu vực một thư mục, bên trong mỗi nhân viên một tệp.</span></p>
-        </li>
-        <li class="cell-item">
-          <p class="cell-role"><span data-i18n="use5Role">Dữ liệu xuất từ ERP và ngân hàng</span></p>
-          <h3><span data-i18n="use5Task">Mở CSV mà không mất số 0 ở đầu</span></h3>
-          <p><span data-i18n="use5Body">CSV → XLSX, trong đó mã sản phẩm, mã số thuế và số tài khoản giữ nguyên như khi xuất.</span></p>
-        </li>
-        <li class="cell-item">
-          <p class="cell-role"><span data-i18n="use6Role">Trường học và đại học</span></p>
-          <h3><span data-i18n="use6Task">Tách danh sách theo lớp hoặc nhóm</span></h3>
-          <p><span data-i18n="use6Body">Một danh sách chung → mỗi nhóm một tệp. Sau đó gộp lại các tệp của giáo viên thành một sổ làm việc.</span></p>
-        </li>
-      </ul>
-    </section>
-
-    <section class="band-soft" id="how-it-works" aria-labelledby="workflow-title" tabindex="-1">
+    <section class="principles" aria-label="Tóm tắt" data-i18n-aria-label="trustLabel">
       <div class="container">
-        <div class="section-head">
+        <div class="principles-grid">
+          <div class="principle-item">
+            <h2><span data-i18n="trustFiles">Không tải gì lên mạng</span></h2>
+            <p><span data-i18n="trustFilesBody">RoWeave xử lý tệp trên máy tính của bạn. Bạn có thể tắt tính năng tự động kiểm tra bản cập nhật trong cài đặt.</span></p>
+          </div>
+          <div class="principle-item">
+            <h2><span data-i18n="fact2Title">Không cài vào Excel</span></h2>
+            <p><span data-i18n="fact2Body">Ứng dụng độc lập, không dùng macro VBA hay phần bổ trợ. Không cần cài Excel, và trên Windows có thể cài đặt mà không cần quyền quản trị.</span></p>
+          </div>
+          <div class="principle-item">
+            <h2><span data-i18n="fact3Title">Xem kế hoạch trước khi chạy</span></h2>
+            <p><span data-i18n="featuresIntro">Trước khi chạy, RoWeave cho bạn biết sẽ nhận được những tệp nào và những gì sẽ không được chuyển sang.</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features" aria-labelledby="features-title" tabindex="-1">
+      <div class="container split-section">
+        <div class="split-rail">
+          <h2 id="features-title"><span data-i18n="featuresTitle">Ba việc thường phải làm bằng tay</span></h2>
+        </div>
+
+        <div class="split-content">
+          <article class="feature-entry" id="mode-split">
+            <p class="entry-index"><span data-i18n="splitLabel">Tách</span></p>
+            <h3><span data-i18n="splitTitle">Một trang tính → mỗi giá trị một tệp</span></h3>
+            <p><span data-i18n="splitBody">Chọn một cột, ví dụ “Phòng ban”. RoWeave tạo mỗi phòng ban một sổ làm việc, giữ nguyên các hàng tiêu đề, độ rộng cột, định dạng số, màu nền và màu phông chữ. Chọn nhiều cột thì cột đầu tiên quyết định các thư mục con.</span></p>
+            <p class="entry-secondary"><span data-i18n="splitDetail">Còn có chế độ “Mỗi trang tính một tệp riêng” (có thể giữ lại các công thức được hỗ trợ trong cùng trang tính) và chế độ “Tách từng phần” cho sổ làm việc rất lớn. Các tệp mới có thể được nén ngay vào ZIP hoặc đặt mật khẩu: một mật khẩu chung cho tất cả hoặc mỗi tệp một mật khẩu riêng, kèm danh sách mật khẩu lưu trong một tệp riêng.</span></p>
+          </article>
+
+          <article class="feature-entry" id="mode-collect">
+            <p class="entry-index"><span data-i18n="collectLabel">Gộp</span></p>
+            <h3><span data-i18n="collectTitle">Nhiều tệp → một trang tính</span></h3>
+            <p><span data-i18n="collectBody">Thả vào một thư mục báo cáo. RoWeave lấy đúng trang tính từ mỗi sổ làm việc, kiểm tra tiêu đề có khớp không rồi xếp các hàng nối tiếp nhau vào một bảng. Có thể thêm một cột chứa tên tệp nguồn. Sổ làm việc XLSX, XLSM và XLSB có mật khẩu cũng dùng được; tệp XLS cũ đã mã hóa (Excel 97–2003) thì không mở được.</span></p>
+          </article>
+
+          <article class="feature-entry" id="mode-csv">
+            <p class="entry-index"><span data-i18n="csvLabel">CSV → Excel</span></p>
+            <h3><span data-i18n="csvTitle">Dữ liệu xuất CSV → tệp Excel chuẩn</span></h3>
+            <p><span data-i18n="csvBody">Chuyển CSV sang XLSX mà vẫn giữ các số 0 ở đầu mã sản phẩm, mã định danh và số tài khoản, để số dài không biến thành “1,2E+15”.</span></p>
+            <p class="entry-secondary"><span data-i18n="csvDetail">RoWeave tự nhận diện mã hóa, kể cả UTF-8 và Windows-1258. Khi chưa chắc chắn, ứng dụng hiện bản xem trước và để bạn chọn. Dữ liệu xuất lớn được đọc theo từng phần, tối đa 8 triệu ô.</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="workflow-band" id="how-it-works" aria-labelledby="workflow-title" tabindex="-1">
+      <div class="container">
+        <div class="band-head">
           <h2 id="workflow-title"><span data-i18n="workflowTitle">Cách hoạt động</span></h2>
         </div>
 
-        <ol class="steps-row">
-          <li>
-            <span class="step-index" aria-hidden="true">01</span>
+        <ol class="workflow-steps">
+          <li class="workflow-step">
+            <span class="step-num" aria-hidden="true">01</span>
             <h3><span data-i18n="step1Title">Thả tệp vào</span></h3>
             <p><span data-i18n="step1Body">Một sổ làm việc, vài tệp hoặc cả một thư mục. Hỗ trợ XLSX, XLSM, XLS, XLSB, CSV, TSV và TXT.</span></p>
           </li>
-          <li>
-            <span class="step-index" aria-hidden="true">02</span>
+          <li class="workflow-step">
+            <span class="step-num" aria-hidden="true">02</span>
             <h3><span data-i18n="step2Title">Kiểm tra kết quả</span></h3>
             <p><span data-i18n="step2Body">Chọn một trang tính và một cột. RoWeave liệt kê các tệp sẽ tạo và cảnh báo nếu có gì không được chuyển sang.</span></p>
           </li>
-          <li>
-            <span class="step-index" aria-hidden="true">03</span>
+          <li class="workflow-step">
+            <span class="step-num" aria-hidden="true">03</span>
             <h3><span data-i18n="step3Title">Lưu kết quả</span></h3>
             <p><span data-i18n="step3Body">Các tệp mới được lưu vào thư mục bạn chọn. Tệp gốc không bị đụng đến, còn các lần chạy trước được lưu trong Lịch sử.</span></p>
           </li>
@@ -264,266 +226,326 @@
       </div>
     </section>
 
-    <section class="section container" id="compare" aria-labelledby="compare-title" tabindex="-1">
-      <div class="section-head">
-        <h2 id="compare-title"><span data-i18n="compareTitle">Thường người ta làm thế nào</span></h2>
-        <p><span data-i18n="compareIntro">Phần bổ trợ làm được nhiều hơn và chạy ngay trong Excel. RoWeave dành cho khi bạn không muốn cài phần bổ trợ hay macro, hoặc làm việc trên Mac.</span></p>
-      </div>
-
-      <div class="table-wrap">
-        <table class="compare-table">
-          <thead>
-            <tr>
-              <th scope="col"><span data-i18n="compareColMethod">Cách làm</span></th>
-              <th scope="col"><span data-i18n="compareColSplit">Tách theo cột thành tệp</span></th>
-              <th scope="col"><span data-i18n="compareColMerge">Gộp tệp thành một</span></th>
-              <th scope="col"><span data-i18n="compareColMac">Mac</span></th>
-              <th scope="col"><span data-i18n="compareColNeeds">Yêu cầu và giới hạn</span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row"><span data-i18n="compareManualTitle">Làm tay</span></th>
-              <td data-label="Tách theo cột thành tệp" data-i18n-data-label="compareColSplit"><span data-i18n="compareManualSplit">Lâu, dễ nhầm hàng</span></td>
-              <td data-label="Gộp tệp thành một" data-i18n-data-label="compareColMerge"><span data-i18n="compareManualMerge">Sao chép và dán thủ công</span></td>
-              <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareYes">Có</span></td>
-              <td data-label="Yêu cầu và giới hạn" data-i18n-data-label="compareColNeeds"><span data-i18n="compareManualNeeds">Với mỗi phòng ban, bạn phải lọc hàng, sao chép rồi lưu thành một tệp riêng</span></td>
-            </tr>
-            <tr>
-              <th scope="row"><span data-i18n="comparePqTitle">Power Query (trong Excel)</span></th>
-              <td data-label="Tách theo cột thành tệp" data-i18n-data-label="compareColSplit"><span data-i18n="compareNo">Không</span></td>
-              <td data-label="Gộp tệp thành một" data-i18n-data-label="compareColMerge"><span data-i18n="comparePqMerge">Có, từ thư mục</span></td>
-              <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="comparePqMac">Gộp từ thư mục bị hạn chế</span></td>
-              <td data-label="Yêu cầu và giới hạn" data-i18n-data-label="compareColNeeds"><span data-i18n="comparePqNeeds">Có sẵn trong Excel cho Windows nhưng phải thiết lập truy vấn; không tách được thành tệp</span></td>
-            </tr>
-            <tr>
-              <th scope="row"><span data-i18n="compareVbaTitle">Macro VBA</span></th>
-              <td data-label="Tách theo cột thành tệp" data-i18n-data-label="compareColSplit"><span data-i18n="compareVbaCode">Nếu có sẵn mã chạy được</span></td>
-              <td data-label="Gộp tệp thành một" data-i18n-data-label="compareColMerge"><span data-i18n="compareVbaCode">Nếu có sẵn mã chạy được</span></td>
-              <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareVbaMac">Thường phải sửa</span></td>
-              <td data-label="Yêu cầu và giới hạn" data-i18n-data-label="compareColNeeds"><span data-i18n="compareVbaNeeds">Cần một macro viết riêng cho việc của bạn và quyền chạy macro đó</span></td>
-            </tr>
-            <tr>
-              <th scope="row"><span data-i18n="compareAddinsTitle">Phần bổ trợ Excel</span></th>
-              <td data-label="Tách theo cột thành tệp" data-i18n-data-label="compareColSplit"><span data-i18n="compareAddinsVaries">Tùy phần bổ trợ</span></td>
-              <td data-label="Gộp tệp thành một" data-i18n-data-label="compareColMerge"><span data-i18n="compareAddinsVaries">Tùy phần bổ trợ</span></td>
-              <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareAddinsVaries">Tùy phần bổ trợ</span></td>
-              <td data-label="Yêu cầu và giới hạn" data-i18n-data-label="compareColNeeds"><span data-i18n="compareAddinsNeeds">Chạy bên trong Excel; khả năng tương thích và điều khoản sử dụng tùy sản phẩm</span></td>
-            </tr>
-            <tr>
-              <th scope="row"><span data-i18n="compareOnlineTitle">Công cụ trực tuyến</span></th>
-              <td data-label="Tách theo cột thành tệp" data-i18n-data-label="compareColSplit"><span data-i18n="compareOnlineVaries">Tùy dịch vụ</span></td>
-              <td data-label="Gộp tệp thành một" data-i18n-data-label="compareColMerge"><span data-i18n="compareOnlineVaries">Tùy dịch vụ</span></td>
-              <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareYes">Có</span></td>
-              <td data-label="Yêu cầu và giới hạn" data-i18n-data-label="compareColNeeds"><span data-i18n="compareOnlineNeeds">Thường phải tải bảng lương hoặc dữ liệu khách hàng lên máy chủ của người khác</span></td>
-            </tr>
-            <tr class="compare-highlight">
-              <th scope="row"><span data-i18n="compareRoweaveTitle">RoWeave</span></th>
-              <td data-label="Tách theo cột thành tệp" data-i18n-data-label="compareColSplit"><span data-i18n="compareRoweaveSplit">Có, ra tệp ngay, kèm xem trước</span></td>
-              <td data-label="Gộp tệp thành một" data-i18n-data-label="compareColMerge"><span data-i18n="compareRoweaveMerge">Có, kèm kiểm tra tiêu đề</span></td>
-              <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareRoweaveMac">Có (Apple Silicon)</span></td>
-              <td data-label="Yêu cầu và giới hạn" data-i18n-data-label="compareColNeeds"><span data-i18n="compareRoweaveNeeds">Ứng dụng riêng cho Windows và Mac; không cần Excel, miễn phí trong bản beta 0.13</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section class="section section-tight container" id="keep" aria-labelledby="keep-title" tabindex="-1">
-      <div class="section-head">
-        <h2 id="keep-title"><span data-i18n="keepTitle">Những gì được chuyển sang tệp mới và những gì không</span></h2>
-      </div>
-
-      <div class="spec-panel">
-        <div class="spec-columns">
-          <div class="spec-col spec-yes">
-            <h3><span class="spec-mark" aria-hidden="true">✓</span> <span data-i18n="keepYesTitle">Được giữ lại</span></h3>
-            <ul>
-              <li><span data-i18n="keepYes1">Phông chữ, màu nền, đường viền, căn lề</span></li>
-              <li><span data-i18n="keepYes2">Độ rộng cột, định dạng số và ngày</span></li>
-              <li><span data-i18n="keepYes3">Các hàng tiêu đề phía trên bảng trong mọi tệp</span></li>
-              <li><span data-i18n="keepYes4">Chiều cao hàng</span></li>
-            </ul>
-          </div>
-
-          <div class="spec-col spec-exp">
-            <h3><span class="spec-mark" aria-hidden="true">β</span> <span data-i18n="keepExpTitle">Beta, bật trong Cài đặt nâng cao (mặc định tắt)</span></h3>
-            <ul>
-              <li><span data-i18n="keepExp1">Bảo vệ trang tính và các ô có thể sửa</span></li>
-              <li><span data-i18n="keepExp2">Danh sách thả xuống và xác thực dữ liệu</span></li>
-              <li><span data-i18n="keepExp3">Định dạng có điều kiện</span></li>
-            </ul>
-            <p class="spec-subnote"><span data-i18n="keepExpNote">Trong mục “Giữ lại gì từ sổ làm việc nguồn” của Tách và Gộp.</span></p>
-          </div>
-
-          <div class="spec-col spec-no">
-            <h3><span class="spec-mark" aria-hidden="true">—</span> <span data-i18n="keepNoTitle">Không được chuyển sang</span></h3>
-            <ul>
-              <li><span data-i18n="keepNo1">PivotTable, biểu đồ, hình ảnh</span></li>
-              <li><span data-i18n="keepNo2">Macro: kết quả là một tệp XLSX thông thường</span></li>
-            </ul>
-          </div>
+    <section class="section" id="scenarios" aria-labelledby="scenarios-title" tabindex="-1">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="scenarios-title"><span data-i18n="useCasesTitle">Nếu hằng tháng bạn vẫn làm việc này bằng tay</span></h2>
         </div>
 
-        <div class="spec-formats">
-          <div>
-            <strong><span data-i18n="formulasTitle">Công thức</span></strong>
-            <p><span data-i18n="formulasBody">Công thức thường được thay bằng các giá trị đã lưu trong sổ làm việc. Ở chế độ “Mỗi trang tính một tệp riêng”, bạn có thể giữ các công thức được hỗ trợ chỉ tham chiếu đến chính trang tính của chúng. Ứng dụng cho biết các giới hạn trước khi chạy.</span></p>
+        <div class="ledger-table" role="region" aria-label="Ví dụ công việc theo phòng ban" data-i18n-aria-label="scenariosLabel">
+          <div class="ledger-header" aria-hidden="true">
+            <span data-i18n="ledgerColRole">Nhóm hoặc nguồn</span>
+            <span data-i18n="ledgerColTask">Công việc</span>
+            <span data-i18n="ledgerColResult">RoWeave làm gì</span>
           </div>
-          <div>
-            <strong><span data-i18n="formatsSplitTitle">Tệp cũ và tệp nhị phân khi Tách</span></strong>
-            <p><span data-i18n="formatsSplitBody">Từ tệp XLS cũ (Excel 97–2003), Tách chuyển sang dữ liệu, định dạng số và các ô đã hợp nhất, nhưng không có phông chữ, màu nền hay đường viền; từ XLSB nhị phân chỉ có giá trị.</span></p>
-          </div>
-          <div>
-            <strong><span data-i18n="formatsCollectTitle">Nguồn hỗn hợp khi Gộp</span></strong>
-            <p><span data-i18n="formatsCollectBody">Nếu trong các nguồn có tệp XLS, XLSB hoặc tệp văn bản (CSV, TSV, TXT), Gộp ghi toàn bộ bảng dưới dạng giá trị, không có định dạng, kể cả phần đến từ các sổ làm việc XLSX.</span></p>
-          </div>
+
+          <ul class="ledger-rows">
+            <li class="ledger-row">
+              <span class="ledger-role" data-i18n="use1Role">Tài chính và kế toán</span>
+              <h3 class="ledger-task"><span data-i18n="use1Task">Gửi cho mỗi trung tâm chi phí báo cáo riêng</span></h3>
+              <p class="ledger-desc"><span data-i18n="use1Body">Một báo cáo chung của công ty → một tệp cho mỗi trung tâm chi phí, với cùng tiêu đề và định dạng số.</span></p>
+            </li>
+            <li class="ledger-row">
+              <span class="ledger-role" data-i18n="use2Role">Nhân sự</span>
+              <h3 class="ledger-task"><span data-i18n="use2Task">Mỗi quản lý chỉ nhận danh sách nhóm của mình</span></h3>
+              <p class="ledger-desc"><span data-i18n="use2Body">Danh sách nhân viên → mỗi phòng ban một tệp, mỗi tệp một mật khẩu riêng. RoWeave lưu các mật khẩu vào một danh sách tách biệt.</span></p>
+            </li>
+            <li class="ledger-row">
+              <span class="ledger-role" data-i18n="use3Role">Logistics và kho</span>
+              <h3 class="ledger-task"><span data-i18n="use3Task">Gộp báo cáo của các kho thành một bảng</span></h3>
+              <p class="ledger-desc"><span data-i18n="use3Body">30 tệp từ các kho khác nhau → một bảng. Mỗi hàng có thể kèm tên tệp mà nó đến từ đó.</span></p>
+            </li>
+            <li class="ledger-row">
+              <span class="ledger-role" data-i18n="use4Role">Vận hành bán hàng</span>
+              <h3 class="ledger-task"><span data-i18n="use4Task">Gửi cho từng nhân viên kinh doanh bảng kế hoạch và thực tế của họ</span></h3>
+              <p class="ledger-desc"><span data-i18n="use4Body">Dữ liệu xuất từ CRM có cột Khu vực và Nhân viên kinh doanh → mỗi khu vực một thư mục, bên trong mỗi nhân viên một tệp.</span></p>
+            </li>
+            <li class="ledger-row">
+              <span class="ledger-role" data-i18n="use5Role">Dữ liệu xuất từ ERP và ngân hàng</span>
+              <h3 class="ledger-task"><span data-i18n="use5Task">Mở CSV mà không mất số 0 ở đầu</span></h3>
+              <p class="ledger-desc"><span data-i18n="use5Body">CSV → XLSX, trong đó mã sản phẩm, mã số thuế và số tài khoản giữ nguyên như khi xuất.</span></p>
+            </li>
+            <li class="ledger-row">
+              <span class="ledger-role" data-i18n="use6Role">Trường học và đại học</span>
+              <h3 class="ledger-task"><span data-i18n="use6Task">Tách danh sách theo lớp hoặc nhóm</span></h3>
+              <p class="ledger-desc"><span data-i18n="use6Body">Một danh sách chung → mỗi nhóm một tệp. Sau đó gộp lại các tệp của giáo viên thành một sổ làm việc.</span></p>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section class="section container faq-layout" id="faq" aria-labelledby="faq-title" tabindex="-1">
-      <div class="faq-aside">
-        <h2 id="faq-title"><span data-i18n="faqTitle">Câu hỏi thường gặp</span></h2>
-        <div class="about-box" id="about">
+    <section class="section section-ruled" id="compare" aria-labelledby="compare-title" tabindex="-1">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="compare-title"><span data-i18n="compareTitle">Thường người ta làm thế nào</span></h2>
+        </div>
+
+        <div class="compare-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th scope="col"><span data-i18n="compareColMethod">Cách làm</span></th>
+                <th scope="col"><span data-i18n="compareColSplit">Tách theo cột thành tệp</span></th>
+                <th scope="col"><span data-i18n="compareColMerge">Gộp tệp thành một</span></th>
+                <th scope="col"><span data-i18n="compareColMac">Mac</span></th>
+                <th scope="col"><span data-i18n="compareColNeeds">Yêu cầu và giới hạn</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><span data-i18n="compareManualTitle">Làm tay</span></th>
+                <td data-label="Tách theo cột thành tệp" data-i18n-data-label="compareColSplit"><span data-i18n="compareManualSplit">Lâu, dễ nhầm hàng</span></td>
+                <td data-label="Gộp tệp thành một" data-i18n-data-label="compareColMerge"><span data-i18n="compareManualMerge">Sao chép và dán thủ công</span></td>
+                <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareYes">Có</span></td>
+                <td data-label="Yêu cầu và giới hạn" data-i18n-data-label="compareColNeeds"><span data-i18n="compareManualNeeds">Với mỗi phòng ban, bạn phải lọc hàng, sao chép rồi lưu thành một tệp riêng</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span data-i18n="comparePqTitle">Power Query (trong Excel)</span></th>
+                <td data-label="Tách theo cột thành tệp" data-i18n-data-label="compareColSplit"><span data-i18n="compareNo">Không</span></td>
+                <td data-label="Gộp tệp thành một" data-i18n-data-label="compareColMerge"><span data-i18n="comparePqMerge">Có, từ thư mục</span></td>
+                <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="comparePqMac">Gộp từ thư mục bị hạn chế</span></td>
+                <td data-label="Yêu cầu và giới hạn" data-i18n-data-label="compareColNeeds"><span data-i18n="comparePqNeeds">Có sẵn trong Excel cho Windows. Cần thiết lập truy vấn</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span data-i18n="compareVbaTitle">Macro VBA</span></th>
+                <td data-label="Tách theo cột thành tệp" data-i18n-data-label="compareColSplit"><span data-i18n="compareVbaCode">Nếu có sẵn mã chạy được</span></td>
+                <td data-label="Gộp tệp thành một" data-i18n-data-label="compareColMerge"><span data-i18n="compareVbaCode">Nếu có sẵn mã chạy được</span></td>
+                <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareVbaMac">Thường phải sửa</span></td>
+                <td data-label="Yêu cầu và giới hạn" data-i18n-data-label="compareColNeeds"><span data-i18n="compareVbaNeeds">Cần một macro viết riêng cho việc của bạn và quyền chạy macro đó</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span data-i18n="compareAddinsTitle">Phần bổ trợ Excel</span></th>
+                <td data-label="Tách theo cột thành tệp" data-i18n-data-label="compareColSplit"><span data-i18n="compareAddinsVaries">Tùy phần bổ trợ</span></td>
+                <td data-label="Gộp tệp thành một" data-i18n-data-label="compareColMerge"><span data-i18n="compareAddinsVaries">Tùy phần bổ trợ</span></td>
+                <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareAddinsVaries">Tùy phần bổ trợ</span></td>
+                <td data-label="Yêu cầu và giới hạn" data-i18n-data-label="compareColNeeds"><span data-i18n="compareAddinsNeeds">Chạy bên trong Excel; khả năng tương thích và điều khoản sử dụng tùy sản phẩm</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span data-i18n="compareOnlineTitle">Công cụ trực tuyến</span></th>
+                <td data-label="Tách theo cột thành tệp" data-i18n-data-label="compareColSplit"><span data-i18n="compareOnlineVaries">Tùy dịch vụ</span></td>
+                <td data-label="Gộp tệp thành một" data-i18n-data-label="compareColMerge"><span data-i18n="compareOnlineVaries">Tùy dịch vụ</span></td>
+                <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareYes">Có</span></td>
+                <td data-label="Yêu cầu và giới hạn" data-i18n-data-label="compareColNeeds"><span data-i18n="compareOnlineNeeds">Thường phải tải bảng lương hoặc dữ liệu khách hàng lên máy chủ của người khác</span></td>
+              </tr>
+              <tr class="compare-roweave">
+                <th scope="row"><span data-i18n="compareRoweaveTitle">RoWeave</span></th>
+                <td data-label="Tách theo cột thành tệp" data-i18n-data-label="compareColSplit"><span data-i18n="compareRoweaveSplit">Có, ra tệp ngay, kèm xem trước</span></td>
+                <td data-label="Gộp tệp thành một" data-i18n-data-label="compareColMerge"><span data-i18n="compareRoweaveMerge">Có, kèm kiểm tra tiêu đề</span></td>
+                <td data-label="Mac" data-i18n-data-label="compareColMac"><span data-i18n="compareRoweaveMac">Có (Apple Silicon)</span></td>
+                <td data-label="Yêu cầu và giới hạn" data-i18n-data-label="compareColNeeds"><span data-i18n="compareRoweaveNeeds">Ứng dụng riêng cho Windows và Mac; không cần Excel, miễn phí trong bản beta 0.13</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-ruled" id="keep" aria-labelledby="keep-title" tabindex="-1">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="keep-title"><span data-i18n="keepTitle">Những gì được chuyển sang tệp mới và những gì không</span></h2>
+        </div>
+
+        <div class="spec-sheet">
+          <div class="spec-main">
+            <div class="spec-col">
+              <h3 class="spec-heading spec-heading-yes"><span class="spec-badge" aria-hidden="true">✓</span> <span data-i18n="keepYesTitle">Được giữ lại</span></h3>
+              <ul class="spec-list">
+                <li><span data-i18n="keepYes1">Phông chữ, màu nền, đường viền, căn lề</span></li>
+                <li><span data-i18n="keepYes2">Độ rộng cột, định dạng số và ngày</span></li>
+                <li><span data-i18n="keepYes3">Các hàng tiêu đề phía trên bảng trong mọi tệp</span></li>
+                <li><span data-i18n="keepYes4">Chiều cao hàng</span></li>
+              </ul>
+            </div>
+
+            <div class="spec-col">
+              <h3 class="spec-heading spec-heading-beta"><span class="spec-badge" aria-hidden="true">β</span> <span data-i18n="keepExpTitle">Beta, bật trong Cài đặt nâng cao</span></h3>
+              <p class="spec-caption"><span data-i18n="keepExpNote">Mặc định tắt. Trong mục “Giữ lại gì từ sổ làm việc nguồn” của Tách và Gộp.</span></p>
+              <ul class="spec-list">
+                <li><span data-i18n="keepExp1">Bảo vệ trang tính và các ô có thể sửa</span></li>
+                <li><span data-i18n="keepExp2">Danh sách thả xuống và xác thực dữ liệu</span></li>
+                <li><span data-i18n="keepExp3">Định dạng có điều kiện</span></li>
+              </ul>
+            </div>
+
+            <div class="spec-col">
+              <h3 class="spec-heading spec-heading-no"><span class="spec-badge" aria-hidden="true">—</span> <span data-i18n="keepNoTitle">Không được chuyển sang</span></h3>
+              <ul class="spec-list">
+                <li><span data-i18n="keepNo1">PivotTable, biểu đồ, hình ảnh</span></li>
+                <li><span data-i18n="keepNo2">Macro: kết quả là một tệp XLSX thông thường</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="spec-notes">
+            <div class="spec-note">
+              <h4><span data-i18n="formulasTitle">Công thức</span></h4>
+              <p><span data-i18n="formulasBody">Công thức thường được thay bằng các giá trị đã lưu trong sổ làm việc. Ở chế độ “Mỗi trang tính một tệp riêng”, bạn có thể giữ các công thức được hỗ trợ chỉ tham chiếu đến chính trang tính của chúng. Ứng dụng cho biết các giới hạn trước khi chạy.</span></p>
+            </div>
+            <div class="spec-note">
+              <h4><span data-i18n="formatsSplitTitle">Tệp cũ và tệp nhị phân khi Tách</span></h4>
+              <p><span data-i18n="formatsSplitBody">Từ tệp XLS cũ (Excel 97–2003), Tách chuyển sang dữ liệu, định dạng số và các ô đã hợp nhất, nhưng không có phông chữ, màu nền hay đường viền; từ XLSB nhị phân chỉ có giá trị.</span></p>
+            </div>
+            <div class="spec-note">
+              <h4><span data-i18n="formatsCollectTitle">Nguồn hỗn hợp khi Gộp</span></h4>
+              <p><span data-i18n="formatsCollectBody">Nếu trong các nguồn có tệp XLS, XLSB hoặc tệp văn bản (CSV, TSV, TXT), Gộp ghi toàn bộ bảng dưới dạng giá trị, không có định dạng, kể cả phần đến từ các sổ làm việc XLSX.</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-ruled" id="faq" aria-labelledby="faq-title" tabindex="-1">
+      <div class="container split-section faq-grid">
+        <div class="split-rail">
+          <h2 id="faq-title"><span data-i18n="faqTitle">Câu hỏi thường gặp</span></h2>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary><span data-i18n="faqSplitHow">Làm sao để tách một tệp Excel thành nhiều tệp?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faqSplitHowBody">Mở bảng trong Tách, chọn một cột, ví dụ “Thành phố”, rồi chạy. RoWeave tạo một tệp cho mỗi giá trị trong cột đó, giữ nguyên tiêu đề, độ rộng cột và định dạng. Bạn thấy danh sách tệp trước khi bắt đầu.</span></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faqMergeHow">Làm sao để gộp nhiều tệp Excel thành một?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faqMergeHowBody">Kéo một thư mục tệp vào Gộp. RoWeave lấy đúng trang tính từ mỗi sổ làm việc, kiểm tra tiêu đề có khớp không rồi xếp các hàng vào một bảng. Bạn có thể thêm cột ghi tên tệp nguồn.</span></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faqCsvZeros">Vì sao Excel xóa số 0 ở đầu khi mở tệp CSV?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faqCsvZerosBody">Excel biến các cột trông giống số thành số, nên 00123 thành 123 và các mã dài thành “1,2E+15”. Hãy chuyển CSV sang XLSX bằng RoWeave: mã sản phẩm, mã số và số tài khoản giữ nguyên như khi xuất.</span></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faq10">Giá bao nhiêu?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faq10Body">Hiện RoWeave miễn phí cho Windows và Mac: đầy đủ tính năng, không giới hạn, không cần đăng ký và không có quảng cáo.</span></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faq1">RoWeave chạy trên những máy tính nào?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faq1Body">Windows 10 và 11 (64-bit, x64), và máy Mac dùng chip Apple Silicon (M1 trở lên) chạy macOS 12.3 trở lên.</span></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faq4">Tệp gốc của tôi có bị thay đổi không?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faq4Body">Không. RoWeave chỉ đọc các tệp nguồn và không bao giờ ghi đè lên chúng. Kết quả được lưu riêng, vào thư mục bạn chọn.</span></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faq3">Định dạng và công thức có được giữ lại không?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faq3Body">Tách giữ phông chữ, màu nền, đường viền, độ rộng cột và định dạng số. Công thức thường được thay bằng các giá trị đã lưu trong sổ làm việc. Ở chế độ “Mỗi trang tính một tệp riêng”, bạn có thể giữ các công thức được hỗ trợ chỉ tham chiếu đến chính trang tính của chúng; ứng dụng cho biết các giới hạn trước khi chạy. Gộp cũng ghi giá trị, và giữ định dạng khi mọi nguồn đều là sổ làm việc XLSX hoặc XLSM.</span> <a href="#keep"><span data-i18n="faq3Link">Những gì được giữ và không được giữ</span></a></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faq6">Có xử lý được tệp lớn không?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faq6Body">RoWeave chuyển CSV lớn sang Excel theo từng phần, không nạp toàn bộ tệp vào bộ nhớ. Giới hạn là 8 triệu ô (ví dụ 400.000 hàng × 20 cột) và 4 triệu hàng. Nếu số hàng vượt quá sức chứa của một trang tính Excel (1.048.576), RoWeave sẽ đề xuất chia ra nhiều trang tính. Ở chế độ thông thường, giới hạn của Tách và Gộp phụ thuộc vào bộ nhớ của máy tính. Nếu sổ làm việc quá lớn, Tách sẽ đề xuất chế độ “Tách từng phần” với các giới hạn riêng, được hiển thị trước khi chạy.</span></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faq7">Tệp có mật khẩu thì sao?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faq7Body">Sổ làm việc XLSX, XLSM và XLSB mở bình thường: bạn nhập mật khẩu trong ứng dụng và nó không bao giờ được lưu. Tệp đã mã hóa ở định dạng XLS cũ (Excel 97–2003) thì không mở được. Tách cũng có thể đặt mật khẩu cho các tệp mới: một mật khẩu chung hoặc mỗi tệp một mật khẩu, danh sách được lưu vào một tệp riêng.</span></p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-i18n="faq2">Có cần cài Excel không?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+            <div class="faq-answer">
+              <p><span data-i18n="faq2Body">Không. RoWeave tự đọc và ghi tệp. Bạn chỉ cần Excel hoặc một ứng dụng bảng tính khác để mở kết quả.</span></p>
+            </div>
+          </details>
+        </div>
+
+        <aside class="about-colophon" id="about" aria-labelledby="about-title">
           <div class="about-head">
-            <img class="about-mascot" src="../assets/mascot-reading.webp" alt="" width="72" height="82" loading="lazy">
-            <h3><span data-i18n="aboutTitle">Về dự án</span></h3>
+            <img class="about-mascot" src="../assets/mascot-reading.webp" alt="" width="60" height="68" loading="lazy">
+            <h3 id="about-title"><span data-i18n="aboutTitle">Về dự án</span></h3>
           </div>
           <p><span data-i18n="aboutBody">RoWeave do một nhà phát triển làm. Tôi liên tục cải thiện ứng dụng dựa trên góp ý của người dùng.</span></p>
           <p class="about-contact"><span data-i18n="aboutContactBefore">Nếu có gì không hoạt động hoặc còn thiếu, hãy viết cho</span> <a href="mailto:support@roweave.app">support@roweave.app</a><span data-i18n="aboutContactAfter">.</span></p>
-        </div>
-      </div>
-
-      <div class="faq-list">
-        <details>
-          <summary><span data-i18n="faqSplitHow">Làm sao để tách một tệp Excel thành nhiều tệp?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faqSplitHowBody">Mở bảng trong Tách, chọn một cột, ví dụ “Thành phố”, rồi chạy. RoWeave tạo một tệp cho mỗi giá trị trong cột đó, giữ nguyên tiêu đề, độ rộng cột và định dạng. Bạn thấy danh sách tệp trước khi bắt đầu.</span></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faqMergeHow">Làm sao để gộp nhiều tệp Excel thành một?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faqMergeHowBody">Kéo một thư mục tệp vào Gộp. RoWeave lấy đúng trang tính từ mỗi sổ làm việc, kiểm tra tiêu đề có khớp không rồi xếp các hàng vào một bảng. Bạn có thể thêm cột ghi tên tệp nguồn.</span></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faqCsvZeros">Vì sao Excel xóa số 0 ở đầu khi mở tệp CSV?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faqCsvZerosBody">Excel biến các cột trông giống số thành số, nên 00123 thành 123 và các mã dài thành “1,2E+15”. Hãy chuyển CSV sang XLSX bằng RoWeave: mã sản phẩm, mã số và số tài khoản giữ nguyên như khi xuất.</span></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faq10">Giá bao nhiêu?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faq10Body">Hiện RoWeave miễn phí cho Windows và Mac: đầy đủ tính năng, không giới hạn, không cần đăng ký và không có quảng cáo.</span></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faq1">RoWeave chạy trên những máy tính nào?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faq1Body">Windows 10 và 11 (64-bit, x64), và máy Mac dùng chip Apple Silicon (M1 trở lên) chạy macOS 12.3 trở lên.</span></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faq4">Tệp gốc của tôi có bị thay đổi không?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faq4Body">Không. RoWeave chỉ đọc các tệp nguồn và không bao giờ ghi đè lên chúng. Kết quả được lưu riêng, vào thư mục bạn chọn.</span></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faq3">Định dạng và công thức có được giữ lại không?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faq3Body">Tách giữ phông chữ, màu nền, đường viền, độ rộng cột và định dạng số. Công thức thường được thay bằng các giá trị đã lưu trong sổ làm việc. Ở chế độ “Mỗi trang tính một tệp riêng”, bạn có thể giữ các công thức được hỗ trợ chỉ tham chiếu đến chính trang tính của chúng; ứng dụng cho biết các giới hạn trước khi chạy. Gộp cũng ghi giá trị, và giữ định dạng khi mọi nguồn đều là sổ làm việc XLSX hoặc XLSM.</span> <a href="#keep"><span data-i18n="faq3Link">Những gì được giữ và không được giữ</span></a></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faq6">Có xử lý được tệp lớn không?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faq6Body">RoWeave chuyển CSV lớn sang Excel theo từng phần, không nạp toàn bộ tệp vào bộ nhớ. Giới hạn là 8 triệu ô (ví dụ 400.000 hàng × 20 cột) và 4 triệu hàng. Nếu số hàng vượt quá sức chứa của một trang tính Excel (1.048.576), RoWeave sẽ đề xuất chia ra nhiều trang tính. Ở chế độ thông thường, giới hạn của Tách và Gộp phụ thuộc vào bộ nhớ của máy tính. Nếu sổ làm việc quá lớn, Tách sẽ đề xuất chế độ “Tách từng phần” với các giới hạn riêng, được hiển thị trước khi chạy.</span></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faq7">Tệp có mật khẩu thì sao?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faq7Body">Sổ làm việc XLSX, XLSM và XLSB mở bình thường: bạn nhập mật khẩu trong ứng dụng và nó không bao giờ được lưu. Tệp đã mã hóa ở định dạng XLS cũ (Excel 97–2003) thì không mở được. Tách cũng có thể đặt mật khẩu cho các tệp mới: một mật khẩu chung hoặc mỗi tệp một mật khẩu, danh sách được lưu vào một tệp riêng.</span></p>
-          </div>
-        </details>
-        <details>
-          <summary><span data-i18n="faq2">Có cần cài Excel không?</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-          <div class="answer">
-            <p><span data-i18n="faq2Body">Không. RoWeave tự đọc và ghi tệp. Bạn chỉ cần Excel hoặc một ứng dụng bảng tính khác để mở kết quả.</span></p>
-          </div>
-        </details>
+        </aside>
       </div>
     </section>
 
-    <section class="container download-section" id="download" aria-labelledby="download-title" tabindex="-1">
-      <div class="download-panel">
-        <div class="download-head">
-          <img src="../assets/roweave-icon-160.webp" alt="" width="52" height="52" loading="lazy">
-          <div>
-            <h2 id="download-title"><span data-i18n="downloadTitle">RoWeave cho Windows và Mac</span></h2>
-            <p><span data-i18n="downloadStatus">Beta 0.13 miễn phí</span></p>
+    <section class="download-band" id="download" aria-labelledby="download-title" tabindex="-1">
+      <div class="container">
+        <div class="download-shell">
+          <div class="download-header">
+            <img src="../assets/roweave-icon-160.webp" alt="" width="56" height="56" loading="lazy">
+            <div>
+              <p class="download-kicker"><span data-i18n="downloadStatus">Beta 0.13 miễn phí</span></p>
+              <h2 id="download-title"><span data-i18n="downloadTitle">RoWeave cho Windows và Mac</span></h2>
+            </div>
+          </div>
+
+          <ul class="platform-grid" aria-label="Các phiên bản ứng dụng" data-i18n-aria-label="platformsLabel">
+            <li class="platform-col">
+              <div class="platform-meta">
+                <h3>Windows</h3>
+                <p><span data-i18n="windowsPlatform">Windows 10/11 (x64)</span></p>
+              </div>
+              <a class="btn btn-download" href="https://github.com/RoWeave/releases/releases/latest/download/RoWeave-Windows-x64-setup.exe"><span data-i18n="downloadWindows">Tải cho Windows</span></a>
+              <p class="platform-file"><span data-i18n="windowsFile">.exe, khoảng 11 MB</span></p>
+              <details class="platform-hint">
+                <summary><span data-i18n="smartscreenSummary">Nếu Windows hiện cảnh báo</span></summary>
+                <p><span data-i18n="smartscreenHint">Thấy thông báo “Windows đã bảo vệ PC của bạn”? Hãy nhấn “Thông tin thêm” rồi “Vẫn chạy”. Trình cài đặt chưa có chữ ký của Microsoft.</span></p>
+              </details>
+            </li>
+
+            <li class="platform-col">
+              <div class="platform-meta">
+                <h3>macOS</h3>
+                <p><span data-i18n="macPlatform">Apple Silicon (M1 trở lên), macOS 12.3+</span></p>
+              </div>
+              <a class="btn btn-download" href="https://github.com/RoWeave/releases/releases/latest/download/RoWeave-macOS-arm64.dmg"><span data-i18n="downloadMac">Tải cho Mac</span></a>
+              <p class="platform-file"><span data-i18n="macFile">.dmg, khoảng 14 MB. Được nhà phát triển ký và Apple công chứng.</span></p>
+            </li>
+          </ul>
+
+          <div class="download-footer">
+            <a class="download-link" href="https://github.com/RoWeave/releases/releases"><span data-i18n="downloadMeta">Tất cả phiên bản trên GitHub</span> <span aria-hidden="true">↗</span></a>
           </div>
         </div>
-
-        <ul class="platform-grid" aria-label="Các phiên bản ứng dụng" data-i18n-aria-label="platformsLabel">
-          <li class="platform-card">
-            <div class="platform-head">
-              <h3>Windows</h3>
-              <p><span data-i18n="windowsPlatform">Windows 10 và 11, 64-bit (x64)</span></p>
-            </div>
-            <a class="button store-button" href="#" data-store="msstore" hidden>Microsoft Store</a>
-            <a class="button direct-download" href="https://github.com/RoWeave/releases/releases/latest/download/RoWeave-Windows-x64-setup.exe"><span data-i18n="downloadWindows">Tải cho Windows</span></a>
-            <p class="platform-file"><span data-i18n="windowsFile">Trình cài đặt .exe, khoảng 11 MB</span></p>
-            <details class="platform-hint">
-              <summary><span data-i18n="smartscreenSummary">Nếu Windows hiện cảnh báo</span></summary>
-              <p><span data-i18n="smartscreenHint">Nếu Windows hiện “Windows đã bảo vệ PC của bạn”, hãy nhấn “Thông tin thêm” rồi “Vẫn chạy”: trình cài đặt chưa có chữ ký của Microsoft.</span></p>
-            </details>
-          </li>
-
-          <li class="platform-card">
-            <div class="platform-head">
-              <h3>macOS</h3>
-              <p><span data-i18n="macPlatform">Apple Silicon (M1 trở lên), macOS 12.3+</span></p>
-            </div>
-            <a class="button store-button" href="#" data-store="mas" hidden>Mac App Store</a>
-            <a class="button direct-download" href="https://github.com/RoWeave/releases/releases/latest/download/RoWeave-macOS-arm64.dmg"><span data-i18n="downloadMac">Tải cho Mac</span></a>
-            <p class="platform-file"><span data-i18n="macFile">Tệp .dmg, khoảng 14 MB. Đã được Apple ký và công chứng.</span></p>
-          </li>
-        </ul>
-
-        <p class="download-meta"><a class="text-link" href="https://github.com/RoWeave/releases/releases"><span data-i18n="downloadMeta">Tất cả phiên bản trên GitHub</span></a></p>
       </div>
     </section>
   </main>
 
-  <footer class="container site-footer">
-    <div class="footer-top">
-      <a class="brand" href="#" aria-label="RoWeave, về đầu trang" data-i18n-aria-label="brandHome"><img src="../assets/roweave-icon-160.webp" alt="" width="28" height="28" loading="lazy"><span>RoWeave</span></a>
-      <p><span data-i18n="footerTagline">Ứng dụng máy tính để tách và gộp sổ làm việc Excel.</span></p>
-    </div>
-
-    <nav class="language-links" aria-label="Ngôn ngữ trang" data-i18n-aria-label="language"><a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a><a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a><a href="../de/index.html" hreflang="de" lang="de">Deutsch</a><a href="../en/index.html" hreflang="en" lang="en">English</a><a href="../es/index.html" hreflang="es" lang="es">Español</a><a href="../fr/index.html" hreflang="fr" lang="fr">Français</a><a href="../it/index.html" hreflang="it" lang="it">Italiano</a><a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a><a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a><a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a><a href="../vi/index.html" hreflang="vi" aria-current="page" lang="vi">Tiếng Việt</a><a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a><a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a><a href="../ko/index.html" hreflang="ko" lang="ko">한국어</a><a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
-
-    <p class="footer-privacy"><a href="#privacy"><span data-i18n="privacyMore">Tìm hiểu thêm về quyền riêng tư</span></a></p>
-
-    <div class="footer-bottom">
-      <p>© 2026 RoWeave</p>
-      <span><span data-i18n="footerSupport">Hỗ trợ:</span> <a href="mailto:support@roweave.app">support@roweave.app</a></span>
-      <a href="../en/privacy/"><span data-i18n="footerPrivacy">Quyền riêng tư</span></a>
-    </div>
-
-    <details class="privacy-disclosure" id="privacy">
-      <summary><span data-i18n="privacyDetails">Quyền riêng tư trong ứng dụng và trên trang web này</span><span class="faq-mark" aria-hidden="true">+</span></summary>
-      <div class="answer">
-        <p><span data-i18n="privacyDetails1">Ứng dụng chỉ xử lý tệp Excel trên máy của bạn và không bao giờ gửi nội dung của chúng qua mạng. Ứng dụng chỉ kết nối Internet để kiểm tra cập nhật (updates.roweave.app, hoặc GitHub nếu không được) và, khi bạn bấm, để tải phiên bản mới từ GitHub. Không có tên tệp hay nội dung nào được gửi đi, và bạn có thể tắt việc kiểm tra tự động. Trang web này không có biểu mẫu, quảng cáo, công cụ đếm truy cập hay cookie.</span></p>
-        <p><span data-i18n="privacySupport">“Liên hệ hỗ trợ” trong ứng dụng chỉ soạn sẵn một email gửi support@roweave.app: bạn tự gửi bằng email của mình, RoWeave không tự gửi gì. Khi chọn “Đính kèm thông tin chẩn đoán”, ứng dụng lưu một tệp thông tin kỹ thuật (phiên bản RoWeave và hệ thống, các bước và thời gian xử lý, mã lỗi, ước tính bộ nhớ) rồi đính kèm vào email. Tệp không chứa nội dung bảng, đường dẫn hay mật khẩu.</span></p>
-        <p><span data-i18n="privacyDetails2">Trang web và các tệp tải xuống được lưu trữ trên GitHub, nơi có thể thấy dữ liệu kết nối kỹ thuật như địa chỉ IP của bạn. Nếu bạn gửi email tới support@roweave.app, địa chỉ của bạn chỉ được dùng để trả lời.</span></p>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <a class="brand" href="#top" aria-label="RoWeave, về đầu trang" data-i18n-aria-label="brandHome">
+          <img src="../assets/roweave-icon-160.webp" alt="" width="24" height="24" loading="lazy">
+          <span class="brand-name">RoWeave</span>
+        </a>
       </div>
-    </details>
+
+      <nav class="language-links" aria-label="Ngôn ngữ trang" data-i18n-aria-label="language"><a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a><a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a><a href="../de/index.html" hreflang="de" lang="de">Deutsch</a><a href="../en/index.html" hreflang="en" lang="en">English</a><a href="../es/index.html" hreflang="es" lang="es">Español</a><a href="../fr/index.html" hreflang="fr" lang="fr">Français</a><a href="../it/index.html" hreflang="it" lang="it">Italiano</a><a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a><a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a><a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a><a href="../vi/index.html" hreflang="vi" aria-current="page" lang="vi">Tiếng Việt</a><a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a><a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a><a href="../ko/index.html" hreflang="ko" lang="ko">한국어</a><a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></nav>
+
+      <div class="footer-meta">
+        <span>© 2026 RoWeave</span>
+        <span><span data-i18n="footerSupport">Hỗ trợ:</span> <a href="mailto:support@roweave.app">support@roweave.app</a></span>
+        <a href="#privacy"><span data-i18n="privacyMore">Tìm hiểu thêm về quyền riêng tư</span></a>
+        <a href="../en/privacy/"><span data-i18n="footerPrivacy">Quyền riêng tư</span></a>
+      </div>
+
+      <details class="privacy-disclosure" id="privacy">
+        <summary><span data-i18n="privacyDetails">Quyền riêng tư trong ứng dụng và trên trang web này</span><span class="faq-mark" aria-hidden="true">+</span></summary>
+        <div class="faq-answer">
+          <p><span data-i18n="privacyDetails1">Ứng dụng chỉ xử lý tệp Excel trên máy của bạn và không bao giờ gửi nội dung của chúng qua mạng. Ứng dụng chỉ kết nối Internet để kiểm tra cập nhật (updates.roweave.app, hoặc GitHub nếu không được) và, khi bạn bấm, để tải phiên bản mới từ GitHub. Không có tên tệp hay nội dung nào được gửi đi, và bạn có thể tắt việc kiểm tra tự động. Trang web này không có biểu mẫu, quảng cáo, công cụ đếm truy cập hay cookie.</span></p>
+          <p><span data-i18n="privacySupport">“Liên hệ hỗ trợ” trong ứng dụng chỉ soạn sẵn một email gửi support@roweave.app: bạn tự gửi bằng email của mình, RoWeave không tự gửi gì. Khi chọn “Đính kèm thông tin chẩn đoán”, ứng dụng lưu một tệp thông tin kỹ thuật (phiên bản RoWeave và hệ thống, các bước và thời gian xử lý, mã lỗi, ước tính bộ nhớ) rồi đính kèm vào email. Tệp không chứa nội dung bảng, đường dẫn hay mật khẩu.</span></p>
+          <p><span data-i18n="privacyDetails2">Trang web và các tệp tải xuống được lưu trữ trên GitHub, nơi có thể thấy dữ liệu kết nối kỹ thuật như địa chỉ IP của bạn. Nếu bạn gửi email tới support@roweave.app, địa chỉ của bạn chỉ được dùng để trả lời.</span></p>
+        </div>
+      </details>
+    </div>
   </footer>
 </body>
 </html>

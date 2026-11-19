@@ -38,13 +38,16 @@
     return;
   }
 
+  // The theme follows the system until the button is pressed; the choice is not saved (privacy policy).
   const themeButton = document.querySelector('.theme-toggle');
+  const themeText = themeButton.querySelector('[data-theme-text]');
   const systemDark = window.matchMedia('(prefers-color-scheme: dark)');
   const isDark = () => (root.dataset.theme ? root.dataset.theme === 'dark' : systemDark.matches);
   function updateTheme() {
     const dark = isDark();
     themeButton.setAttribute('aria-label', dark ? themeButton.dataset.labelLight : themeButton.dataset.labelDark);
-    const canvas = getComputedStyle(root).getPropertyValue('--canvas').trim();
+    themeText.textContent = dark ? themeButton.dataset.textLight : themeButton.dataset.textDark;
+    const canvas = getComputedStyle(root).getPropertyValue('--bg').trim();
     if (canvas) document.querySelector('meta[name="theme-color"]').content = canvas;
   }
   themeButton.hidden = false;
@@ -55,32 +58,29 @@
   systemDark.addEventListener('change', updateTheme);
   updateTheme();
 
+  // Below 1080 px (styles.css, compact header) the navigation is a panel opened by the menu button.
   const menuButton = document.querySelector('.menu-toggle');
   const navigation = document.querySelector('#navigation');
-  const narrowScreen = window.matchMedia('(max-width: 900px)');
   function setMenu(open) {
     menuButton.setAttribute('aria-expanded', String(open));
     menuButton.setAttribute('aria-label', open ? menuButton.dataset.labelClose : menuButton.dataset.labelOpen);
-    navigation.dataset.collapsed = String(narrowScreen.matches && !open);
+    navigation.classList.toggle('is-open', open);
   }
   menuButton.hidden = false;
-  setMenu(false);
   menuButton.addEventListener('click', () => {
     const open = menuButton.getAttribute('aria-expanded') !== 'true';
     setMenu(open);
     if (open) navigation.querySelector('a')?.focus();
   });
-  narrowScreen.addEventListener('change', () => {
+  navigation.addEventListener('click', event => {
+    if (event.target.closest('a')) setMenu(false);
+  });
+  // Crossing the breakpoint closes the panel; focus on a header link that becomes hidden moves to the menu button.
+  const compactHeader = window.matchMedia('(max-width: 1080px)');
+  compactHeader.addEventListener('change', () => {
     const focusInNavigation = navigation.contains(document.activeElement);
     setMenu(false);
-    if (narrowScreen.matches && focusInNavigation) menuButton.focus();
-  });
-  navigation.addEventListener('click', event => {
-    const link = event.target.closest('a');
-    if (link) {
-      setMenu(false);
-      if (narrowScreen.matches) document.getElementById(link.hash.slice(1))?.focus({ preventScroll: true });
-    }
+    if (compactHeader.matches && focusInNavigation) menuButton.focus();
   });
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
@@ -104,10 +104,10 @@
   tabs.forEach((tab, index) => {
     tab.addEventListener('click', () => selectTab(tab, false));
     tab.addEventListener('keydown', event => {
-      const step = { ArrowRight: 1, ArrowLeft: -1 }[event.key];
-      if (!step) return;
+      const target = { ArrowRight: index + 1, ArrowLeft: index - 1, Home: 0, End: tabs.length - 1 }[event.key];
+      if (target === undefined) return;
       event.preventDefault();
-      selectTab(tabs[(index + step + tabs.length) % tabs.length], true);
+      selectTab(tabs[(target + tabs.length) % tabs.length], true);
     });
   });
 
