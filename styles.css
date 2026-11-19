@@ -570,6 +570,10 @@ summary:focus-visible,
   width: 100%;
   height: auto;
   display: block;
+  /* While a slow connection is still loading the screenshot, show a calm placeholder of the same
+     size instead of the alt text; screen readers still read the alt. */
+  background: var(--bg-recessed);
+  color: transparent;
 }
 
 /* Theme-switched screenshots */
