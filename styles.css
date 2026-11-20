@@ -42,7 +42,7 @@
   --finale-btn-text: #ffffff;
 
   /* Elevation & focus */
-  --frame-shadow: 0 20px 50px rgba(20, 32, 24, 0.09), 0 2px 8px rgba(20, 32, 24, 0.05);
+  --frame-shadow: 0 8px 24px rgb(0 0 0 / 0.06), 0 1px 2px rgb(0 0 0 / 0.04);
   --focus: #0a84ff;
   --selection-bg: #cbead7;
   --selection-ink: #133b25;
@@ -98,7 +98,7 @@
   --finale-btn-hover: #337b58;
   --finale-btn-text: #f4f7f5;
 
-  --frame-shadow: 0 24px 60px rgba(0, 0, 0, 0.45), 0 2px 8px rgba(0, 0, 0, 0.3);
+  --frame-shadow: 0 8px 24px rgb(0 0 0 / 0.28), 0 1px 2px rgb(0 0 0 / 0.2);
   --focus: #8fb1d4;
   --selection-bg: #2b5940;
   --selection-ink: #e8e9eb;
@@ -140,7 +140,7 @@
     --finale-btn-hover: #337b58;
     --finale-btn-text: #f4f7f5;
 
-    --frame-shadow: 0 24px 60px rgba(0, 0, 0, 0.45), 0 2px 8px rgba(0, 0, 0, 0.3);
+    --frame-shadow: 0 8px 24px rgb(0 0 0 / 0.28), 0 1px 2px rgb(0 0 0 / 0.2);
     --focus: #8fb1d4;
     --selection-bg: #2b5940;
     --selection-ink: #e8e9eb;
@@ -265,7 +265,7 @@ summary:focus-visible,
 .site-nav a {
   font-size: 14px;
   color: var(--ink-muted);
-  transition: color 0.15s ease;
+  transition: color 0.15s ease-out;
 }
 
 .site-nav a:hover {
@@ -297,7 +297,7 @@ summary:focus-visible,
   color: var(--ink-secondary);
   background: var(--surface);
   cursor: pointer;
-  transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease;
+  transition: border-color 0.15s ease-out, color 0.15s ease-out, background-color 0.15s ease-out;
 }
 
 .language-control:hover {
@@ -324,7 +324,7 @@ summary:focus-visible,
 .theme-toggle {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  gap: 6px;
   height: 36px;
   padding: 0 12px;
   border: 1px solid var(--rule);
@@ -332,7 +332,7 @@ summary:focus-visible,
   font-size: 13px;
   color: var(--ink-secondary);
   background: var(--surface);
-  transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease;
+  transition: border-color 0.15s ease-out, color 0.15s ease-out, background-color 0.15s ease-out;
 }
 
 .theme-toggle:hover {
@@ -369,12 +369,12 @@ summary:focus-visible,
   justify-content: center;
   gap: 8px;
   height: 44px;
-  padding: 0 22px;
+  padding: 0 20px;
   border-radius: 6px;
   font-size: 15px;
   font-weight: 550;
   letter-spacing: -0.005em;
-  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  transition: background-color 0.15s ease-out, border-color 0.15s ease-out, color 0.15s ease-out;
   white-space: nowrap;
 }
 
@@ -410,13 +410,13 @@ summary:focus-visible,
    ========================================================================== */
 .hero {
   padding-top: clamp(20px, 4vh, 52px);
-  padding-bottom: clamp(28px, 4.6vh, 58px);
+  padding-bottom: clamp(28px, 4.6vh, 56px);
 }
 
 .hero-inner {
   display: flex;
   flex-direction: column;
-  gap: clamp(18px, 3.2vh, 42px);
+  gap: clamp(16px, 3.2vh, 40px);
 }
 
 .hero-kicker {
@@ -426,20 +426,10 @@ summary:focus-visible,
   gap: 8px;
   font-family: var(--font-sans);
   font-variant-numeric: tabular-nums;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
   color: var(--ink-muted);
-  margin-bottom: clamp(10px, 1.5vh, 18px);
-}
-
-.kicker-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--accent-ink);
-  flex-shrink: 0;
+  margin-bottom: clamp(8px, 1.5vh, 16px);
 }
 
 .kicker-sep {
@@ -518,10 +508,10 @@ summary:focus-visible,
   align-items: center;
   justify-content: center;
   min-height: 46px;
-  padding: 12px 18px;
+  padding: 12px 16px;
   text-align: center;
   color: var(--ink-muted);
-  transition: background-color 0.15s ease, color 0.15s ease;
+  transition: background-color 0.15s ease-out, color 0.15s ease-out;
 }
 
 .mode-tab + .mode-tab {
@@ -605,7 +595,7 @@ summary:focus-visible,
   }
   .hero-kicker {
     margin-bottom: 8px;
-    font-size: 11px;
+    font-size: 12px;
   }
   .hero h1 {
     font-size: clamp(28px, 2.3vw, 34px);
@@ -621,7 +611,7 @@ summary:focus-visible,
   }
   .hero-actions .btn {
     height: 40px;
-    padding: 0 18px;
+    padding: 0 16px;
     font-size: 14px;
   }
   .mode-tab {
@@ -632,11 +622,11 @@ summary:focus-visible,
 
 @media (min-width: 1024px) and (min-height: 1050px) {
   .hero {
-    padding-top: clamp(38px, 3.8vh, 48px);
-    padding-bottom: clamp(34px, 3.4vh, 42px);
+    padding-top: clamp(40px, 3.8vh, 48px);
+    padding-bottom: clamp(32px, 3.4vh, 40px);
   }
   .hero-inner {
-    gap: clamp(28px, 2.8vh, 34px);
+    gap: clamp(28px, 2.8vh, 32px);
   }
   .hero h1 {
     font-size: clamp(38px, 2.2vw, 43px);
@@ -658,7 +648,7 @@ summary:focus-visible,
 }
 
 .principle-item {
-  padding: 24px 32px 30px;
+  padding: 24px 32px 28px;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -736,20 +726,18 @@ summary:focus-visible,
 }
 
 .feature-entry {
-  padding: clamp(26px, 3.2vw, 38px) 0;
+  padding: clamp(24px, 3.2vw, 36px) 0;
   border-bottom: 1px solid var(--rule);
-  scroll-margin-top: 90px;
+  scroll-margin-top: 84px;
 }
 
 .entry-index {
   font-family: var(--font-sans);
   font-variant-numeric: tabular-nums;
-  font-size: 12px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  font-size: 13px;
   color: var(--accent-ink);
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .feature-entry h3 {
@@ -795,7 +783,7 @@ summary:focus-visible,
 }
 
 .workflow-step {
-  padding: 26px 32px 8px 0;
+  padding: 24px 32px 8px 0;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -860,7 +848,7 @@ summary:focus-visible,
   align-items: baseline;
   padding: 20px 16px;
   border-bottom: 1px solid var(--rule);
-  transition: background-color 0.14s ease;
+  transition: background-color 0.15s ease-out;
 }
 
 .ledger-row:last-child {
@@ -909,7 +897,7 @@ summary:focus-visible,
 }
 
 .compare-table thead th {
-  padding: 13px 16px;
+  padding: 12px 16px;
   background: var(--bg-recessed);
   border-bottom: 1px solid var(--rule);
   font-family: var(--font-sans);
@@ -974,7 +962,7 @@ summary:focus-visible,
 }
 
 .spec-col {
-  padding: 28px 30px;
+  padding: 24px 32px;
 }
 
 .spec-col + .spec-col {
@@ -1030,7 +1018,7 @@ summary:focus-visible,
 .spec-list {
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: 8px;
 }
 
 .spec-list li {
@@ -1060,7 +1048,7 @@ summary:focus-visible,
 }
 
 .spec-note {
-  padding: 24px 30px;
+  padding: 24px 32px;
 }
 
 .spec-note + .spec-note {
@@ -1170,12 +1158,12 @@ summary:focus-visible,
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 18px 0;
+  padding: 16px 0;
   font-size: 16px;
   font-weight: 550;
   line-height: 1.4;
   color: var(--ink);
-  transition: color 0.15s ease;
+  transition: color 0.15s ease-out;
 }
 
 .faq-list summary::-webkit-details-marker,
@@ -1195,7 +1183,7 @@ summary:focus-visible,
   line-height: 1;
   color: var(--ink-subtle);
   flex-shrink: 0;
-  transition: transform 0.18s ease, color 0.18s ease;
+  transition: transform 0.18s ease-out, color 0.18s ease-out;
 }
 
 details[open] > summary .faq-mark {
@@ -1204,7 +1192,7 @@ details[open] > summary .faq-mark {
 }
 
 .faq-answer {
-  padding: 0 0 22px;
+  padding: 0 0 20px;
   max-width: 64ch;
 }
 
@@ -1237,7 +1225,7 @@ details[open] > summary .faq-mark {
 .download-header {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 16px;
 }
 
 .download-header img {
@@ -1248,10 +1236,8 @@ details[open] > summary .faq-mark {
 .download-kicker {
   font-family: var(--font-sans);
   font-variant-numeric: tabular-nums;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
   color: #84d6a8;
   margin-bottom: 4px;
 }
@@ -1358,7 +1344,7 @@ details[open] > summary .faq-mark {
   text-decoration: underline;
   text-underline-offset: 4px;
   text-decoration-color: var(--finale-rule);
-  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+  transition: color 0.15s ease-out, text-decoration-color 0.15s ease-out;
 }
 
 .download-link:hover {
@@ -1386,15 +1372,15 @@ details[open] > summary .faq-mark {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 10px 18px;
-  padding: 18px 0;
+  gap: 10px 16px;
+  padding: 16px 0;
   border-bottom: 1px solid var(--rule);
   font-size: 13px;
   color: var(--ink-muted);
 }
 
 .language-links a {
-  transition: color 0.15s ease;
+  transition: color 0.15s ease-out;
 }
 
 .language-links a:hover {
@@ -1411,7 +1397,7 @@ details[open] > summary .faq-mark {
   flex-wrap: wrap;
   align-items: center;
   gap: 12px 28px;
-  padding: 18px 0;
+  padding: 16px 0;
   font-size: 13.5px;
   color: var(--ink-muted);
 }
@@ -1477,7 +1463,7 @@ details[open] > summary .faq-mark {
 
   .workflow-step,
   .workflow-step + .workflow-step {
-    padding: 22px 0;
+    padding: 20px 0;
     border-left: 0;
   }
 
@@ -1502,7 +1488,7 @@ details[open] > summary .faq-mark {
     top: var(--header-h);
     background: var(--bg);
     border-bottom: 1px solid var(--rule-strong);
-    padding: 16px clamp(16px, 5vw, 32px) 22px;
+    padding: 16px clamp(16px, 5vw, 32px) 24px;
     flex-direction: column;
     align-items: flex-start;
     gap: 4px;
@@ -1558,7 +1544,7 @@ details[open] > summary .faq-mark {
 
   .ledger-row {
     grid-template-columns: 1fr;
-    gap: 5px;
+    gap: 4px;
     padding: 16px 0;
   }
 
@@ -1610,7 +1596,7 @@ details[open] > summary .faq-mark {
   }
 
   .compare-table tbody td {
-    padding: 5px 0;
+    padding: 4px 0;
     border: 0;
     display: grid;
     grid-template-columns: 112px minmax(0, 1fr);
@@ -1638,7 +1624,7 @@ details[open] > summary .faq-mark {
 
   .platform-col,
   .platform-col + .platform-col {
-    padding: 22px 0;
+    padding: 24px 0;
     border-left: 0;
   }
 
@@ -1700,7 +1686,7 @@ details[open] > summary .faq-mark {
   }
 
   .hero-kicker {
-    font-size: 11px;
+    font-size: 12px;
     row-gap: 2px;
     column-gap: 10px;
     margin-bottom: 8px;
@@ -1770,7 +1756,7 @@ details[open] > summary .faq-mark {
 
   .spec-col,
   .spec-note {
-    padding: 18px;
+    padding: 16px;
   }
 
   .download-header {
